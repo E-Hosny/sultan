@@ -1,61 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# سلطان المسعري - خبير تقييم المجوهرات والأحجار الكريمة
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+موقع إلكتروني فاخر لسلطان المسعري، خبير تقييم المجوهرات والأحجار الكريمة.
 
-## About Laravel
+## الميزات
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- ✅ تصميم فاخر ومريح مع ألوان ذهبية دافئة
+- ✅ شريط تنقل جانبي يعمل على الهواتف المحمولة
+- ✅ تأثيرات بصرية متقدمة ورسوم متحركة
+- ✅ استجابة مثالية على جميع الأجهزة
+- ✅ عرض الخدمات والاستشارات بشكل واضح
+- ✅ أزرار تواصل تفاعلية
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## النشر على Render.com
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### المتطلبات
 
-## Learning Laravel
+- حساب على Render.com
+- مستودع Git (GitHub/GitLab/Bitbucket)
+- Laravel 12
+- PHP 8.2+
+- Node.js 18+
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### خطوات النشر
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. **رفع الكود إلى Git**
+   ```bash
+   git add .
+   git commit -m "Add deployment files"
+   git push origin main
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **إنشاء خدمة جديدة على Render**
+   - اذهب إلى [Render.com](https://render.com)
+   - انقر على "New +" ثم "Web Service"
+   - اربط مستودع Git الخاص بك
 
-## Laravel Sponsors
+3. **إعدادات النشر**
+   - **Build Command**: `./deploy.sh`
+   - **Start Command**: `php artisan serve --host=0.0.0.0 --port=$PORT`
+   - **Environment**: `PHP`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. **متغيرات البيئة**
+   ```
+   APP_ENV=production
+   APP_DEBUG=false
+   APP_KEY=base64:YOUR_APP_KEY_HERE
+   DB_CONNECTION=sqlite
+   DB_DATABASE=/opt/render/project/src/database/database.sqlite
+   ```
 
-### Premium Partners
+5. **تشغيل النشر**
+   - انقر على "Create Web Service"
+   - انتظر اكتمال عملية البناء والنشر
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### ملفات النشر المطلوبة
 
-## Contributing
+- `Dockerfile` - إعدادات Docker للنشر
+- `render.yaml` - إعدادات Render
+- `Procfile` - أوامر تشغيل التطبيق
+- `deploy.sh` - سكريبت النشر
+- `.dockerignore` - ملفات مستبعدة من Docker
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## التطوير المحلي
 
-## Code of Conduct
+### المتطلبات
+- PHP 8.2+
+- Composer
+- Node.js 18+
+- SQLite
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### التثبيت
+```bash
+# تثبيت التبعيات
+composer install
+npm install
 
-## Security Vulnerabilities
+# إنشاء ملف البيئة
+cp .env.example .env
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# إنشاء مفتاح التطبيق
+php artisan key:generate
 
-## License
+# إنشاء قاعدة البيانات
+touch database/database.sqlite
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# تشغيل migrations
+php artisan migrate
+
+# بناء assets
+npm run build
+
+# تشغيل الخادم
+php artisan serve
+```
+
+## البنية
+
+```
+sultan/
+├── app/                 # كود التطبيق
+├── resources/
+│   ├── views/          # ملفات Blade
+│   ├── css/            # ملفات CSS
+│   └── js/             # ملفات JavaScript
+├── public/             # الملفات العامة
+├── routes/             # ملفات التوجيه
+├── database/           # قاعدة البيانات
+├── Dockerfile          # إعدادات Docker
+├── render.yaml         # إعدادات Render
+└── deploy.sh           # سكريبت النشر
+```
+
+## الدعم
+
+للدعم والاستفسارات، يرجى التواصل مع:
+- البريد الإلكتروني: sultan@example.com
+- واتساب: +966500000000
+
+## الترخيص
+
+هذا المشروع مرخص تحت رخصة MIT.
