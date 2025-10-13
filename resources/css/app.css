@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Luxury Styles */
+@layer base {
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+}
+
+@layer utilities {
+    .text-shadow-gold {
+        text-shadow: 0 2px 10px rgba(201, 169, 97, 0.3);
+    }
+    
+    .glow-gold {
+        box-shadow: 0 0 20px rgba(201, 169, 97, 0.2);
+    }
+}

@@ -1,64 +1,41 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>سلطان المسعري - خبير تقييم المجوهرات والأحجار الكريمة</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=playfair-display:400,500,600,700|inter:300,400,500,600|tajawal:400,500,700" rel="stylesheet" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=ibm-plex-sans-arabic:400,500,600,700|inter:300,400,500,600" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-            <style>
+    
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        :root {
+            --primary: #F8F9FA;
+            --secondary: #E9ECEF;
+            --accent: #D4AF37;
+            --text-primary: #2D3748;
+            --text-secondary: #718096;
+            --text-light: #A0AEC0;
+            --border: #E2E8F0;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-hover: rgba(0, 0, 0, 0.15);
+            --gradient: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+        }
+        
         body {
-            font-family: 'Tajawal', 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0A1628 0%, #1a2942 50%, #0f1d35 100%);
-            color: #F5F5F0;
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
-        
-        /* Decorative Background Elements */
-        .bg-decoration {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.05;
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .bg-decoration-1 {
-            top: -10%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: #C9A961;
-        }
-        
-        .bg-decoration-2 {
-            bottom: -10%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: #8B7355;
-        }
-        
-        .bg-decoration-3 {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            background: #D4B76E;
+            font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+            background: var(--primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-weight: 400;
         }
         
         /* Container */
@@ -66,19 +43,17 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
-            position: relative;
-            z-index: 1;
         }
         
         /* Navigation */
         .navbar {
-            padding: 1.5rem 0;
+            background: rgba(248, 249, 250, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
-            background: rgba(10, 22, 40, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(201, 169, 97, 0.1);
             z-index: 100;
+            padding: 1rem 0;
         }
         
         .navbar-content {
@@ -88,99 +63,175 @@
         }
         
         .navbar-brand {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: #C9A961;
+            color: var(--text-primary);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+        }
+        
+        .navbar-brand i {
+            color: var(--accent);
+            font-size: 1.25rem;
         }
         
         .navbar-links {
             display: flex;
-            gap: 2rem;
+            gap: 0.5rem;
             align-items: center;
         }
         
         .nav-link {
-            color: #F5F5F0;
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.25rem;
             border-radius: 8px;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
         }
         
         .nav-link:hover {
-            color: #C9A961;
-            background: rgba(201, 169, 97, 0.1);
+            color: var(--text-primary);
+            background: var(--secondary);
         }
         
-        .nav-link-switch {
+        .template-selector {
+            position: relative;
+        }
+        
+        .template-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid rgba(201, 169, 97, 0.3);
+            padding: 0.75rem 1.25rem;
+            background: white;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
             border-radius: 8px;
-            color: #C9A961;
-            text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 0.95rem;
         }
         
-        .nav-link-switch:hover {
-            border-color: #C9A961;
-            background: rgba(201, 169, 97, 0.1);
+        .template-btn:hover {
+            border-color: var(--accent);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+        
+        .template-dropdown {
+            position: absolute;
+            top: 120%;
+            left: 0;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 0.5rem;
+            min-width: 220px;
+            display: none;
+            box-shadow: 0 10px 40px var(--shadow);
+        }
+        
+        .template-dropdown.active {
+            display: block;
+            animation: fadeIn 0.2s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .template-option {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .template-option:hover {
+            background: var(--secondary);
+            color: var(--text-primary);
+        }
+        
+        .template-option.active {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .template-option i {
+            width: 16px;
+            margin-left: 0.5rem;
         }
         
         /* Hero Section */
         .hero {
             padding: 6rem 0;
             text-align: center;
+            background: var(--gradient);
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: white;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
         
         .hero-icon {
             width: 120px;
             height: 120px;
             margin: 0 auto 2rem;
-            background: linear-gradient(135deg, rgba(201, 169, 97, 0.2), rgba(212, 183, 110, 0.1));
-            border: 2px solid rgba(201, 169, 97, 0.3);
+            background: white;
+            border: 2px solid var(--border);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: #C9A961;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            color: var(--accent);
+            box-shadow: 0 8px 32px var(--shadow);
         }
         
         .hero-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
             font-size: 3.5rem;
             font-weight: 700;
-            color: #C9A961;
+            color: var(--text-primary);
             margin-bottom: 1rem;
-            text-shadow: 0 4px 20px rgba(201, 169, 97, 0.3);
+            line-height: 1.2;
         }
         
         .hero-subtitle {
             font-size: 1.5rem;
-            color: #B8C5D6;
+            color: var(--text-secondary);
             margin-bottom: 1rem;
             font-weight: 500;
         }
         
         .hero-description {
             font-size: 1.1rem;
-            color: #B8C5D6;
+            color: var(--text-secondary);
             margin-bottom: 3rem;
             max-width: 600px;
             margin-left: auto;
@@ -190,113 +241,127 @@
         
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
         
         .btn {
             padding: 1rem 2.5rem;
-            border-radius: 12px;
+            border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            transition: all 0.3s;
-            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
         }
         
         .btn-primary {
-            background: #C9A961;
-            color: #0A1628;
-            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
+            background: var(--text-primary);
+            color: white;
+            box-shadow: 0 4px 16px var(--shadow);
         }
         
         .btn-primary:hover {
-            background: #D4B76E;
+            background: #1A202C;
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.4);
+            box-shadow: 0 8px 24px var(--shadow-hover);
         }
         
         .btn-secondary {
-            background: transparent;
-            color: #C9A961;
-            border: 2px solid rgba(201, 169, 97, 0.5);
+            background: white;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
         }
         
         .btn-secondary:hover {
-            background: rgba(201, 169, 97, 0.1);
-            border-color: #C9A961;
+            border-color: var(--accent);
+            box-shadow: 0 4px 16px var(--shadow);
         }
         
-        /* Section Title */
+        /* Section */
         .section {
             padding: 5rem 0;
         }
         
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #C9A961;
+        .section-header {
             text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+            margin-bottom: 4rem;
         }
         
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #C9A961, transparent);
-            margin: 1rem auto 0;
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--secondary);
+            color: var(--text-secondary);
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-bottom: 4rem;
         }
         
         .service-card {
-            background: linear-gradient(135deg, rgba(26, 41, 66, 0.8), rgba(15, 29, 53, 0.8));
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(201, 169, 97, 0.2);
-            border-radius: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
             padding: 2.5rem;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            position: relative;
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(201, 169, 97, 0.5);
-            box-shadow: 0 20px 60px rgba(201, 169, 97, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px var(--shadow);
+            border-color: var(--accent);
         }
         
         .service-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(201, 169, 97, 0.1);
-            border: 2px solid rgba(201, 169, 97, 0.3);
-            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background: var(--secondary);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            color: #C9A961;
+            font-size: 1.5rem;
+            color: var(--accent);
             margin-bottom: 1.5rem;
         }
         
         .service-card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 1.4rem;
             font-weight: 600;
-            color: #C9A961;
-            margin-bottom: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
         }
         
         .service-items {
@@ -306,48 +371,48 @@
         }
         
         .service-item {
-            background: rgba(201, 169, 97, 0.05);
-            border: 1px solid rgba(201, 169, 97, 0.15);
+            background: var(--primary);
+            border: 1px solid var(--border);
             border-radius: 12px;
             padding: 1.5rem;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s ease;
         }
         
         .service-item:hover {
-            background: rgba(201, 169, 97, 0.1);
-            border-color: rgba(201, 169, 97, 0.3);
+            background: white;
+            border-color: var(--accent);
             transform: translateX(-5px);
         }
         
         .service-item-title {
             font-weight: 600;
-            color: #F5F5F0;
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         
         .service-item-price {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: #C9A961;
+            color: var(--accent);
             margin: 0.5rem 0;
         }
         
         .service-item-description {
-            color: #B8C5D6;
+            color: var(--text-secondary);
             font-size: 0.9rem;
         }
         
         /* Stats Section */
         .stats {
-            background: linear-gradient(135deg, rgba(26, 41, 66, 0.6), rgba(15, 29, 53, 0.6));
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(201, 169, 97, 0.2);
+            background: white;
+            border: 1px solid var(--border);
             border-radius: 20px;
             padding: 3rem;
             margin: 4rem 0;
+            box-shadow: 0 8px 32px var(--shadow);
         }
         
         .stats-grid {
@@ -362,66 +427,88 @@
         }
         
         .stat-number {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
             font-size: 3rem;
-            font-weight: 700;
-            color: #C9A961;
+            font-weight: 800;
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
         
         .stat-label {
-            color: #B8C5D6;
-            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 500;
         }
         
         /* Contact Section */
         .contact-card {
-            background: linear-gradient(135deg, rgba(26, 41, 66, 0.8), rgba(15, 29, 53, 0.8));
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(201, 169, 97, 0.2);
+            background: white;
+            border: 1px solid var(--border);
             border-radius: 20px;
             padding: 3rem;
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
+            box-shadow: 0 8px 32px var(--shadow);
+        }
+        
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--accent);
+            margin: 0 auto 2rem;
         }
         
         .contact-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
             font-size: 2rem;
             font-weight: 700;
-            color: #C9A961;
+            color: var(--text-primary);
             margin-bottom: 1.5rem;
         }
         
         .contact-description {
-            color: #B8C5D6;
+            color: var(--text-secondary);
             font-size: 1.1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             line-height: 1.8;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         /* Footer */
         .footer {
             padding: 3rem 0;
             text-align: center;
-            border-top: 1px solid rgba(201, 169, 97, 0.1);
+            border-top: 1px solid var(--border);
             margin-top: 5rem;
+            background: var(--primary);
         }
         
         .footer-text {
-            color: #B8C5D6;
+            color: var(--text-light);
             font-size: 0.9rem;
         }
         
         /* Mobile Menu */
         .mobile-menu-toggle {
             display: none;
-            background: none;
-            border: 2px solid rgba(201, 169, 97, 0.3);
-            color: #C9A961;
-            font-size: 1.5rem;
-            padding: 0.5rem 1rem;
+            background: white;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            padding: 0.75rem 1rem;
             border-radius: 8px;
             cursor: pointer;
         }
@@ -436,19 +523,23 @@
                 font-size: 1.2rem;
             }
             
+            .section-title {
+                font-size: 2rem;
+            }
+            
             .navbar-links {
                 display: none;
                 position: fixed;
                 top: 0;
                 right: 0;
-                width: 80%;
+                width: 85%;
                 height: 100vh;
-                background: rgba(10, 22, 40, 0.98);
+                background: rgba(248, 249, 250, 0.98);
                 backdrop-filter: blur(20px);
                 flex-direction: column;
                 padding: 4rem 2rem;
-                gap: 1rem;
-                border-left: 1px solid rgba(201, 169, 97, 0.2);
+                gap: 0.5rem;
+                border-left: 1px solid var(--border);
             }
             
             .navbar-links.active {
@@ -468,7 +559,8 @@
                 gap: 2rem;
             }
             
-            .hero-buttons {
+            .hero-buttons,
+            .contact-buttons {
                 flex-direction: column;
             }
             
@@ -476,15 +568,54 @@
                 width: 100%;
                 justify-content: center;
             }
+            
+            .hero {
+                padding: 4rem 0 3rem;
+            }
+            
+            .hero-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+            
+            .template-dropdown {
+                left: auto;
+                right: 0;
+            }
         }
-            </style>
-    </head>
+        
+        /* Subtle animations */
+        .service-card,
+        .stats,
+        .contact-card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.6s ease forwards;
+        }
+        
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Smooth focus states */
+        .btn:focus,
+        .nav-link:focus,
+        .template-btn:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
 <body>
-    <!-- Background Decorations -->
-    <div class="bg-decoration bg-decoration-1"></div>
-    <div class="bg-decoration bg-decoration-2"></div>
-    <div class="bg-decoration bg-decoration-3"></div>
-    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -499,23 +630,23 @@
                 </button>
                 
                 <div class="navbar-links" id="navbarLinks">
-                    <div style="position: relative;">
-                        <button onclick="toggleTemplateMenu()" class="nav-link-switch" style="cursor: pointer;">
+                    <div class="template-selector">
+                        <button class="template-btn" onclick="toggleTemplateDropdown()">
                             <i class="fas fa-palette"></i>
                             اختر القالب
                             <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
                         </button>
-                        <div id="templateMenu" style="display: none; position: absolute; top: 120%; left: 0; background: rgba(26, 41, 66, 0.95); backdrop-filter: blur(20px); border: 1px solid rgba(201, 169, 97, 0.3); border-radius: 12px; padding: 0.5rem; min-width: 200px; z-index: 1000;">
-                            <a href="{{ route('switch.template', 'home') }}" style="display: block; padding: 0.75rem 1rem; color: #F5F5F0; text-decoration: none; border-radius: 8px; transition: all 0.3s; font-weight: 500;">
+                        <div class="template-dropdown" id="templateDropdown">
+                            <a href="{{ route('switch.template', 'home') }}" class="template-option">
                                 <i class="fas fa-star"></i> القالب الكلاسيكي
                             </a>
-                            <a href="{{ route('switch.template', 'laravel') }}" style="display: block; padding: 0.75rem 1rem; color: #C9A961; text-decoration: none; border-radius: 8px; transition: all 0.3s; font-weight: 600; background: rgba(201, 169, 97, 0.1);">
+                            <a href="{{ route('switch.template', 'laravel') }}" class="template-option">
                                 <i class="fas fa-gem"></i> القالب الفاخر
                             </a>
-                            <a href="{{ route('switch.template', 'modern') }}" style="display: block; padding: 0.75rem 1rem; color: #F5F5F0; text-decoration: none; border-radius: 8px; transition: all 0.3s; font-weight: 500;">
+                            <a href="{{ route('switch.template', 'modern') }}" class="template-option">
                                 <i class="fas fa-rocket"></i> القالب العصري
                             </a>
-                            <a href="{{ route('switch.template', 'minimal') }}" style="display: block; padding: 0.75rem 1rem; color: #F5F5F0; text-decoration: none; border-radius: 8px; transition: all 0.3s; font-weight: 500;">
+                            <a href="{{ route('switch.template', 'minimal') }}" class="template-option active">
                                 <i class="fas fa-circle"></i> القالب البسيط
                             </a>
                         </div>
@@ -526,25 +657,31 @@
                 </div>
             </div>
         </div>
-                </nav>
+    </nav>
     
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
+            <div class="hero-badge">
+                <i class="fas fa-certificate"></i>
+                خبير معتمد في تقييم المجوهرات
+            </div>
             <div class="hero-icon">
                 <i class="fas fa-gem"></i>
             </div>
             <h1 class="hero-title">سلطان المسعري</h1>
             <p class="hero-subtitle">خبير تقييم المجوهرات والأحجار الكريمة</p>
-            <p class="hero-description">استشارات سريعة وتقارير احترافية معتمدة لتقييم مجوهراتك وأحجارك الكريمة بدقة وشفافية</p>
+            <p class="hero-description">
+                استشارات سريعة وتقارير احترافية معتمدة لتقييم مجوهراتك وأحجارك الكريمة بدقة وشفافية عالية
+            </p>
             <div class="hero-buttons">
                 <a href="#services" class="btn btn-primary">
-                    اكتشف خدماتي
                     <i class="fas fa-arrow-down"></i>
+                    اكتشف خدماتي
                 </a>
                 <a href="#contact" class="btn btn-secondary">
-                    تواصل معي
                     <i class="fas fa-phone"></i>
+                    تواصل معي
                 </a>
             </div>
         </div>
@@ -553,7 +690,16 @@
     <!-- Services Section -->
     <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title">الاستشارات والتقييم</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-briefcase"></i>
+                    خدماتنا المميزة
+                </div>
+                <h2 class="section-title">الاستشارات والتقييم</h2>
+                <p class="section-description">
+                    نقدم مجموعة شاملة من الخدمات الاحترافية لتقييم المجوهرات والأحجار الكريمة
+                </p>
+            </div>
             
             <div class="services-grid">
                 <!-- Instant Consultations -->
@@ -595,17 +741,13 @@
                         </div>
                     </div>
                 </div>
-                </div>
-            
-            <h2 class="section-title">بناء البراند</h2>
-            
-            <div class="services-grid">
+                
                 <!-- Brand Building -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-crown"></i>
                     </div>
-                    <h3 class="service-card-title">خدمات تطوير العلامة التجارية</h3>
+                    <h3 class="service-card-title">بناء البراند</h3>
                     <div class="service-items">
                         <div class="service-item">
                             <div class="service-item-title">جلسة تعريفية (20 دقيقة)</div>
@@ -624,13 +766,22 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Additional Services -->
+            </div>
+            
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-plus"></i>
+                    المزيد من الخدمات
+                </div>
+                <h2 class="section-title">خدمات إضافية</h2>
+            </div>
+            
+            <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-star"></i>
                     </div>
-                    <h3 class="service-card-title">خدمات إضافية</h3>
+                    <h3 class="service-card-title">خدمات متنوعة</h3>
                     <div class="service-items">
                         <div class="service-item">
                             <div class="service-item-title">استشارة تسعير</div>
@@ -644,8 +795,8 @@
                         </div>
                     </div>
                 </div>
-        </div>
-
+            </div>
+            
             <!-- Stats -->
             <div class="stats">
                 <div class="stats-grid">
@@ -673,16 +824,23 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">تواصل معي</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    تواصل معنا
+                </div>
+                <h2 class="section-title">احجز استشارتك الآن</h2>
+            </div>
+            
             <div class="contact-card">
-                <div class="service-icon" style="margin: 0 auto 1.5rem;">
+                <div class="contact-icon">
                     <i class="fas fa-phone"></i>
                 </div>
-                <h3 class="contact-title">احجز استشارتك الآن</h3>
+                <h3 class="contact-title">نحن هنا لخدمتك</h3>
                 <p class="contact-description">
-                    للحصول على استشارة احترافية أو حجز موعد، يرجى التواصل معي مباشرة
+                    للحصول على استشارة احترافية أو حجز موعد، يرجى التواصل معي مباشرة عبر الهاتف أو واتساب
                 </p>
-                <div class="hero-buttons">
+                <div class="contact-buttons">
                     <a href="tel:+966500000000" class="btn btn-primary">
                         <i class="fas fa-phone"></i>
                         اتصل الآن
@@ -706,28 +864,30 @@
     </footer>
     
     <script>
+        // Toggle mobile menu
         function toggleMobileMenu() {
             const navbarLinks = document.getElementById('navbarLinks');
             navbarLinks.classList.toggle('active');
         }
         
-        function toggleTemplateMenu() {
-            const menu = document.getElementById('templateMenu');
-            menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+        // Toggle template dropdown
+        function toggleTemplateDropdown() {
+            const dropdown = document.getElementById('templateDropdown');
+            dropdown.classList.toggle('active');
         }
         
-        // Close template menu when clicking outside
+        // Close dropdowns when clicking outside
         document.addEventListener('click', function(event) {
-            const menu = document.getElementById('templateMenu');
-            const button = event.target.closest('button');
+            const templateSelector = document.querySelector('.template-selector');
+            const dropdown = document.getElementById('templateDropdown');
             
-            if (!button || !button.onclick || button.onclick.toString().indexOf('toggleTemplateMenu') === -1) {
-                if (menu) menu.style.display = 'none';
+            if (!templateSelector.contains(event.target)) {
+                dropdown.classList.remove('active');
             }
         });
         
         // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
+        document.querySelectorAll('.nav-link, .template-option').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('navbarLinks').classList.remove('active');
             });
@@ -746,6 +906,25 @@
                 }
             });
         });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe animated elements
+        document.querySelectorAll('.service-card, .stats, .contact-card').forEach(el => {
+            observer.observe(el);
+        });
     </script>
-    </body>
+</body>
 </html>

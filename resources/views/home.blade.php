@@ -1100,6 +1100,18 @@
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link-luxury dropdown-toggle" href="#" id="templateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-palette"></i>
+                            <span>اختر القالب</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="templateDropdown" style="background: rgba(26, 26, 24, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(201, 169, 97, 0.3);">
+                            <li><a class="dropdown-item" href="{{ route('switch.template', 'home') }}" style="color: #D4AF37;"><i class="fas fa-star"></i> القالب الكلاسيكي</a></li>
+                            <li><a class="dropdown-item" href="{{ route('switch.template', 'laravel') }}"><i class="fas fa-gem"></i> القالب الفاخر</a></li>
+                            <li><a class="dropdown-item" href="{{ route('switch.template', 'modern') }}"><i class="fas fa-rocket"></i> القالب العصري</a></li>
+                            <li><a class="dropdown-item" href="{{ route('switch.template', 'minimal') }}"><i class="fas fa-circle"></i> القالب البسيط</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link-luxury" href="#home">الرئيسية</a>
                     </li>
@@ -1132,7 +1144,30 @@
             </button>
         </div>
         <ul class="mobile-sidebar-nav">
+            <li style="border-bottom: 1px solid rgba(201, 169, 97, 0.2); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
+                <span style="color: #D4AF37; font-weight: bold; font-size: 0.9rem;"><i class="fas fa-palette"></i> اختر القالب</span>
+            </li>
             <li>
+                <a href="{{ route('switch.template', 'home') }}" style="padding-right: 1.5rem;">
+                    <i class="fas fa-star"></i>القالب الكلاسيكي
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('switch.template', 'laravel') }}" style="padding-right: 1.5rem;">
+                    <i class="fas fa-gem"></i>القالب الفاخر
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('switch.template', 'modern') }}" style="padding-right: 1.5rem;">
+                    <i class="fas fa-rocket"></i>القالب العصري
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('switch.template', 'minimal') }}" style="padding-right: 1.5rem;">
+                    <i class="fas fa-circle"></i>القالب البسيط
+                </a>
+            </li>
+            <li style="border-top: 1px solid rgba(201, 169, 97, 0.2); padding-top: 0.5rem; margin-top: 0.5rem;">
                 <a href="#home" onclick="closeMobileSidebar()">
                     <i class="fas fa-home"></i>الرئيسية
                 </a>
