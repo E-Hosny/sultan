@@ -36,13 +36,100 @@
             color: var(--text-primary);
             line-height: 1.7;
             font-weight: 400;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
         
         /* Container */
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
+        }
+        
+        /* Quick Contact Bar */
+        .quick-contact-bar {
+            background: var(--text-primary);
+            color: white;
+            padding: 0.75rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+        
+        .quick-contact-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item i {
+            color: var(--accent);
+            width: 16px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+        
+        .quick-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+        
+        .quick-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .quick-btn.primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .quick-btn.primary:hover {
+            background: #B8941F;
+            transform: translateY(-1px);
+        }
+        
+        .quick-btn.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .quick-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
         
         /* Navigation */
@@ -50,9 +137,6 @@
             background: rgba(248, 249, 250, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
             padding: 1rem 0;
         }
         
@@ -76,27 +160,6 @@
         .navbar-brand i {
             color: var(--accent);
             font-size: 1.25rem;
-        }
-        
-        .navbar-links {
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-        }
-        
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.75rem 1.25rem;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            font-size: 0.95rem;
-        }
-        
-        .nav-link:hover {
-            color: var(--text-primary);
-            background: var(--secondary);
         }
         
         .template-selector {
@@ -179,75 +242,252 @@
             margin-left: 0.5rem;
         }
         
-        /* Hero Section */
-        .hero {
-            padding: 6rem 0;
-            text-align: center;
-            background: var(--gradient);
+        /* Main Content - Single Screen Layout */
+        .main-content {
+            padding: 1rem 0;
+            min-height: calc(100vh - 200px);
         }
         
-        .hero-badge {
+        /* Header Section */
+        .header-section {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .header-badge {
             display: inline-block;
-            padding: 0.5rem 1.5rem;
+            padding: 0.3rem 1rem;
             background: white;
             color: var(--text-secondary);
             border: 1px solid var(--border);
             border-radius: 50px;
             font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.75rem;
         }
         
-        .hero-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2rem;
+        .header-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 0.75rem;
             background: white;
             border: 2px solid var(--border);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 1.25rem;
             color: var(--accent);
-            box-shadow: 0 8px 32px var(--shadow);
+            box-shadow: 0 4px 16px var(--shadow);
         }
         
-        .hero-title {
+        .header-title {
             font-family: 'IBM Plex Sans Arabic', sans-serif;
-            font-size: 3.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.25rem;
             line-height: 1.2;
         }
         
-        .hero-subtitle {
-            font-size: 1.5rem;
+        .header-subtitle {
+            font-size: 1rem;
             color: var(--text-secondary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-weight: 500;
         }
         
-        .hero-description {
-            font-size: 1.1rem;
+        .header-description {
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
+            max-width: 500px;
+            margin: 0 auto 1rem;
+            line-height: 1.4;
         }
         
-        .hero-buttons {
-            display: flex;
+        /* Services Grid */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px var(--shadow);
+            border-color: var(--accent);
+        }
+        
+        .service-card.featured {
+            border: 2px solid var(--accent);
+        }
+        
+        .service-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+        
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin: 0 auto 1rem;
+        }
+        
+        .service-card-title {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .service-price {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-description {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .service-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .service-btn:hover {
+            background: #B8941F;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .service-btn.free {
+            background: #28a745;
+        }
+        
+        .service-btn.free:hover {
+            background: #218838;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .contact-title {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .contact-method:hover {
+            background: white;
+            border-color: var(--accent);
+        }
+        
+        .method-icon {
+            width: 35px;
+            height: 35px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .method-content h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .method-content p {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 0;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 0.75rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 1rem;
         }
         
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
@@ -284,215 +524,46 @@
             box-shadow: 0 4px 16px var(--shadow);
         }
         
-        /* Section */
-        .section {
-            padding: 5rem 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: var(--secondary);
-            color: var(--text-secondary);
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .section-title {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-        
-        .section-description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-        
-        .service-card {
+        /* Stats */
+        .stats-section {
             background: white;
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px var(--shadow);
-            border-color: var(--accent);
-        }
-        
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--secondary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card-title {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-items {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .service-item {
-            background: var(--primary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .service-item:hover {
-            background: white;
-            border-color: var(--accent);
-            transform: translateX(-5px);
-        }
-        
-        .service-item-title {
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-        
-        .service-item-price {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin: 0.5rem 0;
-        }
-        
-        .service-item-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        /* Stats Section */
-        .stats {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 4rem 0;
-            box-shadow: 0 8px 32px var(--shadow);
+            padding: 1rem;
+            margin-top: 1rem;
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
             text-align: center;
         }
         
         .stat-item {
-            padding: 1rem;
+            padding: 0.25rem;
         }
         
         .stat-number {
             font-family: 'IBM Plex Sans Arabic', sans-serif;
-            font-size: 3rem;
+            font-size: 1.6rem;
             font-weight: 800;
             color: var(--text-primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
         
         .stat-label {
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 0.8rem;
             font-weight: 500;
-        }
-        
-        /* Contact Section */
-        .contact-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 8px 32px var(--shadow);
-        }
-        
-        .contact-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--accent);
-            margin: 0 auto 2rem;
-        }
-        
-        .contact-title {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-description {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-        }
-        
-        .contact-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
         }
         
         /* Footer */
         .footer {
-            padding: 3rem 0;
+            padding: 1.5rem 0;
             text-align: center;
             border-top: 1px solid var(--border);
-            margin-top: 5rem;
+            margin-top: 2rem;
             background: var(--primary);
         }
         
@@ -515,51 +586,51 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
+            .container {
+                padding: 0 0.75rem;
             }
             
-            .hero-subtitle {
-                font-size: 1.2rem;
+            .quick-contact-content {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
             }
             
-            .section-title {
+            .contact-info {
+                justify-content: center;
+                gap: 1.5rem;
+            }
+            
+            .quick-actions {
+                justify-content: center;
+            }
+            
+            .header-title {
                 font-size: 2rem;
             }
             
-            .navbar-links {
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 85%;
-                height: 100vh;
-                background: rgba(248, 249, 250, 0.98);
-                backdrop-filter: blur(20px);
+            .header-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+            
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-method {
                 flex-direction: column;
-                padding: 4rem 2rem;
-                gap: 0.5rem;
-                border-left: 1px solid var(--border);
+                text-align: center;
             }
             
-            .navbar-links.active {
-                display: flex;
-            }
-            
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .hero-buttons,
             .contact-buttons {
                 flex-direction: column;
             }
@@ -569,26 +640,36 @@
                 justify-content: center;
             }
             
-            .hero {
-                padding: 4rem 0 3rem;
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
             }
             
-            .hero-icon {
-                width: 100px;
-                height: 100px;
-                font-size: 2.5rem;
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
             
-            .template-dropdown {
-                left: auto;
-                right: 0;
+            .header-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .service-price {
+                font-size: 1.5rem;
             }
         }
         
         /* Subtle animations */
         .service-card,
-        .stats,
-        .contact-card {
+        .contact-section,
+        .stats-section {
             opacity: 0;
             transform: translateY(20px);
             animation: slideUp 0.6s ease forwards;
@@ -608,7 +689,6 @@
         
         /* Smooth focus states */
         .btn:focus,
-        .nav-link:focus,
         .template-btn:focus {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
@@ -616,189 +696,172 @@
     </style>
 </head>
 <body>
+    <!-- Quick Contact Bar -->
+    <div class="quick-contact-bar">
+        <div class="container">
+            <div class="quick-contact-content">
+                <div class="contact-info">
+                    <span class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+966500000000">+966 50 000 0000</a>
+                    </span>
+                    <span class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/966500000000" target="_blank">واتساب</a>
+                    </span>
+                </div>
+                <div class="quick-actions">
+                    <a href="tel:+966500000000" class="quick-btn primary">
+                        <i class="fas fa-phone"></i>
+                        احجز الآن
+                    </a>
+                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        واتساب سريع
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <a href="#home" class="navbar-brand">
+                <a href="#" class="navbar-brand">
                     <i class="fas fa-gem"></i>
                     سلطان المسعري
                 </a>
                 
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
-                <div class="navbar-links" id="navbarLinks">
-                    <div class="template-selector">
-                        <button class="template-btn" onclick="toggleTemplateDropdown()">
-                            <i class="fas fa-palette"></i>
-                            اختر القالب
-                            <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
-                        </button>
-                        <div class="template-dropdown" id="templateDropdown">
-                            <a href="{{ route('switch.template', 'home') }}" class="template-option">
-                                <i class="fas fa-star"></i> القالب الكلاسيكي
-                            </a>
-                            <a href="{{ route('switch.template', 'laravel') }}" class="template-option">
-                                <i class="fas fa-gem"></i> القالب الفاخر
-                            </a>
-                            <a href="{{ route('switch.template', 'modern') }}" class="template-option">
-                                <i class="fas fa-rocket"></i> القالب العصري
-                            </a>
-                            <a href="{{ route('switch.template', 'minimal') }}" class="template-option active">
-                                <i class="fas fa-circle"></i> القالب البسيط
-                            </a>
-                        </div>
+                <div class="template-selector">
+                    <button class="template-btn" onclick="toggleTemplateDropdown()">
+                        <i class="fas fa-palette"></i>
+                        اختر القالب
+                        <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+                    </button>
+                    <div class="template-dropdown" id="templateDropdown">
+                        <a href="{{ route('switch.template', 'home') }}" class="template-option">
+                            <i class="fas fa-star"></i> القالب الكلاسيكي
+                        </a>
+                        <a href="{{ route('switch.template', 'laravel') }}" class="template-option">
+                            <i class="fas fa-gem"></i> القالب الفاخر
+                        </a>
+                        <a href="{{ route('switch.template', 'modern') }}" class="template-option">
+                            <i class="fas fa-rocket"></i> القالب العصري
+                        </a>
+                        <a href="{{ route('switch.template', 'minimal') }}" class="template-option active">
+                            <i class="fas fa-circle"></i> القالب البسيط
+                        </a>
                     </div>
-                    <a href="#home" class="nav-link">الرئيسية</a>
-                    <a href="#services" class="nav-link">الخدمات</a>
-                    <a href="#contact" class="nav-link">التواصل</a>
                 </div>
             </div>
         </div>
     </nav>
     
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Main Content -->
+    <main class="main-content">
         <div class="container">
-            <div class="hero-badge">
-                <i class="fas fa-certificate"></i>
-                خبير معتمد في تقييم المجوهرات
-            </div>
-            <div class="hero-icon">
-                <i class="fas fa-gem"></i>
-            </div>
-            <h1 class="hero-title">سلطان المسعري</h1>
-            <p class="hero-subtitle">خبير تقييم المجوهرات والأحجار الكريمة</p>
-            <p class="hero-description">
-                استشارات سريعة وتقارير احترافية معتمدة لتقييم مجوهراتك وأحجارك الكريمة بدقة وشفافية عالية
-            </p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">
-                    <i class="fas fa-arrow-down"></i>
-                    اكتشف خدماتي
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-phone"></i>
-                    تواصل معي
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-briefcase"></i>
-                    خدماتنا المميزة
+            <!-- Header Section -->
+            <div class="header-section">
+                <div class="header-badge">
+                    <i class="fas fa-certificate"></i>
+                    خبير معتمد في تقييم المجوهرات
                 </div>
-                <h2 class="section-title">الاستشارات والتقييم</h2>
-                <p class="section-description">
-                    نقدم مجموعة شاملة من الخدمات الاحترافية لتقييم المجوهرات والأحجار الكريمة
+                <div class="header-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h1 class="header-title">سلطان المسعري</h1>
+                <p class="header-subtitle">خبير تقييم المجوهرات والأحجار الكريمة</p>
+                <p class="header-description">
+                    استشارات سريعة وتقارير احترافية معتمدة لتقييم مجوهراتك وأحجارك الكريمة بدقة وشفافية عالية
                 </p>
             </div>
             
-            <div class="services-grid">
-                <!-- Instant Consultations -->
-                <div class="service-card">
+            <!-- Services Grid -->
+            <div class="services-container">
+                <!-- الاستشارات الفورية -->
+                <div class="service-card featured">
+                    <div class="service-badge">الأكثر طلباً</div>
                     <div class="service-icon">
                         <i class="fas fa-clock"></i>
                     </div>
                     <h3 class="service-card-title">الاستشارات الفورية</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-item-title">استشارة فورية (20 دقيقة)</div>
-                            <div class="service-item-price">390 ر.س</div>
-                            <div class="service-item-description">تقييم سريع عبر الصور</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-item-title">استشارة موسعة (60 دقيقة)</div>
-                            <div class="service-item-price">950 ر.س</div>
-                            <div class="service-item-description">تحليل شامل ومفصل</div>
-                        </div>
-                    </div>
+                    <div class="service-price">390 ر.س</div>
+                    <p class="service-description">استشارة فورية لمدة 20 دقيقة عبر الصور مع تقييم سريع ومفصل</p>
+                    <a href="tel:+966500000000" class="service-btn">احجز الآن</a>
                 </div>
                 
-                <!-- Evaluation & Reports -->
+                <!-- التقييم بالصور -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-camera"></i>
                     </div>
-                    <h3 class="service-card-title">التقييم والتقارير</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-item-title">تقييم مبدئي بالصور</div>
-                            <div class="service-item-price">750 ر.س</div>
-                            <div class="service-item-description">تقرير مبدئي مع التوصيات</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-item-title">دفعة مقدمة لتقرير رسمي</div>
-                            <div class="service-item-price">اتصل للتفاصيل</div>
-                            <div class="service-item-description">تقرير رسمي معتمد</div>
-                        </div>
-                    </div>
+                    <h3 class="service-card-title">التقييم بالصور</h3>
+                    <div class="service-price">750 ر.س</div>
+                    <p class="service-description">تقييم مبدئي شامل بالصور مع تقرير مفصل والتوصيات</p>
+                    <a href="tel:+966500000000" class="service-btn">احجز الآن</a>
                 </div>
                 
-                <!-- Brand Building -->
+                <!-- الاستشارة الشاملة -->
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-crown"></i>
                     </div>
-                    <h3 class="service-card-title">بناء البراند</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-item-title">جلسة تعريفية (20 دقيقة)</div>
-                            <div class="service-item-price">مجاناً</div>
-                            <div class="service-item-description">استشارة أولية مجانية</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-item-title">استشارة شاملة (90 دقيقة)</div>
-                            <div class="service-item-price">1,500 ر.س</div>
-                            <div class="service-item-description">خطة تطوير متكاملة</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-item-title">باقة تطوير كاملة (شهر)</div>
-                            <div class="service-item-price">اتصل للتفاصيل</div>
-                            <div class="service-item-description">متابعة وتطوير مستمر</div>
-                        </div>
-                    </div>
+                    <h3 class="service-card-title">الاستشارة الشاملة</h3>
+                    <div class="service-price">1,500 ر.س</div>
+                    <p class="service-description">استشارة شاملة لمدة 90 دقيقة مع خطة تطوير متكاملة</p>
+                    <a href="tel:+966500000000" class="service-btn">احجز الآن</a>
                 </div>
-            </div>
-            
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-plus"></i>
-                    المزيد من الخدمات
-                </div>
-                <h2 class="section-title">خدمات إضافية</h2>
-            </div>
-            
-            <div class="services-grid">
+                
+                <!-- الاستشارة المجانية -->
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-gift"></i>
                     </div>
-                    <h3 class="service-card-title">خدمات متنوعة</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-item-title">استشارة تسعير</div>
-                            <div class="service-item-price">500 ر.س</div>
-                            <div class="service-item-description">تحديد الأسعار المناسبة</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-item-title">تدريب فريق العمل</div>
-                            <div class="service-item-price">اتصل للتفاصيل</div>
-                            <div class="service-item-description">تأهيل احترافي</div>
-                        </div>
-                    </div>
+                    <h3 class="service-card-title">جلسة تعريفية</h3>
+                    <div class="service-price">مجاناً</div>
+                    <p class="service-description">جلسة تعريفية لمدة 20 دقيقة للتعرف على خدماتنا</p>
+                    <a href="tel:+966500000000" class="service-btn free">احجز مجاناً</a>
                 </div>
             </div>
             
-            <!-- Stats -->
-            <div class="stats">
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3 class="contact-title">تواصل معنا الآن</h3>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="method-content">
+                            <h4>اتصل مباشرة</h4>
+                            <p>+966 50 000 0000</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="method-content">
+                            <h4>واتساب سريع</h4>
+                            <p>+966 50 000 0000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-buttons">
+                    <a href="tel:+966500000000" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        اتصل الآن
+                    </a>
+                    <a href="https://wa.me/966500000000" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        واتساب
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="stats-section">
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">15+</div>
@@ -819,40 +882,7 @@
                 </div>
             </div>
         </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-envelope"></i>
-                    تواصل معنا
-                </div>
-                <h2 class="section-title">احجز استشارتك الآن</h2>
-            </div>
-            
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <h3 class="contact-title">نحن هنا لخدمتك</h3>
-                <p class="contact-description">
-                    للحصول على استشارة احترافية أو حجز موعد، يرجى التواصل معي مباشرة عبر الهاتف أو واتساب
-                </p>
-                <div class="contact-buttons">
-                    <a href="tel:+966500000000" class="btn btn-primary">
-                        <i class="fas fa-phone"></i>
-                        اتصل الآن
-                    </a>
-                    <a href="https://wa.me/966500000000" class="btn btn-secondary" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        واتساب
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
     
     <!-- Footer -->
     <footer class="footer">
@@ -864,12 +894,6 @@
     </footer>
     
     <script>
-        // Toggle mobile menu
-        function toggleMobileMenu() {
-            const navbarLinks = document.getElementById('navbarLinks');
-            navbarLinks.classList.toggle('active');
-        }
-        
         // Toggle template dropdown
         function toggleTemplateDropdown() {
             const dropdown = document.getElementById('templateDropdown');
@@ -884,27 +908,6 @@
             if (!templateSelector.contains(event.target)) {
                 dropdown.classList.remove('active');
             }
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link, .template-option').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navbarLinks').classList.remove('active');
-            });
-        });
-        
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
         });
         
         // Intersection Observer for animations
@@ -922,8 +925,20 @@
         }, observerOptions);
         
         // Observe animated elements
-        document.querySelectorAll('.service-card, .stats, .contact-card').forEach(el => {
+        document.querySelectorAll('.service-card, .contact-section, .stats-section').forEach(el => {
             observer.observe(el);
+        });
+        
+        // Add click animation to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.classList.contains('service-btn')) return;
+                
+                const serviceBtn = this.querySelector('.service-btn');
+                if (serviceBtn) {
+                    serviceBtn.click();
+                }
+            });
         });
     </script>
 </body>
