@@ -42,8 +42,8 @@
         
         body {
             font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
-            background: var(--velvet-gradient);
-            color: var(--text-primary);
+            background: var(--velvet-gradient) !important;
+            color: var(--text-primary) !important;
             line-height: 1.7;
             font-weight: 400;
             min-height: 100vh;
@@ -58,7 +58,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 70%) !important;
             pointer-events: none;
             z-index: -1;
         }
@@ -109,7 +109,7 @@
         }
         
         .contact-item a {
-            color: var(--text-primary);
+            color: var(--text-primary) !important;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
@@ -542,7 +542,7 @@
         .method-content p {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--accent) !important;
             margin: 0;
             text-shadow: 0 1px 3px var(--shadow);
         }
@@ -657,6 +657,23 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            body {
+                background: var(--velvet-gradient) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            body::before {
+                background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 70%) !important;
+            }
+            
+            .contact-item a {
+                color: var(--text-primary) !important;
+            }
+            
+            .method-content p {
+                color: var(--accent) !important;
+            }
+            
             .container {
                 padding: 0 0.75rem;
             }
@@ -691,6 +708,23 @@
             
             .service-card {
                 padding: 1.5rem;
+                background: var(--velvet-gradient) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            .contact-section {
+                background: var(--velvet-gradient) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            .stats-section {
+                background: var(--green-gradient) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            .footer {
+                background: var(--secondary) !important;
+                color: var(--text-primary) !important;
             }
             
             .contact-methods {
@@ -700,6 +734,8 @@
             .contact-method {
                 flex-direction: column;
                 text-align: center;
+                background: var(--secondary) !important;
+                color: var(--text-primary) !important;
             }
             
             .contact-buttons {
@@ -722,6 +758,43 @@
         }
         
         @media (max-width: 480px) {
+            body {
+                background: var(--velvet-gradient) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            body::before {
+                background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 70%) !important;
+            }
+            
+            .contact-item a {
+                color: var(--text-primary) !important;
+            }
+            
+            .method-content p {
+                color: var(--accent) !important;
+            }
+            
+            .service-card {
+                background: var(--velvet-gradient) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            .contact-section {
+                background: var(--velvet-gradient) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            .stats-section {
+                background: var(--green-gradient) !important;
+                color: var(--text-primary) !important;
+            }
+            
+            .footer {
+                background: var(--secondary) !important;
+                color: var(--text-primary) !important;
+            }
+            
             .stats-grid {
                 grid-template-columns: 1fr;
             }
