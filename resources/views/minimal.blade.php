@@ -10,10 +10,27 @@
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=ibm-plex-sans-arabic:400,500,600,700|inter:300,400,500,600" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* تحميل الخط السعودي */
+        @font-face {
+            font-family: 'SaudiWeb';
+            src: url('{{ asset('fonts/SaudiWeb-Regular.woff') }}') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'SaudiWeb';
+            src: url('{{ asset('fonts/SaudiWeb-Bold.woff') }}') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -44,7 +61,7 @@
         }
         
         body {
-            font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+            font-family: 'SaudiWeb', 'Inter', sans-serif;
             background: var(--velvet-gradient) !important;
             background-color: #0a0a0a !important;
             color: var(--text-primary) !important;
@@ -179,9 +196,9 @@
         }
         
         .navbar-brand {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-family: 'SaudiWeb', sans-serif;
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: bold;
             color: var(--text-primary);
             text-decoration: none;
             display: flex;
@@ -208,10 +225,10 @@
             color: var(--text-primary);
             border: 1px solid var(--border-light);
             border-radius: 8px;
-            font-weight: 500;
+            font-weight: normal;
             cursor: pointer;
             transition: all 0.2s ease;
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-family: 'SaudiWeb', sans-serif;
             font-size: 0.95rem;
         }
         
@@ -318,9 +335,9 @@
         }
         
         .header-title {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-family: 'SaudiWeb', sans-serif;
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: bold;
             color: var(--text-primary);
             margin-bottom: 0.25rem;
             line-height: 1.2;
@@ -424,18 +441,18 @@
         }
         
         .service-card-title {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-family: 'SaudiWeb', sans-serif;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: bold;
             color: var(--text-primary);
             margin-bottom: 0.75rem;
             text-shadow: 0 1px 3px var(--shadow);
         }
         
         .service-price {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-family: 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
-            font-weight: 700;
+            font-weight: bold;
             color: var(--accent);
             margin-bottom: 0.5rem;
         }
@@ -491,9 +508,9 @@
         }
         
         .contact-title {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-family: 'SaudiWeb', sans-serif;
             font-size: 1.3rem;
-            font-weight: 700;
+            font-weight: bold;
             color: var(--text-primary);
             margin-bottom: 1rem;
         }
@@ -562,7 +579,7 @@
         .btn {
             padding: 1rem 2rem;
             border-radius: 8px;
-            font-weight: 600;
+            font-weight: bold;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -571,7 +588,7 @@
             font-size: 1rem;
             border: none;
             cursor: pointer;
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-family: 'SaudiWeb', sans-serif;
         }
         
         .btn-primary {
@@ -620,9 +637,9 @@
         }
         
         .stat-number {
-            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-family: 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
-            font-weight: 800;
+            font-weight: bold;
             color: var(--text-primary);
             margin-bottom: 0.25rem;
         }
@@ -749,18 +766,25 @@
             
             .services-container {
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                gap: 1.5rem;
             }
             
             .service-card {
                 padding: 1.5rem;
                 background: var(--velvet-gradient) !important;
                 color: var(--text-primary) !important;
+                margin-bottom: 0.5rem;
+            }
+            
+            .service-card.featured {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
             
             .contact-section {
                 background: var(--velvet-gradient) !important;
                 color: var(--text-primary) !important;
+                margin-top: 2rem;
             }
             
             .stats-section {
@@ -840,11 +864,18 @@
             .service-card {
                 background: var(--velvet-gradient) !important;
                 color: var(--text-primary) !important;
+                margin-bottom: 0.75rem;
+            }
+            
+            .service-card.featured {
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
             }
             
             .contact-section {
                 background: var(--velvet-gradient) !important;
                 color: var(--text-primary) !important;
+                margin-top: 2.5rem;
             }
             
             .stats-section {
