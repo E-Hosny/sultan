@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="msapplication-navbutton-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>سلطان المسعري - خبير تقييم المجوهرات والأحجار الكريمة</title>
     
     <!-- Fonts -->
@@ -43,6 +46,7 @@
         body {
             font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
             background: var(--velvet-gradient) !important;
+            background-color: #0a0a0a !important;
             color: var(--text-primary) !important;
             line-height: 1.7;
             font-weight: 400;
@@ -655,10 +659,42 @@
             cursor: pointer;
         }
         
+        /* Force mobile styles */
+        html {
+            background: #0a0a0a !important;
+            background-color: #0a0a0a !important;
+            min-height: 100vh !important;
+        }
+        
+        /* Extra viewport protection */
+        @viewport {
+            background-color: #0a0a0a !important;
+        }
+        
+        /* Mobile link fixes */
+        a[href^="tel:"] {
+            color: var(--text-primary) !important;
+            text-decoration: none !important;
+        }
+        
+        a[href^="tel:"]:link,
+        a[href^="tel:"]:visited,
+        a[href^="tel:"]:hover,
+        a[href^="tel:"]:active {
+            color: var(--text-primary) !important;
+            text-decoration: none !important;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
+            html {
+                background: #0a0a0a !important;
+                background-color: #0a0a0a !important;
+            }
+            
             body {
                 background: var(--velvet-gradient) !important;
+                background-color: #0a0a0a !important;
                 color: var(--text-primary) !important;
             }
             
@@ -671,6 +707,16 @@
             }
             
             .method-content p {
+                color: var(--accent) !important;
+            }
+            
+            /* Force all phone links to be white */
+            a[href^="tel:"] {
+                color: var(--text-primary) !important;
+                text-decoration: none !important;
+            }
+            
+            .method-content a[href^="tel:"] {
                 color: var(--accent) !important;
             }
             
@@ -758,8 +804,14 @@
         }
         
         @media (max-width: 480px) {
+            html {
+                background: #0a0a0a !important;
+                background-color: #0a0a0a !important;
+            }
+            
             body {
                 background: var(--velvet-gradient) !important;
+                background-color: #0a0a0a !important;
                 color: var(--text-primary) !important;
             }
             
@@ -772,6 +824,16 @@
             }
             
             .method-content p {
+                color: var(--accent) !important;
+            }
+            
+            /* Extra force for phone links on small screens */
+            a[href^="tel:"] {
+                color: var(--text-primary) !important;
+                text-decoration: none !important;
+            }
+            
+            .method-content a[href^="tel:"] {
                 color: var(--accent) !important;
             }
             
@@ -916,22 +978,22 @@
     <div class="quick-contact-bar">
         <div class="container">
             <div class="quick-contact-content">
-                <div class="contact-info">
-                    <span class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+966500000000">+966 50 000 0000</a>
-                    </span>
-                    <span class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/966500000000" target="_blank">واتساب</a>
-                    </span>
-                </div>
+                 <div class="contact-info">
+                     <span class="contact-item">
+                         <i class="fas fa-phone"></i>
+                         <a href="tel:+966500000000" style="color: #F5F5F5 !important; text-decoration: none !important;">+966 50 000 0000</a>
+                     </span>
+                     <span class="contact-item">
+                         <i class="fab fa-whatsapp"></i>
+                         <a href="https://wa.me/966500000000" target="_blank" style="color: #F5F5F5 !important; text-decoration: none !important;">واتساب</a>
+                     </span>
+                 </div>
                 <div class="quick-actions">
-                    <a href="tel:+966500000000" class="quick-btn primary">
+                    <a href="tel:+966500000000" class="quick-btn primary" style="color: #0a0a0a !important; text-decoration: none !important;">
                         <i class="fas fa-phone"></i>
                         احجز الآن
                     </a>
-                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank">
+                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank" style="color: #F5F5F5 !important; text-decoration: none !important;">
                         <i class="fab fa-whatsapp"></i>
                         واتساب سريع
                     </a>
@@ -1049,27 +1111,27 @@
                         <div class="method-icon">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <div class="method-content">
-                            <h4>اتصل مباشرة</h4>
-                            <p>+966 50 000 0000</p>
-                        </div>
+                         <div class="method-content">
+                             <h4>اتصل مباشرة</h4>
+                             <p style="color: #D4AF37 !important;">+966 50 000 0000</p>
+                         </div>
                     </div>
                     <div class="contact-method">
                         <div class="method-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
-                        <div class="method-content">
-                            <h4>واتساب سريع</h4>
-                            <p>+966 50 000 0000</p>
-                        </div>
+                         <div class="method-content">
+                             <h4>واتساب سريع</h4>
+                             <p style="color: #D4AF37 !important;">+966 50 000 0000</p>
+                         </div>
                     </div>
                 </div>
                 <div class="contact-buttons">
-                    <a href="tel:+966500000000" class="btn btn-primary">
+                    <a href="tel:+966500000000" class="btn btn-primary" style="color: #0a0a0a !important; text-decoration: none !important;">
                         <i class="fas fa-phone"></i>
                         اتصل الآن
                     </a>
-                    <a href="https://wa.me/966500000000" class="btn btn-secondary" target="_blank">
+                    <a href="https://wa.me/966500000000" class="btn btn-secondary" target="_blank" style="color: #F5F5F5 !important; text-decoration: none !important;">
                         <i class="fab fa-whatsapp"></i>
                         واتساب
                     </a>
