@@ -26,9 +26,14 @@ Route::get('/minimal-classic', function () {
     return view('minimal-classic');
 })->name('minimal-classic');
 
+// صفحة التصميم الزمردي الكلاسيكي
+Route::get('/emerald-classic', function () {
+    return view('emerald-classic');
+})->name('emerald-classic');
+
 // التبديل بين التصميمات
 Route::get('/switch-template/{template}', function ($template) {
-    if (in_array($template, ['home', 'laravel', 'modern', 'minimal', 'minimal-classic'])) {
+    if (in_array($template, ['home', 'laravel', 'modern', 'minimal', 'minimal-classic', 'emerald-classic'])) {
         session(['current_template' => $template]);
         return redirect()->route($template);
     }

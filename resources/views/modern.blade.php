@@ -784,6 +784,9 @@
                             <a href="{{ route('switch.template', 'minimal-classic') }}" class="template-option">
                                 <i class="fas fa-palette"></i> القالب البسيط الكلاسيكي
                             </a>
+                            <a href="{{ route('switch.template', 'emerald-classic') }}" class="template-option">
+                                <i class="fas fa-gem"></i> القالب الزمردي الكلاسيكي
+                            </a>
                         </div>
                     </div>
                     <a href="#home" class="nav-link">الرئيسية</a>

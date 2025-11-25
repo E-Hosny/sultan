@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0a0a0a">
-    <meta name="msapplication-navbutton-color" content="#0a0a0a">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#FAFAFA">
+    <meta name="msapplication-navbutton-color" content="#FAFAFA">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>سلطان المسعري - خبير تقييم المجوهرات والأحجار الكريمة</title>
     
     <!-- Fonts -->
@@ -38,32 +38,47 @@
         }
         
         :root {
-            --primary: #0a0a0a;
-            --secondary: #1a1a1a;
-            --tertiary: #2a2a2a;
-            --accent: #D4AF37;
-            --accent-light: #E6C360;
+            /* ألوان القالب الزمردي الكلاسيكي - الأخضر الزمردي + الذهبي + الرمادي الداكن */
+            --luxury-gold: #C9A64D;
+            --deep-gold: #B8941F;
+            --warm-cream: #FAFAFA;
+            --rich-brown: #1C1C1C;
+            --soft-beige: #FAFAFA;
+            --dark-chocolate: #1C1C1C;
+            --warm-white: #FAFAFA;
+            --muted-gold: #C9A64D;
+            
+            /* متغيرات القالب الزمردي */
+            --primary: #FAFAFA;
+            --secondary: #FAFAFA;
+            --tertiary: #F5F5F5;
+            --accent: #C9A64D;
+            --accent-light: #D9B65D;
             --accent-dark: #B8941F;
-            --dark-green: #1B3B36;
-            --dark-green-light: #2D5650;
-            --text-primary: #F5F5F5;
-            --text-secondary: #C7C7C7;
-            --text-light: #9A9A9A;
-            --text-gold: #D4AF37;
-            --border: #2a2a2a;
-            --border-light: #3a3a3a;
-            --shadow: rgba(0, 0, 0, 0.5);
-            --shadow-hover: rgba(0, 0, 0, 0.7);
-            --shadow-gold: rgba(212, 175, 55, 0.3);
-            --gradient: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
-            --velvet-gradient: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 25%, #0f0f0f 50%, #1a1a1a 75%, #0a0a0a 100%);
-            --green-gradient: linear-gradient(135deg, #1B3B36 0%, #2D5650 100%);
+            --emerald: #0D5C4A;
+            --emerald-dark: #0A4A3A;
+            --emerald-light: #0F6B5A;
+            --text-primary: #1C1C1C;
+            --text-secondary: #2C2C2C;
+            --text-light: #4A4A4A;
+            --text-gold: #C9A64D;
+            --border: #C9A64D;
+            --border-light: #D9B65D;
+            --shadow: rgba(28, 28, 28, 0.25);
+            --shadow-hover: rgba(28, 28, 28, 0.4);
+            --shadow-gold: rgba(201, 166, 77, 0.4);
+            --shadow-emerald: rgba(13, 92, 74, 0.4);
+            --gradient: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 50%, #FAFAFA 100%);
+            --velvet-gradient: linear-gradient(145deg, #FAFAFA 0%, #F5F5F5 25%, #FAFAFA 50%, #F5F5F5 75%, #FAFAFA 100%);
+            --green-gradient: linear-gradient(135deg, #0D5C4A 0%, #0A4A3A 100%);
+            --emerald-gradient: linear-gradient(135deg, #0D5C4A 0%, #0F6B5A 100%);
+            --warm-gradient: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
         }
         
         body {
             font-family: 'SaudiWeb', 'Inter', sans-serif;
-            background: var(--velvet-gradient) !important;
-            background-color: #0a0a0a !important;
+            background: var(--warm-gradient) !important;
+            background-color: #FAFAFA !important;
             color: var(--text-primary) !important;
             line-height: 1.7;
             font-weight: 400;
@@ -79,7 +94,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 70%) !important;
+            background: radial-gradient(ellipse at center, rgba(13, 92, 74, 0.1) 0%, transparent 70%) !important;
             pointer-events: none;
             z-index: -1;
         }
@@ -93,14 +108,14 @@
         
         /* Quick Contact Bar */
         .quick-contact-bar {
-            background: var(--green-gradient);
-            color: var(--text-primary);
+            background: var(--emerald-gradient);
+            color: #FAFAFA;
             padding: 0.75rem 0;
             position: sticky;
             top: 0;
             z-index: 200;
-            box-shadow: 0 2px 20px var(--shadow);
-            border-bottom: 1px solid var(--accent);
+            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(13, 92, 74, 0.3);
+            border-bottom: 2px solid var(--emerald-dark);
         }
         
         .quick-contact-content {
@@ -125,19 +140,20 @@
         }
         
         .contact-item i {
-            color: var(--accent);
+            color: #FAFAFA;
             width: 16px;
         }
         
         .contact-item a {
-            color: var(--text-primary) !important;
+            color: #FAFAFA !important;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
         }
         
         .contact-item a:hover {
-            color: var(--accent);
+            color: #FAFAFA;
+            opacity: 0.9;
         }
         
         .quick-actions {
@@ -160,33 +176,33 @@
         
         .quick-btn.primary {
             background: var(--accent);
-            color: var(--primary);
+            color: #1C1C1C;
             box-shadow: 0 4px 15px var(--shadow-gold);
         }
         
         .quick-btn.primary:hover {
-            background: #B8941F;
+            background: var(--deep-gold);
             transform: translateY(-1px);
         }
         
         .quick-btn.secondary {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--text-primary);
-            border: 1px solid var(--accent);
+            background: rgba(201, 166, 77, 0.2);
+            color: #FAFAFA;
+            border: 1px solid #FAFAFA;
         }
         
         .quick-btn.secondary:hover {
-            background: rgba(212, 175, 55, 0.2);
+            background: rgba(201, 166, 77, 0.3);
             box-shadow: 0 4px 15px var(--shadow-gold);
         }
         
         /* Navigation */
         .navbar {
-            background: rgba(26, 26, 26, 0.95);
+            background: rgba(250, 250, 250, 0.98);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--accent);
+            border-bottom: 2px solid var(--accent);
             padding: 1rem 0;
-            box-shadow: 0 4px 20px var(--shadow);
+            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(201, 166, 77, 0.2);
         }
         
         .navbar-content {
@@ -284,9 +300,9 @@
         }
         
         .template-option.active {
-            background: var(--accent);
-            color: var(--primary);
-            box-shadow: 0 4px 15px var(--shadow-gold);
+            background: var(--emerald);
+            color: #FAFAFA;
+            box-shadow: 0 4px 15px var(--shadow-emerald);
         }
         
         .template-option i {
@@ -309,14 +325,14 @@
         .header-badge {
             display: inline-block;
             padding: 0.3rem 1rem;
-            background: var(--green-gradient);
-            color: var(--text-primary);
-            border: 1px solid var(--accent);
+            background: var(--emerald-gradient);
+            color: #FAFAFA;
+            border: 2px solid var(--emerald-dark);
             border-radius: 50px;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.8rem;
             margin-bottom: 0.75rem;
-            box-shadow: 0 4px 15px var(--shadow);
+            box-shadow: 0 4px 20px var(--shadow-emerald), 0 2px 8px rgba(28, 28, 28, 0.3);
         }
         
         .header-icon {
@@ -324,14 +340,14 @@
             height: 50px;
             margin: 0 auto 0.75rem;
             background: var(--velvet-gradient);
-            border: 2px solid var(--accent);
+            border: 3px solid var(--emerald);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
-            color: var(--accent);
-            box-shadow: 0 4px 16px var(--shadow), inset 0 2px 8px var(--shadow-gold);
+            color: #1C1C1C;
+            box-shadow: 0 6px 20px var(--shadow), 0 0 15px var(--shadow-emerald), inset 0 2px 8px rgba(13, 92, 74, 0.2);
         }
         
         .header-title {
@@ -382,13 +398,13 @@
         
         .service-card {
             background: var(--velvet-gradient);
-            border: 1px solid var(--border-light);
+            border: 2px solid var(--border);
             border-radius: 16px;
             padding: 1.5rem;
             transition: all 0.3s ease;
             position: relative;
             text-align: center;
-            box-shadow: 0 8px 25px var(--shadow);
+            box-shadow: 0 8px 30px var(--shadow), 0 2px 8px rgba(201, 166, 77, 0.15);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -399,12 +415,13 @@
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px var(--shadow), 0 0 30px var(--shadow-gold);
-            border-color: var(--accent);
+            box-shadow: 0 15px 45px var(--shadow), 0 0 35px var(--shadow-emerald);
+            border-color: var(--emerald);
         }
         
         .service-card.featured {
-            border: 2px solid var(--accent);
+            border: 3px solid var(--emerald);
+            box-shadow: 0 10px 35px var(--shadow), 0 0 25px var(--shadow-emerald);
         }
         
         .services-container .service-card.featured {
@@ -416,28 +433,30 @@
             position: absolute;
             top: -15px;
             right: 20px;
-            background: var(--accent);
-            color: var(--primary);
+            background: var(--emerald-gradient);
+            color: #FAFAFA;
             padding: 0.4rem 0.8rem;
             border-radius: 15px;
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 700;
             z-index: 10;
-            box-shadow: 0 4px 15px var(--shadow-gold);
+            box-shadow: 0 4px 20px var(--shadow-emerald), 0 2px 8px rgba(28, 28, 28, 0.3);
+            border: 1px solid var(--emerald-dark);
         }
         
         .service-icon {
             width: 50px;
             height: 50px;
-            background: var(--green-gradient);
+            background: var(--emerald-gradient);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
-            color: var(--accent);
+            color: #FAFAFA;
             margin: 0 auto 1rem;
-            box-shadow: 0 4px 15px var(--shadow), inset 0 2px 8px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 4px 20px var(--shadow), 0 2px 10px rgba(13, 92, 74, 0.3), inset 0 2px 8px rgba(13, 92, 74, 0.2);
+            border: 1px solid var(--emerald-dark);
         }
         
         .service-card-title {
@@ -453,8 +472,9 @@
             font-family: 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
-            color: var(--accent);
+            color: var(--emerald);
             margin-bottom: 0.5rem;
+            text-shadow: 0 1px 3px rgba(13, 92, 74, 0.3);
         }
         
         .service-description {
@@ -467,8 +487,8 @@
         .service-btn {
             display: inline-block;
             padding: 0.75rem 2rem;
-            background: var(--accent) !important;
-            color: var(--primary) !important;
+            background: var(--emerald) !important;
+            color: #FFFFFF !important;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
@@ -476,35 +496,35 @@
             transition: all 0.2s ease;
             width: 100%;
             text-align: center;
-            box-shadow: 0 4px 15px var(--shadow-gold);
+            box-shadow: 0 4px 15px var(--shadow-emerald);
             margin-top: auto;
         }
         
         .service-btn:hover {
-            background: var(--accent-light);
+            background: var(--emerald-dark);
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px var(--shadow-gold);
+            box-shadow: 0 6px 20px var(--shadow-emerald);
         }
         
         .service-btn.free {
-            background: var(--accent);
-            color: var(--primary);
+            background: var(--emerald);
+            color: #FFFFFF;
         }
         
         .service-btn.free:hover {
-            background: var(--accent-light);
-            box-shadow: 0 6px 20px var(--shadow-gold);
+            background: var(--emerald-dark);
+            box-shadow: 0 6px 20px var(--shadow-emerald);
         }
         
         /* Contact Section */
         .contact-section {
             background: var(--velvet-gradient);
-            border: 1px solid var(--accent);
+            border: 2px solid var(--emerald);
             border-radius: 20px;
             padding: 1.5rem;
             text-align: center;
             margin-top: 1rem;
-            box-shadow: 0 8px 25px var(--shadow), inset 0 1px 3px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 35px var(--shadow), 0 0 20px rgba(13, 92, 74, 0.2), inset 0 1px 3px rgba(13, 92, 74, 0.15);
         }
         
         .contact-title {
@@ -528,29 +548,31 @@
             gap: 0.5rem;
             padding: 0.75rem;
             background: var(--secondary);
-            border: 1px solid var(--border-light);
+            border: 2px solid var(--border);
             border-radius: 12px;
             transition: all 0.2s ease;
+            box-shadow: 0 2px 8px var(--shadow);
         }
         
         .contact-method:hover {
             background: var(--tertiary);
-            border-color: var(--accent);
-            box-shadow: 0 4px 15px var(--shadow-gold);
+            border-color: var(--emerald);
+            box-shadow: 0 6px 20px var(--shadow-emerald), 0 2px 8px rgba(13, 92, 74, 0.2);
         }
         
         .method-icon {
             width: 35px;
             height: 35px;
-            background: var(--accent);
+            background: var(--emerald-gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 0.9rem;
-            color: var(--primary);
+            color: #FAFAFA;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px var(--shadow-gold);
+            box-shadow: 0 4px 15px var(--shadow-emerald), 0 2px 6px rgba(28, 28, 28, 0.2);
+            border: 1px solid var(--emerald-dark);
         }
         
         .method-content h4 {
@@ -563,9 +585,9 @@
         .method-content p {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--accent) !important;
+            color: var(--emerald) !important;
             margin: 0;
-            text-shadow: 0 1px 3px var(--shadow);
+            text-shadow: 0 1px 3px rgba(13, 92, 74, 0.3);
         }
         
         .contact-buttons {
@@ -592,15 +614,15 @@
         }
         
         .btn-primary {
-            background: var(--accent);
-            color: var(--primary);
-            box-shadow: 0 4px 16px var(--shadow-gold);
+            background: var(--emerald);
+            color: #FAFAFA;
+            box-shadow: 0 4px 16px var(--shadow-emerald);
         }
         
         .btn-primary:hover {
-            background: var(--accent-light);
+            background: var(--emerald-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px var(--shadow-gold);
+            box-shadow: 0 8px 24px var(--shadow-emerald);
         }
         
         .btn-secondary {
@@ -610,19 +632,19 @@
         }
         
         .btn-secondary:hover {
-            border-color: var(--accent);
-            box-shadow: 0 4px 16px var(--shadow-gold);
+            border-color: var(--emerald);
+            box-shadow: 0 4px 16px var(--shadow-emerald);
             background: var(--tertiary);
         }
         
         /* Stats */
         .stats-section {
-            background: var(--green-gradient);
-            border: 1px solid var(--accent);
+            background: var(--emerald-gradient);
+            border: 2px solid var(--emerald-dark);
             border-radius: 16px;
             padding: 1rem;
             margin-top: 1rem;
-            box-shadow: 0 8px 25px var(--shadow), inset 0 2px 8px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 35px var(--shadow), 0 0 25px rgba(13, 92, 74, 0.3), inset 0 2px 8px rgba(13, 92, 74, 0.15);
         }
         
         .stats-grid {
@@ -640,23 +662,25 @@
             font-family: 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
-            color: var(--text-primary);
+            color: #FAFAFA;
             margin-bottom: 0.25rem;
         }
         
         .stat-label {
-            color: var(--text-secondary);
+            color: #FAFAFA;
             font-size: 0.8rem;
             font-weight: 500;
+            opacity: 0.9;
         }
         
         /* Footer */
         .footer {
             padding: 1.5rem 0;
             text-align: center;
-            border-top: 1px solid var(--accent);
+            border-top: 2px solid var(--accent);
             margin-top: 2rem;
             background: var(--secondary);
+            box-shadow: 0 -4px 15px var(--shadow);
         }
         
         .footer-text {
@@ -678,14 +702,14 @@
         
         /* Force mobile styles */
         html {
-            background: #0a0a0a !important;
-            background-color: #0a0a0a !important;
+            background: #FAFAFA !important;
+            background-color: #FAFAFA !important;
             min-height: 100vh !important;
         }
         
         /* Extra viewport protection */
         @viewport {
-            background-color: #0a0a0a !important;
+            background-color: #FAFAFA !important;
         }
         
         /* Mobile link fixes */
@@ -705,36 +729,36 @@
         /* Responsive */
         @media (max-width: 768px) {
             html {
-                background: #0a0a0a !important;
-                background-color: #0a0a0a !important;
+                background: #FAFAFA !important;
+                background-color: #FAFAFA !important;
             }
             
             body {
-                background: var(--velvet-gradient) !important;
-                background-color: #0a0a0a !important;
+                background: var(--warm-gradient) !important;
+                background-color: #FAFAFA !important;
                 color: var(--text-primary) !important;
             }
             
             body::before {
-                background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 70%) !important;
+                background: radial-gradient(ellipse at center, rgba(13, 92, 74, 0.1) 0%, transparent 70%) !important;
             }
             
             .contact-item a {
-                color: var(--text-primary) !important;
+                color: #FAFAFA !important;
             }
             
             .method-content p {
-                color: var(--accent) !important;
+                color: var(--emerald) !important;
             }
             
-            /* Force all phone links to be white */
+            /* Force all phone links */
             a[href^="tel:"] {
                 color: var(--text-primary) !important;
                 text-decoration: none !important;
             }
             
             .method-content a[href^="tel:"] {
-                color: var(--accent) !important;
+                color: var(--emerald) !important;
             }
             
             .container {
@@ -788,8 +812,8 @@
             }
             
             .stats-section {
-                background: var(--green-gradient) !important;
-                color: var(--text-primary) !important;
+                background: var(--emerald-gradient) !important;
+                color: #FAFAFA !important;
             }
             
             .footer {
@@ -829,26 +853,26 @@
         
         @media (max-width: 480px) {
             html {
-                background: #0a0a0a !important;
-                background-color: #0a0a0a !important;
+                background: #FAFAFA !important;
+                background-color: #FAFAFA !important;
             }
             
             body {
-                background: var(--velvet-gradient) !important;
-                background-color: #0a0a0a !important;
+                background: var(--warm-gradient) !important;
+                background-color: #FAFAFA !important;
                 color: var(--text-primary) !important;
             }
             
             body::before {
-                background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 70%) !important;
+                background: radial-gradient(ellipse at center, rgba(13, 92, 74, 0.1) 0%, transparent 70%) !important;
             }
             
             .contact-item a {
-                color: var(--text-primary) !important;
+                color: #FAFAFA !important;
             }
             
             .method-content p {
-                color: var(--accent) !important;
+                color: var(--emerald) !important;
             }
             
             /* Extra force for phone links on small screens */
@@ -858,7 +882,7 @@
             }
             
             .method-content a[href^="tel:"] {
-                color: var(--accent) !important;
+                color: var(--emerald) !important;
             }
             
             .service-card {
@@ -879,8 +903,8 @@
             }
             
             .stats-section {
-                background: var(--green-gradient) !important;
-                color: var(--text-primary) !important;
+                background: var(--emerald-gradient) !important;
+                color: #FAFAFA !important;
             }
             
             .footer {
@@ -939,7 +963,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% 0%, rgba(13, 92, 74, 0.1) 0%, transparent 50%);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -951,7 +975,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(13, 92, 74, 0.08) 0%, transparent 70%);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -963,19 +987,19 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.05) 50%, transparent 70%);
+            background: linear-gradient(45deg, transparent 30%, rgba(13, 92, 74, 0.1) 50%, transparent 70%);
             border-radius: inherit;
             pointer-events: none;
         }
         
-        /* Golden glow animation for featured elements */
-        @keyframes goldenGlow {
-            0%, 100% { box-shadow: 0 8px 25px var(--shadow), 0 0 0 rgba(212, 175, 55, 0); }
-            50% { box-shadow: 0 8px 25px var(--shadow), 0 0 20px rgba(212, 175, 55, 0.3); }
+        /* Emerald glow animation for featured elements */
+        @keyframes emeraldGlow {
+            0%, 100% { box-shadow: 0 8px 25px var(--shadow), 0 0 0 rgba(13, 92, 74, 0); }
+            50% { box-shadow: 0 8px 25px var(--shadow), 0 0 20px rgba(13, 92, 74, 0.4); }
         }
         
         .service-card.featured {
-            animation: goldenGlow 3s ease-in-out infinite;
+            animation: emeraldGlow 3s ease-in-out infinite;
             display: flex !important;
             opacity: 1 !important;
             visibility: visible !important;
@@ -998,7 +1022,7 @@
             left: 1px;
             right: 1px;
             height: 50%;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -1012,19 +1036,19 @@
                  <div class="contact-info">
                      <span class="contact-item">
                          <i class="fas fa-phone"></i>
-                         <a href="tel:+966500000000" style="color: #F5F5F5 !important; text-decoration: none !important;">+966 50 000 0000</a>
+                         <a href="tel:+966500000000" style="color: #FAFAFA !important; text-decoration: none !important;">+966 50 000 0000</a>
                      </span>
                      <span class="contact-item">
                          <i class="fab fa-whatsapp"></i>
-                         <a href="https://wa.me/966500000000" target="_blank" style="color: #F5F5F5 !important; text-decoration: none !important;">واتساب</a>
+                         <a href="https://wa.me/966500000000" target="_blank" style="color: #FAFAFA !important; text-decoration: none !important;">واتساب</a>
                      </span>
                  </div>
                 <div class="quick-actions">
-                    <a href="tel:+966500000000" class="quick-btn primary" style="color: #0a0a0a !important; text-decoration: none !important;">
+                    <a href="tel:+966500000000" class="quick-btn primary" style="color: #1C1C1C !important; text-decoration: none !important;">
                         <i class="fas fa-phone"></i>
                         احجز الآن
                     </a>
-                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank" style="color: #F5F5F5 !important; text-decoration: none !important;">
+                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank" style="color: #FAFAFA !important; text-decoration: none !important;">
                         <i class="fab fa-whatsapp"></i>
                         واتساب سريع
                     </a>
@@ -1058,13 +1082,13 @@
                         <a href="{{ route('switch.template', 'modern') }}" class="template-option">
                             <i class="fas fa-rocket"></i> القالب العصري
                         </a>
-                        <a href="{{ route('switch.template', 'minimal') }}" class="template-option active">
+                        <a href="{{ route('switch.template', 'minimal') }}" class="template-option">
                             <i class="fas fa-circle"></i> القالب البسيط
                         </a>
                         <a href="{{ route('switch.template', 'minimal-classic') }}" class="template-option">
                             <i class="fas fa-palette"></i> القالب البسيط الكلاسيكي
                         </a>
-                        <a href="{{ route('switch.template', 'emerald-classic') }}" class="template-option">
+                        <a href="{{ route('switch.template', 'emerald-classic') }}" class="template-option active">
                             <i class="fas fa-gem"></i> القالب الزمردي الكلاسيكي
                         </a>
                     </div>
@@ -1103,7 +1127,7 @@
                     <h3 class="service-card-title">الاستشارات الفورية</h3>
                     <div class="service-price">390 ر.س</div>
                     <p class="service-description">استشارة فورية لمدة 20 دقيقة عبر الصور مع تقييم سريع ومفصل</p>
-                    <a href="tel:+966500000000" class="service-btn">احجز الآن</a>
+                    <a href="tel:+966500000000" class="service-btn" style="color: #FFFFFF !important;">احجز الآن</a>
                 </div>
                 
                 <!-- التقييم بالصور -->
@@ -1114,7 +1138,7 @@
                     <h3 class="service-card-title">التقييم بالصور</h3>
                     <div class="service-price">750 ر.س</div>
                     <p class="service-description">تقييم مبدئي شامل بالصور مع تقرير مفصل والتوصيات</p>
-                    <a href="tel:+966500000000" class="service-btn">احجز الآن</a>
+                    <a href="tel:+966500000000" class="service-btn" style="color: #FFFFFF !important;">احجز الآن</a>
                 </div>
                 
                 <!-- الاستشارة الشاملة -->
@@ -1125,7 +1149,7 @@
                     <h3 class="service-card-title">الاستشارة الشاملة</h3>
                     <div class="service-price">1,500 ر.س</div>
                     <p class="service-description">استشارة شاملة لمدة 90 دقيقة مع خطة تطوير متكاملة</p>
-                    <a href="tel:+966500000000" class="service-btn">احجز الآن</a>
+                    <a href="tel:+966500000000" class="service-btn" style="color: #FFFFFF !important;">احجز الآن</a>
                 </div>
                 
                 <!-- الاستشارة المجانية -->
@@ -1136,7 +1160,7 @@
                     <h3 class="service-card-title">جلسة تعريفية</h3>
                     <div class="service-price">مجاناً</div>
                     <p class="service-description">جلسة تعريفية لمدة 20 دقيقة للتعرف على خدماتنا</p>
-                    <a href="tel:+966500000000" class="service-btn free">احجز مجاناً</a>
+                    <a href="tel:+966500000000" class="service-btn free" style="color: #FFFFFF !important;">احجز مجاناً</a>
                 </div>
             </div>
             
@@ -1150,7 +1174,7 @@
                         </div>
                          <div class="method-content">
                              <h4>اتصل مباشرة</h4>
-                             <p style="color: #D4AF37 !important;">+966 50 000 0000</p>
+                             <p style="color: #0D5C4A !important;">+966 50 000 0000</p>
                          </div>
                     </div>
                     <div class="contact-method">
@@ -1159,16 +1183,16 @@
                         </div>
                          <div class="method-content">
                              <h4>واتساب سريع</h4>
-                             <p style="color: #D4AF37 !important;">+966 50 000 0000</p>
+                             <p style="color: #0D5C4A !important;">+966 50 000 0000</p>
                          </div>
                     </div>
                 </div>
                 <div class="contact-buttons">
-                    <a href="tel:+966500000000" class="btn btn-primary" style="color: #0a0a0a !important; text-decoration: none !important;">
+                    <a href="tel:+966500000000" class="btn btn-primary" style="color: #FAFAFA !important; text-decoration: none !important;">
                         <i class="fas fa-phone"></i>
                         اتصل الآن
                     </a>
-                    <a href="https://wa.me/966500000000" class="btn btn-secondary" target="_blank" style="color: #F5F5F5 !important; text-decoration: none !important;">
+                    <a href="https://wa.me/966500000000" class="btn btn-secondary" target="_blank" style="color: #1C1C1C !important; text-decoration: none !important;">
                         <i class="fab fa-whatsapp"></i>
                         واتساب
                     </a>
@@ -1258,3 +1282,4 @@
     </script>
 </body>
 </html>
+
