@@ -21,9 +21,14 @@ Route::get('/minimal', function () {
     return view('minimal');
 })->name('minimal');
 
+// صفحة التصميم البسيط الكلاسيكي
+Route::get('/minimal-classic', function () {
+    return view('minimal-classic');
+})->name('minimal-classic');
+
 // التبديل بين التصميمات
 Route::get('/switch-template/{template}', function ($template) {
-    if (in_array($template, ['home', 'laravel', 'modern', 'minimal'])) {
+    if (in_array($template, ['home', 'laravel', 'modern', 'minimal', 'minimal-classic'])) {
         session(['current_template' => $template]);
         return redirect()->route($template);
     }

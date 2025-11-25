@@ -1110,6 +1110,7 @@
                             <li><a class="dropdown-item" href="{{ route('switch.template', 'laravel') }}"><i class="fas fa-gem"></i> القالب الفاخر</a></li>
                             <li><a class="dropdown-item" href="{{ route('switch.template', 'modern') }}"><i class="fas fa-rocket"></i> القالب العصري</a></li>
                             <li><a class="dropdown-item" href="{{ route('switch.template', 'minimal') }}"><i class="fas fa-circle"></i> القالب البسيط</a></li>
+                            <li><a class="dropdown-item" href="{{ route('switch.template', 'minimal-classic') }}"><i class="fas fa-palette"></i> القالب البسيط الكلاسيكي</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

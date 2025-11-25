@@ -518,6 +518,9 @@
                             <a href="{{ route('switch.template', 'minimal') }}" style="display: block; padding: 0.75rem 1rem; color: #F5F5F0; text-decoration: none; border-radius: 8px; transition: all 0.3s; font-weight: 500;">
                                 <i class="fas fa-circle"></i> القالب البسيط
                             </a>
+                            <a href="{{ route('switch.template', 'minimal-classic') }}" style="display: block; padding: 0.75rem 1rem; color: #F5F5F0; text-decoration: none; border-radius: 8px; transition: all 0.3s; font-weight: 500;">
+                                <i class="fas fa-palette"></i> القالب البسيط الكلاسيكي
+                            </a>
                         </div>
                     </div>
                     <a href="#home" class="nav-link">الرئيسية</a>
