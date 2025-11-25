@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#F8F0E0">
-    <meta name="msapplication-navbutton-color" content="#F8F0E0">
+    <meta name="theme-color" content="#F6F1E9">
+    <meta name="msapplication-navbutton-color" content="#F6F1E9">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>سلطان المسعري - خبير تقييم المجوهرات والأحجار الكريمة</title>
     
@@ -38,44 +38,44 @@
         }
         
         :root {
-            /* ألوان القالب الكلاسيكي - محسنة للحيوية */
-            --luxury-gold: #B8965A;
-            --deep-gold: #8B6914;
-            --warm-cream: #F5F5DC;
-            --rich-brown: #8B4513;
-            --soft-beige: #FDF5E6;
-            --dark-chocolate: #1A0F0A;
-            --warm-white: #FFFEF7;
-            --muted-gold: #C49B2D;
+            /* ألوان القالب الكلاسيكي - الذهبي + الأسود + العاجي */
+            --luxury-gold: #D4AF37;
+            --deep-gold: #B8941F;
+            --warm-cream: #F6F1E9;
+            --rich-brown: #000000;
+            --soft-beige: #F6F1E9;
+            --dark-chocolate: #000000;
+            --warm-white: #F6F1E9;
+            --muted-gold: #D4AF37;
             
             /* متغيرات القالب البسيط مع ألوان كلاسيكية محسنة */
-            --primary: #FFFEF7;
-            --secondary: #F8F0E0;
-            --tertiary: #F0E6D0;
-            --accent: #B8965A;
-            --accent-light: #D4A85F;
-            --accent-dark: #8B6914;
-            --dark-green: #8B4513;
-            --dark-green-light: #A0522D;
-            --text-primary: #1A0F0A;
-            --text-secondary: #4A3420;
-            --text-light: #6B5A45;
-            --text-gold: #B8965A;
-            --border: #D4C4A8;
-            --border-light: #C4B098;
-            --shadow: rgba(26, 15, 10, 0.25);
-            --shadow-hover: rgba(26, 15, 10, 0.4);
-            --shadow-gold: rgba(184, 150, 90, 0.4);
-            --gradient: linear-gradient(135deg, #F8F0E0 0%, #F0E6D0 50%, #FFFEF7 100%);
-            --velvet-gradient: linear-gradient(145deg, #F8F0E0 0%, #F0E6D0 25%, #FFFEF7 50%, #F0E6D0 75%, #F8F0E0 100%);
-            --green-gradient: linear-gradient(135deg, #B8965A 0%, #8B6914 100%);
-            --warm-gradient: linear-gradient(135deg, #F8F0E0 0%, #F0E6D0 100%);
+            --primary: #F6F1E9;
+            --secondary: #F6F1E9;
+            --tertiary: #F6F1E9;
+            --accent: #D4AF37;
+            --accent-light: #E5C55A;
+            --accent-dark: #B8941F;
+            --dark-green: #000000;
+            --dark-green-light: #1A1A1A;
+            --text-primary: #000000;
+            --text-secondary: #2A2A2A;
+            --text-light: #4A4A4A;
+            --text-gold: #D4AF37;
+            --border: #D4AF37;
+            --border-light: #E5C55A;
+            --shadow: rgba(0, 0, 0, 0.25);
+            --shadow-hover: rgba(0, 0, 0, 0.4);
+            --shadow-gold: rgba(212, 175, 55, 0.4);
+            --gradient: linear-gradient(135deg, #F6F1E9 0%, #F6F1E9 50%, #F6F1E9 100%);
+            --velvet-gradient: linear-gradient(145deg, #F6F1E9 0%, #F6F1E9 25%, #F6F1E9 50%, #F6F1E9 75%, #F6F1E9 100%);
+            --green-gradient: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+            --warm-gradient: linear-gradient(135deg, #F6F1E9 0%, #F6F1E9 100%);
         }
         
         body {
             font-family: 'SaudiWeb', 'Inter', sans-serif;
             background: var(--warm-gradient) !important;
-            background-color: #F8F0E0 !important;
+            background-color: #F6F1E9 !important;
             color: var(--text-primary) !important;
             line-height: 1.7;
             font-weight: 400;
@@ -91,7 +91,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(184, 150, 90, 0.15) 0%, transparent 70%) !important;
+            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%) !important;
             pointer-events: none;
             z-index: -1;
         }
@@ -106,13 +106,13 @@
         /* Quick Contact Bar */
         .quick-contact-bar {
             background: var(--green-gradient);
-            color: var(--warm-white);
+            color: #000000;
             padding: 0.75rem 0;
             position: sticky;
             top: 0;
             z-index: 200;
-            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(184, 150, 90, 0.3);
-            border-bottom: 2px solid var(--accent-dark);
+            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(212, 175, 55, 0.3);
+            border-bottom: 2px solid #000000;
         }
         
         .quick-contact-content {
@@ -137,19 +137,19 @@
         }
         
         .contact-item i {
-            color: var(--warm-white);
+            color: #000000;
             width: 16px;
         }
         
         .contact-item a {
-            color: var(--warm-white) !important;
+            color: #000000 !important;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
         }
         
         .contact-item a:hover {
-            color: var(--warm-white);
+            color: #000000;
             opacity: 0.9;
         }
         
@@ -173,7 +173,7 @@
         
         .quick-btn.primary {
             background: var(--accent);
-            color: var(--warm-white);
+            color: #000000;
             box-shadow: 0 4px 15px var(--shadow-gold);
         }
         
@@ -183,23 +183,23 @@
         }
         
         .quick-btn.secondary {
-            background: rgba(184, 150, 90, 0.2);
-            color: var(--warm-white);
-            border: 1px solid var(--warm-white);
+            background: rgba(212, 175, 55, 0.2);
+            color: #000000;
+            border: 1px solid #000000;
         }
         
         .quick-btn.secondary:hover {
-            background: rgba(184, 150, 90, 0.3);
+            background: rgba(212, 175, 55, 0.3);
             box-shadow: 0 4px 15px var(--shadow-gold);
         }
         
         /* Navigation */
         .navbar {
-            background: rgba(255, 254, 247, 0.98);
+            background: rgba(246, 241, 233, 0.98);
             backdrop-filter: blur(20px);
             border-bottom: 2px solid var(--accent);
             padding: 1rem 0;
-            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(184, 150, 90, 0.2);
+            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(212, 175, 55, 0.2);
         }
         
         .navbar-content {
@@ -298,7 +298,7 @@
         
         .template-option.active {
             background: var(--accent);
-            color: var(--warm-white);
+            color: #000000;
             box-shadow: 0 4px 15px var(--shadow-gold);
         }
         
@@ -323,13 +323,13 @@
             display: inline-block;
             padding: 0.3rem 1rem;
             background: var(--green-gradient);
-            color: var(--warm-white);
-            border: 2px solid var(--accent-dark);
+            color: #000000;
+            border: 2px solid #000000;
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.8rem;
             margin-bottom: 0.75rem;
-            box-shadow: 0 4px 20px var(--shadow-gold), 0 2px 8px rgba(26, 15, 10, 0.3);
+            box-shadow: 0 4px 20px var(--shadow-gold), 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         
         .header-icon {
@@ -343,8 +343,8 @@
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
-            color: var(--accent-dark);
-            box-shadow: 0 6px 20px var(--shadow), 0 0 15px var(--shadow-gold), inset 0 2px 8px rgba(184, 150, 90, 0.2);
+            color: #000000;
+            box-shadow: 0 6px 20px var(--shadow), 0 0 15px var(--shadow-gold), inset 0 2px 8px rgba(212, 175, 55, 0.2);
         }
         
         .header-title {
@@ -401,7 +401,7 @@
             transition: all 0.3s ease;
             position: relative;
             text-align: center;
-            box-shadow: 0 8px 30px var(--shadow), 0 2px 8px rgba(184, 150, 90, 0.15);
+            box-shadow: 0 8px 30px var(--shadow), 0 2px 8px rgba(212, 175, 55, 0.15);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -431,14 +431,14 @@
             top: -15px;
             right: 20px;
             background: var(--green-gradient);
-            color: var(--warm-white);
+            color: #000000;
             padding: 0.4rem 0.8rem;
             border-radius: 15px;
             font-size: 0.75rem;
             font-weight: 700;
             z-index: 10;
-            box-shadow: 0 4px 20px var(--shadow-gold), 0 2px 8px rgba(26, 15, 10, 0.3);
-            border: 1px solid var(--accent-dark);
+            box-shadow: 0 4px 20px var(--shadow-gold), 0 2px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid #000000;
         }
         
         .service-icon {
@@ -450,10 +450,10 @@
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
-            color: var(--warm-white);
+            color: #000000;
             margin: 0 auto 1rem;
-            box-shadow: 0 4px 20px var(--shadow), 0 2px 10px rgba(184, 150, 90, 0.3), inset 0 2px 8px rgba(184, 150, 90, 0.2);
-            border: 1px solid var(--accent-dark);
+            box-shadow: 0 4px 20px var(--shadow), 0 2px 10px rgba(212, 175, 55, 0.3), inset 0 2px 8px rgba(212, 175, 55, 0.2);
+            border: 1px solid #000000;
         }
         
         .service-card-title {
@@ -469,9 +469,9 @@
             font-family: 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
-            color: var(--accent-dark);
+            color: var(--accent);
             margin-bottom: 0.5rem;
-            text-shadow: 0 1px 3px rgba(184, 150, 90, 0.3);
+            text-shadow: 0 1px 3px rgba(212, 175, 55, 0.3);
         }
         
         .service-description {
@@ -485,7 +485,7 @@
             display: inline-block;
             padding: 0.75rem 2rem;
             background: var(--accent) !important;
-            color: var(--warm-white) !important;
+            color: #000000 !important;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
@@ -505,7 +505,7 @@
         
         .service-btn.free {
             background: var(--accent);
-            color: var(--warm-white);
+            color: #000000;
         }
         
         .service-btn.free:hover {
@@ -521,7 +521,7 @@
             padding: 1.5rem;
             text-align: center;
             margin-top: 1rem;
-            box-shadow: 0 10px 35px var(--shadow), 0 0 20px rgba(184, 150, 90, 0.2), inset 0 1px 3px rgba(184, 150, 90, 0.15);
+            box-shadow: 0 10px 35px var(--shadow), 0 0 20px rgba(212, 175, 55, 0.2), inset 0 1px 3px rgba(212, 175, 55, 0.15);
         }
         
         .contact-title {
@@ -566,10 +566,10 @@
             align-items: center;
             justify-content: center;
             font-size: 0.9rem;
-            color: var(--warm-white);
+            color: #000000;
             flex-shrink: 0;
-            box-shadow: 0 4px 15px var(--shadow-gold), 0 2px 6px rgba(26, 15, 10, 0.2);
-            border: 1px solid var(--accent-dark);
+            box-shadow: 0 4px 15px var(--shadow-gold), 0 2px 6px rgba(0, 0, 0, 0.2);
+            border: 1px solid #000000;
         }
         
         .method-content h4 {
@@ -582,9 +582,9 @@
         .method-content p {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--accent-dark) !important;
+            color: var(--accent) !important;
             margin: 0;
-            text-shadow: 0 1px 3px rgba(184, 150, 90, 0.3);
+            text-shadow: 0 1px 3px rgba(212, 175, 55, 0.3);
         }
         
         .contact-buttons {
@@ -612,7 +612,7 @@
         
         .btn-primary {
             background: var(--accent);
-            color: var(--warm-white);
+            color: #000000;
             box-shadow: 0 4px 16px var(--shadow-gold);
         }
         
@@ -637,11 +637,11 @@
         /* Stats */
         .stats-section {
             background: var(--green-gradient);
-            border: 2px solid var(--accent-dark);
+            border: 2px solid #000000;
             border-radius: 16px;
             padding: 1rem;
             margin-top: 1rem;
-            box-shadow: 0 10px 35px var(--shadow), 0 0 25px rgba(184, 150, 90, 0.3), inset 0 2px 8px rgba(184, 150, 90, 0.15);
+            box-shadow: 0 10px 35px var(--shadow), 0 0 25px rgba(212, 175, 55, 0.3), inset 0 2px 8px rgba(212, 175, 55, 0.15);
         }
         
         .stats-grid {
@@ -659,12 +659,12 @@
             font-family: 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
-            color: var(--warm-white);
+            color: #000000;
             margin-bottom: 0.25rem;
         }
         
         .stat-label {
-            color: var(--warm-white);
+            color: #000000;
             font-size: 0.8rem;
             font-weight: 500;
             opacity: 0.9;
@@ -699,14 +699,14 @@
         
         /* Force mobile styles */
         html {
-            background: #F8F0E0 !important;
-            background-color: #F8F0E0 !important;
+            background: #F6F1E9 !important;
+            background-color: #F6F1E9 !important;
             min-height: 100vh !important;
         }
         
         /* Extra viewport protection */
         @viewport {
-            background-color: #F8F0E0 !important;
+            background-color: #F6F1E9 !important;
         }
         
         /* Mobile link fixes */
@@ -726,22 +726,22 @@
         /* Responsive */
         @media (max-width: 768px) {
             html {
-                background: #F8F0E0 !important;
-                background-color: #F8F0E0 !important;
+                background: #F6F1E9 !important;
+                background-color: #F6F1E9 !important;
             }
             
             body {
                 background: var(--warm-gradient) !important;
-                background-color: #F8F0E0 !important;
+                background-color: #F6F1E9 !important;
                 color: var(--text-primary) !important;
             }
             
             body::before {
-                background: radial-gradient(ellipse at center, rgba(184, 150, 90, 0.15) 0%, transparent 70%) !important;
+                background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%) !important;
             }
             
             .contact-item a {
-                color: var(--warm-white) !important;
+                color: #000000 !important;
             }
             
             .method-content p {
@@ -810,7 +810,7 @@
             
             .stats-section {
                 background: var(--green-gradient) !important;
-                color: var(--warm-white) !important;
+                color: #000000 !important;
             }
             
             .footer {
@@ -850,22 +850,22 @@
         
         @media (max-width: 480px) {
             html {
-                background: #F8F0E0 !important;
-                background-color: #F8F0E0 !important;
+                background: #F6F1E9 !important;
+                background-color: #F6F1E9 !important;
             }
             
             body {
                 background: var(--warm-gradient) !important;
-                background-color: #F8F0E0 !important;
+                background-color: #F6F1E9 !important;
                 color: var(--text-primary) !important;
             }
             
             body::before {
-                background: radial-gradient(ellipse at center, rgba(184, 150, 90, 0.15) 0%, transparent 70%) !important;
+                background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%) !important;
             }
             
             .contact-item a {
-                color: var(--warm-white) !important;
+                color: #000000 !important;
             }
             
             .method-content p {
@@ -901,7 +901,7 @@
             
             .stats-section {
                 background: var(--green-gradient) !important;
-                color: var(--warm-white) !important;
+                color: #000000 !important;
             }
             
             .footer {
@@ -960,7 +960,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(184, 150, 90, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -972,7 +972,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(184, 150, 90, 0.08) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -984,15 +984,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(184, 150, 90, 0.1) 50%, transparent 70%);
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%);
             border-radius: inherit;
             pointer-events: none;
         }
         
         /* Golden glow animation for featured elements */
         @keyframes goldenGlow {
-            0%, 100% { box-shadow: 0 8px 25px var(--shadow), 0 0 0 rgba(184, 150, 90, 0); }
-            50% { box-shadow: 0 8px 25px var(--shadow), 0 0 20px rgba(184, 150, 90, 0.4); }
+            0%, 100% { box-shadow: 0 8px 25px var(--shadow), 0 0 0 rgba(212, 175, 55, 0); }
+            50% { box-shadow: 0 8px 25px var(--shadow), 0 0 20px rgba(212, 175, 55, 0.4); }
         }
         
         .service-card.featured {
@@ -1033,19 +1033,19 @@
                  <div class="contact-info">
                      <span class="contact-item">
                          <i class="fas fa-phone"></i>
-                         <a href="tel:+966500000000" style="color: #FFFEF7 !important; text-decoration: none !important;">+966 50 000 0000</a>
+                         <a href="tel:+966500000000" style="color: #000000 !important; text-decoration: none !important;">+966 50 000 0000</a>
                      </span>
                      <span class="contact-item">
                          <i class="fab fa-whatsapp"></i>
-                         <a href="https://wa.me/966500000000" target="_blank" style="color: #FFFEF7 !important; text-decoration: none !important;">واتساب</a>
+                         <a href="https://wa.me/966500000000" target="_blank" style="color: #000000 !important; text-decoration: none !important;">واتساب</a>
                      </span>
                  </div>
                 <div class="quick-actions">
-                    <a href="tel:+966500000000" class="quick-btn primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
+                    <a href="tel:+966500000000" class="quick-btn primary" style="color: #000000 !important; text-decoration: none !important;">
                         <i class="fas fa-phone"></i>
                         احجز الآن
                     </a>
-                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank" style="color: #FFFEF7 !important; text-decoration: none !important;">
+                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank" style="color: #000000 !important; text-decoration: none !important;">
                         <i class="fab fa-whatsapp"></i>
                         واتساب سريع
                     </a>
@@ -1168,7 +1168,7 @@
                         </div>
                          <div class="method-content">
                              <h4>اتصل مباشرة</h4>
-                             <p style="color: #8B6914 !important;">+966 50 000 0000</p>
+                             <p style="color: #D4AF37 !important;">+966 50 000 0000</p>
                          </div>
                     </div>
                     <div class="contact-method">
@@ -1177,16 +1177,16 @@
                         </div>
                          <div class="method-content">
                              <h4>واتساب سريع</h4>
-                             <p style="color: #8B6914 !important;">+966 50 000 0000</p>
+                             <p style="color: #D4AF37 !important;">+966 50 000 0000</p>
                          </div>
                     </div>
                 </div>
                 <div class="contact-buttons">
-                    <a href="tel:+966500000000" class="btn btn-primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
+                    <a href="tel:+966500000000" class="btn btn-primary" style="color: #000000 !important; text-decoration: none !important;">
                         <i class="fas fa-phone"></i>
                         اتصل الآن
                     </a>
-                    <a href="https://wa.me/966500000000" class="btn btn-secondary" target="_blank" style="color: #2F1B14 !important; text-decoration: none !important;">
+                    <a href="https://wa.me/966500000000" class="btn btn-secondary" target="_blank" style="color: #000000 !important; text-decoration: none !important;">
                         <i class="fab fa-whatsapp"></i>
                         واتساب
                     </a>
