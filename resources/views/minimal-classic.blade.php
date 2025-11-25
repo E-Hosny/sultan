@@ -105,14 +105,14 @@
         
         /* Quick Contact Bar */
         .quick-contact-bar {
-            background: var(--green-gradient);
+            background: #FAFAFA;
             color: #000000;
             padding: 0.75rem 0;
             position: sticky;
             top: 0;
             z-index: 200;
-            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(212, 175, 55, 0.3);
-            border-bottom: 2px solid #000000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
         
         .quick-contact-content {
@@ -174,32 +174,34 @@
         .quick-btn.primary {
             background: var(--accent);
             color: #000000;
-            box-shadow: 0 4px 15px var(--shadow-gold);
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
         }
         
         .quick-btn.primary:hover {
             background: var(--deep-gold);
             transform: translateY(-1px);
+            box-shadow: 0 4px 15px var(--shadow-gold);
         }
         
         .quick-btn.secondary {
-            background: rgba(212, 175, 55, 0.2);
+            background: #FAFAFA;
             color: #000000;
-            border: 1px solid #000000;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         
         .quick-btn.secondary:hover {
-            background: rgba(212, 175, 55, 0.3);
-            box-shadow: 0 4px 15px var(--shadow-gold);
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--accent);
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
         }
         
         /* Navigation */
         .navbar {
-            background: rgba(246, 241, 233, 0.98);
+            background: rgba(250, 250, 250, 0.98);
             backdrop-filter: blur(20px);
-            border-bottom: 2px solid var(--accent);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             padding: 1rem 0;
-            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
         
         .navbar-content {
@@ -636,12 +638,12 @@
         
         /* Stats */
         .stats-section {
-            background: var(--green-gradient);
-            border: 2px solid #000000;
+            background: #FAFAFA;
+            border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 16px;
             padding: 1rem;
             margin-top: 1rem;
-            box-shadow: 0 10px 35px var(--shadow), 0 0 25px rgba(212, 175, 55, 0.3), inset 0 2px 8px rgba(212, 175, 55, 0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
         
         .stats-grid {
@@ -674,10 +676,10 @@
         .footer {
             padding: 1.5rem 0;
             text-align: center;
-            border-top: 2px solid var(--accent);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
             margin-top: 2rem;
-            background: var(--secondary);
-            box-shadow: 0 -4px 15px var(--shadow);
+            background: #FAFAFA;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
         }
         
         .footer-text {
@@ -809,12 +811,12 @@
             }
             
             .stats-section {
-                background: var(--green-gradient) !important;
+                background: #FAFAFA !important;
                 color: #000000 !important;
             }
             
             .footer {
-                background: var(--secondary) !important;
+                background: #FAFAFA !important;
                 color: var(--text-primary) !important;
             }
             
@@ -900,12 +902,12 @@
             }
             
             .stats-section {
-                background: var(--green-gradient) !important;
+                background: #FAFAFA !important;
                 color: #000000 !important;
             }
             
             .footer {
-                background: var(--secondary) !important;
+                background: #FAFAFA !important;
                 color: var(--text-primary) !important;
             }
             
