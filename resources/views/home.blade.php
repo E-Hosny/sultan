@@ -1112,6 +1112,7 @@
                             <li><a class="dropdown-item" href="{{ route('switch.template', 'minimal') }}"><i class="fas fa-circle"></i> القالب البسيط</a></li>
                             <li><a class="dropdown-item" href="{{ route('switch.template', 'minimal-classic') }}"><i class="fas fa-palette"></i> القالب البسيط الكلاسيكي</a></li>
                             <li><a class="dropdown-item" href="{{ route('switch.template', 'emerald-classic') }}"><i class="fas fa-gem"></i> القالب الزمردي الكلاسيكي</a></li>
+                            <li><a class="dropdown-item" href="{{ route('switch.template', 'royal-classic') }}"><i class="fas fa-crown"></i> القالب الملكي الكلاسيكي</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

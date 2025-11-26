@@ -31,9 +31,14 @@ Route::get('/emerald-classic', function () {
     return view('emerald-classic');
 })->name('emerald-classic');
 
+// صفحة التصميم الملكي الكلاسيكي
+Route::get('/royal-classic', function () {
+    return view('royal-classic');
+})->name('royal-classic');
+
 // التبديل بين التصميمات
 Route::get('/switch-template/{template}', function ($template) {
-    if (in_array($template, ['home', 'laravel', 'modern', 'minimal', 'minimal-classic', 'emerald-classic'])) {
+    if (in_array($template, ['home', 'laravel', 'modern', 'minimal', 'minimal-classic', 'emerald-classic', 'royal-classic'])) {
         session(['current_template' => $template]);
         return redirect()->route($template);
     }

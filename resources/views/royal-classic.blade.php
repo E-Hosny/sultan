@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#FAFAFA">
-    <meta name="msapplication-navbutton-color" content="#FAFAFA">
+    <meta name="theme-color" content="#EFE8D8">
+    <meta name="msapplication-navbutton-color" content="#EFE8D8">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>سلطان المسعري - خبير تقييم المجوهرات والأحجار الكريمة</title>
     
@@ -38,47 +38,47 @@
         }
         
         :root {
-            /* ألوان القالب الزمردي الكلاسيكي - الأخضر الزمردي + الذهبي + الرمادي الداكن */
-            --luxury-gold: #C9A64D;
-            --deep-gold: #B8941F;
-            --warm-cream: #FAFAFA;
+            /* ألوان القالب الملكي الكلاسيكي - الأزرق الملكي + الذهبي + Off-white */
+            --luxury-gold: #E2C044;
+            --deep-gold: #D4B030;
+            --warm-cream: #EFE8D8;
             --rich-brown: #1C1C1C;
-            --soft-beige: #FAFAFA;
+            --soft-beige: #EFE8D8;
             --dark-chocolate: #1C1C1C;
-            --warm-white: #FAFAFA;
-            --muted-gold: #C9A64D;
+            --warm-white: #EFE8D8;
+            --muted-gold: #E2C044;
             
-            /* متغيرات القالب الزمردي */
-            --primary: #FAFAFA;
-            --secondary: #FAFAFA;
-            --tertiary: #F5F5F5;
-            --accent: #C9A64D;
-            --accent-light: #D9B65D;
-            --accent-dark: #B8941F;
-            --emerald: #0D5C4A;
-            --emerald-dark: #0A4A3A;
-            --emerald-light: #0F6B5A;
+            /* متغيرات القالب الملكي */
+            --primary: #EFE8D8;
+            --secondary: #EFE8D8;
+            --tertiary: #E8E0D0;
+            --accent: #E2C044;
+            --accent-light: #E8C85A;
+            --accent-dark: #D4B030;
+            --royal-blue: #0C2D66;
+            --royal-blue-dark: #0A2444;
+            --royal-blue-light: #0E3566;
             --text-primary: #1C1C1C;
             --text-secondary: #2C2C2C;
             --text-light: #4A4A4A;
-            --text-gold: #C9A64D;
-            --border: #C9A64D;
-            --border-light: #D9B65D;
+            --text-gold: #E2C044;
+            --border: #E2C044;
+            --border-light: #E8C85A;
             --shadow: rgba(28, 28, 28, 0.25);
             --shadow-hover: rgba(28, 28, 28, 0.4);
-            --shadow-gold: rgba(201, 166, 77, 0.4);
-            --shadow-emerald: rgba(13, 92, 74, 0.4);
-            --gradient: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 50%, #FAFAFA 100%);
-            --velvet-gradient: linear-gradient(145deg, #FAFAFA 0%, #F5F5F5 25%, #FAFAFA 50%, #F5F5F5 75%, #FAFAFA 100%);
-            --green-gradient: linear-gradient(135deg, #0D5C4A 0%, #0A4A3A 100%);
-            --emerald-gradient: linear-gradient(135deg, #0D5C4A 0%, #0F6B5A 100%);
-            --warm-gradient: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+            --shadow-gold: rgba(226, 192, 68, 0.4);
+            --shadow-royal: rgba(12, 45, 102, 0.4);
+            --gradient: linear-gradient(135deg, #EFE8D8 0%, #E8E0D0 50%, #EFE8D8 100%);
+            --velvet-gradient: linear-gradient(145deg, #EFE8D8 0%, #E8E0D0 25%, #EFE8D8 50%, #E8E0D0 75%, #EFE8D8 100%);
+            --royal-gradient: linear-gradient(135deg, #0C2D66 0%, #0A2444 100%);
+            --blue-gradient: linear-gradient(135deg, #0C2D66 0%, #0E3566 100%);
+            --warm-gradient: linear-gradient(135deg, #EFE8D8 0%, #E8E0D0 100%);
         }
         
         body {
             font-family: 'SaudiWeb', 'Inter', sans-serif;
             background: var(--warm-gradient) !important;
-            background-color: #FAFAFA !important;
+            background-color: #EFE8D8 !important;
             color: var(--text-primary) !important;
             line-height: 1.7;
             font-weight: 400;
@@ -94,7 +94,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(13, 92, 74, 0.1) 0%, transparent 70%) !important;
+            background: radial-gradient(ellipse at center, rgba(12, 45, 102, 0.1) 0%, transparent 70%) !important;
             pointer-events: none;
             z-index: -1;
         }
@@ -108,14 +108,14 @@
         
         /* Quick Contact Bar */
         .quick-contact-bar {
-            background: var(--emerald-gradient);
-            color: #FAFAFA;
+            background: var(--royal-gradient);
+            color: #EFE8D8;
             padding: 0.75rem 0;
             position: sticky;
             top: 0;
             z-index: 200;
-            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(13, 92, 74, 0.3);
-            border-bottom: 2px solid var(--emerald-dark);
+            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(12, 45, 102, 0.3);
+            border-bottom: 2px solid var(--royal-blue-dark);
         }
         
         .quick-contact-content {
@@ -140,19 +140,19 @@
         }
         
         .contact-item i {
-            color: #FAFAFA;
+            color: #EFE8D8;
             width: 16px;
         }
         
         .contact-item a {
-            color: #FAFAFA !important;
+            color: #EFE8D8 !important;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
         }
         
         .contact-item a:hover {
-            color: #FAFAFA;
+            color: #EFE8D8;
             opacity: 0.9;
         }
         
@@ -186,23 +186,23 @@
         }
         
         .quick-btn.secondary {
-            background: rgba(201, 166, 77, 0.2);
-            color: #FAFAFA;
-            border: 1px solid #FAFAFA;
+            background: rgba(226, 192, 68, 0.2);
+            color: #EFE8D8;
+            border: 1px solid #EFE8D8;
         }
         
         .quick-btn.secondary:hover {
-            background: rgba(201, 166, 77, 0.3);
+            background: rgba(226, 192, 68, 0.3);
             box-shadow: 0 4px 15px var(--shadow-gold);
         }
         
         /* Navigation */
         .navbar {
-            background: rgba(250, 250, 250, 0.98);
+            background: rgba(239, 232, 216, 0.98);
             backdrop-filter: blur(20px);
             border-bottom: 2px solid var(--accent);
             padding: 1rem 0;
-            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(201, 166, 77, 0.2);
+            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(226, 192, 68, 0.2);
         }
         
         .navbar-content {
@@ -300,9 +300,9 @@
         }
         
         .template-option.active {
-            background: var(--emerald);
-            color: #FAFAFA;
-            box-shadow: 0 4px 15px var(--shadow-emerald);
+            background: var(--royal-blue);
+            color: #EFE8D8;
+            box-shadow: 0 4px 15px var(--shadow-royal);
         }
         
         .template-option i {
@@ -325,14 +325,14 @@
         .header-badge {
             display: inline-block;
             padding: 0.3rem 1rem;
-            background: var(--emerald-gradient);
-            color: #FAFAFA;
-            border: 2px solid var(--emerald-dark);
+            background: var(--royal-gradient);
+            color: #EFE8D8;
+            border: 2px solid var(--royal-blue-dark);
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.8rem;
             margin-bottom: 0.75rem;
-            box-shadow: 0 4px 20px var(--shadow-emerald), 0 2px 8px rgba(28, 28, 28, 0.3);
+            box-shadow: 0 4px 20px var(--shadow-royal), 0 2px 8px rgba(28, 28, 28, 0.3);
         }
         
         .header-icon {
@@ -340,14 +340,14 @@
             height: 50px;
             margin: 0 auto 0.75rem;
             background: var(--velvet-gradient);
-            border: 3px solid var(--emerald);
+            border: 3px solid var(--royal-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
             color: #1C1C1C;
-            box-shadow: 0 6px 20px var(--shadow), 0 0 15px var(--shadow-emerald), inset 0 2px 8px rgba(13, 92, 74, 0.2);
+            box-shadow: 0 6px 20px var(--shadow), 0 0 15px var(--shadow-royal), inset 0 2px 8px rgba(12, 45, 102, 0.2);
         }
         
         .header-title {
@@ -404,7 +404,7 @@
             transition: all 0.3s ease;
             position: relative;
             text-align: center;
-            box-shadow: 0 8px 30px var(--shadow), 0 2px 8px rgba(201, 166, 77, 0.15);
+            box-shadow: 0 8px 30px var(--shadow), 0 2px 8px rgba(226, 192, 68, 0.15);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -415,13 +415,13 @@
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 45px var(--shadow), 0 0 35px var(--shadow-emerald);
-            border-color: var(--emerald);
+            box-shadow: 0 15px 45px var(--shadow), 0 0 35px var(--shadow-royal);
+            border-color: var(--royal-blue);
         }
         
         .service-card.featured {
-            border: 3px solid var(--emerald);
-            box-shadow: 0 10px 35px var(--shadow), 0 0 25px var(--shadow-emerald);
+            border: 3px solid var(--royal-blue);
+            box-shadow: 0 10px 35px var(--shadow), 0 0 25px var(--shadow-royal);
         }
         
         .services-container .service-card.featured {
@@ -433,30 +433,30 @@
             position: absolute;
             top: -15px;
             right: 20px;
-            background: var(--emerald-gradient);
-            color: #FAFAFA;
+            background: var(--royal-gradient);
+            color: #EFE8D8;
             padding: 0.4rem 0.8rem;
             border-radius: 15px;
             font-size: 0.75rem;
             font-weight: 700;
             z-index: 10;
-            box-shadow: 0 4px 20px var(--shadow-emerald), 0 2px 8px rgba(28, 28, 28, 0.3);
-            border: 1px solid var(--emerald-dark);
+            box-shadow: 0 4px 20px var(--shadow-royal), 0 2px 8px rgba(28, 28, 28, 0.3);
+            border: 1px solid var(--royal-blue-dark);
         }
         
         .service-icon {
             width: 50px;
             height: 50px;
-            background: var(--emerald-gradient);
+            background: var(--royal-gradient);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.25rem;
-            color: #FAFAFA;
+            color: #EFE8D8;
             margin: 0 auto 1rem;
-            box-shadow: 0 4px 20px var(--shadow), 0 2px 10px rgba(13, 92, 74, 0.3), inset 0 2px 8px rgba(13, 92, 74, 0.2);
-            border: 1px solid var(--emerald-dark);
+            box-shadow: 0 4px 20px var(--shadow), 0 2px 10px rgba(12, 45, 102, 0.3), inset 0 2px 8px rgba(12, 45, 102, 0.2);
+            border: 1px solid var(--royal-blue-dark);
         }
         
         .service-card-title {
@@ -472,9 +472,9 @@
             font-family: 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
-            color: var(--emerald);
+            color: var(--royal-blue);
             margin-bottom: 0.5rem;
-            text-shadow: 0 1px 3px rgba(13, 92, 74, 0.3);
+            text-shadow: 0 1px 3px rgba(12, 45, 102, 0.3);
         }
         
         .service-description {
@@ -487,7 +487,7 @@
         .service-btn {
             display: inline-block;
             padding: 0.75rem 2rem;
-            background: var(--emerald) !important;
+            background: var(--royal-blue) !important;
             color: #FFFFFF !important;
             text-decoration: none;
             border-radius: 8px;
@@ -496,35 +496,35 @@
             transition: all 0.2s ease;
             width: 100%;
             text-align: center;
-            box-shadow: 0 4px 15px var(--shadow-emerald);
+            box-shadow: 0 4px 15px var(--shadow-royal);
             margin-top: auto;
         }
         
         .service-btn:hover {
-            background: var(--emerald-dark);
+            background: var(--royal-blue-dark);
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px var(--shadow-emerald);
+            box-shadow: 0 6px 20px var(--shadow-royal);
         }
         
         .service-btn.free {
-            background: var(--emerald);
+            background: var(--royal-blue);
             color: #FFFFFF;
         }
         
         .service-btn.free:hover {
-            background: var(--emerald-dark);
-            box-shadow: 0 6px 20px var(--shadow-emerald);
+            background: var(--royal-blue-dark);
+            box-shadow: 0 6px 20px var(--shadow-royal);
         }
         
         /* Contact Section */
         .contact-section {
             background: var(--velvet-gradient);
-            border: 2px solid var(--emerald);
+            border: 2px solid var(--royal-blue);
             border-radius: 20px;
             padding: 1.5rem;
             text-align: center;
             margin-top: 1rem;
-            box-shadow: 0 10px 35px var(--shadow), 0 0 20px rgba(13, 92, 74, 0.2), inset 0 1px 3px rgba(13, 92, 74, 0.15);
+            box-shadow: 0 10px 35px var(--shadow), 0 0 20px rgba(12, 45, 102, 0.2), inset 0 1px 3px rgba(12, 45, 102, 0.15);
         }
         
         .contact-title {
@@ -556,23 +556,23 @@
         
         .contact-method:hover {
             background: var(--tertiary);
-            border-color: var(--emerald);
-            box-shadow: 0 6px 20px var(--shadow-emerald), 0 2px 8px rgba(13, 92, 74, 0.2);
+            border-color: var(--royal-blue);
+            box-shadow: 0 6px 20px var(--shadow-royal), 0 2px 8px rgba(12, 45, 102, 0.2);
         }
         
         .method-icon {
             width: 35px;
             height: 35px;
-            background: var(--emerald-gradient);
+            background: var(--royal-gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 0.9rem;
-            color: #FAFAFA;
+            color: #EFE8D8;
             flex-shrink: 0;
-            box-shadow: 0 4px 15px var(--shadow-emerald), 0 2px 6px rgba(28, 28, 28, 0.2);
-            border: 1px solid var(--emerald-dark);
+            box-shadow: 0 4px 15px var(--shadow-royal), 0 2px 6px rgba(28, 28, 28, 0.2);
+            border: 1px solid var(--royal-blue-dark);
         }
         
         .method-content h4 {
@@ -585,9 +585,9 @@
         .method-content p {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--emerald) !important;
+            color: var(--royal-blue) !important;
             margin: 0;
-            text-shadow: 0 1px 3px rgba(13, 92, 74, 0.3);
+            text-shadow: 0 1px 3px rgba(12, 45, 102, 0.3);
         }
         
         .contact-buttons {
@@ -614,15 +614,15 @@
         }
         
         .btn-primary {
-            background: var(--emerald);
-            color: #FAFAFA;
-            box-shadow: 0 4px 16px var(--shadow-emerald);
+            background: var(--royal-blue);
+            color: #EFE8D8;
+            box-shadow: 0 4px 16px var(--shadow-royal);
         }
         
         .btn-primary:hover {
-            background: var(--emerald-dark);
+            background: var(--royal-blue-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px var(--shadow-emerald);
+            box-shadow: 0 8px 24px var(--shadow-royal);
         }
         
         .btn-secondary {
@@ -632,19 +632,19 @@
         }
         
         .btn-secondary:hover {
-            border-color: var(--emerald);
-            box-shadow: 0 4px 16px var(--shadow-emerald);
+            border-color: var(--royal-blue);
+            box-shadow: 0 4px 16px var(--shadow-royal);
             background: var(--tertiary);
         }
         
         /* Stats */
         .stats-section {
-            background: var(--emerald-gradient);
-            border: 2px solid var(--emerald-dark);
+            background: var(--royal-gradient);
+            border: 2px solid var(--royal-blue-dark);
             border-radius: 16px;
             padding: 1rem;
             margin-top: 1rem;
-            box-shadow: 0 10px 35px var(--shadow), 0 0 25px rgba(13, 92, 74, 0.3), inset 0 2px 8px rgba(13, 92, 74, 0.15);
+            box-shadow: 0 10px 35px var(--shadow), 0 0 25px rgba(12, 45, 102, 0.3), inset 0 2px 8px rgba(12, 45, 102, 0.15);
         }
         
         .stats-grid {
@@ -662,12 +662,12 @@
             font-family: 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
-            color: #FAFAFA;
+            color: #EFE8D8;
             margin-bottom: 0.25rem;
         }
         
         .stat-label {
-            color: #FAFAFA;
+            color: #EFE8D8;
             font-size: 0.8rem;
             font-weight: 500;
             opacity: 0.9;
@@ -702,14 +702,14 @@
         
         /* Force mobile styles */
         html {
-            background: #FAFAFA !important;
-            background-color: #FAFAFA !important;
+            background: #EFE8D8 !important;
+            background-color: #EFE8D8 !important;
             min-height: 100vh !important;
         }
         
         /* Extra viewport protection */
         @viewport {
-            background-color: #FAFAFA !important;
+            background-color: #EFE8D8 !important;
         }
         
         /* Mobile link fixes */
@@ -729,26 +729,26 @@
         /* Responsive */
         @media (max-width: 768px) {
             html {
-                background: #FAFAFA !important;
-                background-color: #FAFAFA !important;
+                background: #EFE8D8 !important;
+                background-color: #EFE8D8 !important;
             }
             
             body {
                 background: var(--warm-gradient) !important;
-                background-color: #FAFAFA !important;
+                background-color: #EFE8D8 !important;
                 color: var(--text-primary) !important;
             }
             
             body::before {
-                background: radial-gradient(ellipse at center, rgba(13, 92, 74, 0.1) 0%, transparent 70%) !important;
+                background: radial-gradient(ellipse at center, rgba(12, 45, 102, 0.1) 0%, transparent 70%) !important;
             }
             
             .contact-item a {
-                color: #FAFAFA !important;
+                color: #EFE8D8 !important;
             }
             
             .method-content p {
-                color: var(--emerald) !important;
+                color: var(--royal-blue) !important;
             }
             
             /* Force all phone links */
@@ -758,7 +758,7 @@
             }
             
             .method-content a[href^="tel:"] {
-                color: var(--emerald) !important;
+                color: var(--royal-blue) !important;
             }
             
             .container {
@@ -812,8 +812,8 @@
             }
             
             .stats-section {
-                background: var(--emerald-gradient) !important;
-                color: #FAFAFA !important;
+                background: var(--royal-gradient) !important;
+                color: #EFE8D8 !important;
             }
             
             .footer {
@@ -853,26 +853,26 @@
         
         @media (max-width: 480px) {
             html {
-                background: #FAFAFA !important;
-                background-color: #FAFAFA !important;
+                background: #EFE8D8 !important;
+                background-color: #EFE8D8 !important;
             }
             
             body {
                 background: var(--warm-gradient) !important;
-                background-color: #FAFAFA !important;
+                background-color: #EFE8D8 !important;
                 color: var(--text-primary) !important;
             }
             
             body::before {
-                background: radial-gradient(ellipse at center, rgba(13, 92, 74, 0.1) 0%, transparent 70%) !important;
+                background: radial-gradient(ellipse at center, rgba(12, 45, 102, 0.1) 0%, transparent 70%) !important;
             }
             
             .contact-item a {
-                color: #FAFAFA !important;
+                color: #EFE8D8 !important;
             }
             
             .method-content p {
-                color: var(--emerald) !important;
+                color: var(--royal-blue) !important;
             }
             
             /* Extra force for phone links on small screens */
@@ -882,7 +882,7 @@
             }
             
             .method-content a[href^="tel:"] {
-                color: var(--emerald) !important;
+                color: var(--royal-blue) !important;
             }
             
             .service-card {
@@ -903,8 +903,8 @@
             }
             
             .stats-section {
-                background: var(--emerald-gradient) !important;
-                color: #FAFAFA !important;
+                background: var(--royal-gradient) !important;
+                color: #EFE8D8 !important;
             }
             
             .footer {
@@ -963,7 +963,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(13, 92, 74, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% 0%, rgba(12, 45, 102, 0.1) 0%, transparent 50%);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -975,7 +975,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(13, 92, 74, 0.08) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(12, 45, 102, 0.08) 0%, transparent 70%);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -987,19 +987,19 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(13, 92, 74, 0.1) 50%, transparent 70%);
+            background: linear-gradient(45deg, transparent 30%, rgba(12, 45, 102, 0.1) 50%, transparent 70%);
             border-radius: inherit;
             pointer-events: none;
         }
         
-        /* Emerald glow animation for featured elements */
-        @keyframes emeraldGlow {
-            0%, 100% { box-shadow: 0 8px 25px var(--shadow), 0 0 0 rgba(13, 92, 74, 0); }
-            50% { box-shadow: 0 8px 25px var(--shadow), 0 0 20px rgba(13, 92, 74, 0.4); }
+        /* Royal blue glow animation for featured elements */
+        @keyframes royalGlow {
+            0%, 100% { box-shadow: 0 8px 25px var(--shadow), 0 0 0 rgba(12, 45, 102, 0); }
+            50% { box-shadow: 0 8px 25px var(--shadow), 0 0 20px rgba(12, 45, 102, 0.4); }
         }
         
         .service-card.featured {
-            animation: emeraldGlow 3s ease-in-out infinite;
+            animation: royalGlow 3s ease-in-out infinite;
             display: flex !important;
             opacity: 1 !important;
             visibility: visible !important;
@@ -1036,11 +1036,11 @@
                  <div class="contact-info">
                      <span class="contact-item">
                          <i class="fas fa-phone"></i>
-                         <a href="tel:+966500000000" style="color: #FAFAFA !important; text-decoration: none !important;">+966 50 000 0000</a>
+                         <a href="tel:+966500000000" style="color: #EFE8D8 !important; text-decoration: none !important;">+966 50 000 0000</a>
                      </span>
                      <span class="contact-item">
                          <i class="fab fa-whatsapp"></i>
-                         <a href="https://wa.me/966500000000" target="_blank" style="color: #FAFAFA !important; text-decoration: none !important;">واتساب</a>
+                         <a href="https://wa.me/966500000000" target="_blank" style="color: #EFE8D8 !important; text-decoration: none !important;">واتساب</a>
                      </span>
                  </div>
                 <div class="quick-actions">
@@ -1048,7 +1048,7 @@
                         <i class="fas fa-phone"></i>
                         احجز الآن
                     </a>
-                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank" style="color: #FAFAFA !important; text-decoration: none !important;">
+                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank" style="color: #EFE8D8 !important; text-decoration: none !important;">
                         <i class="fab fa-whatsapp"></i>
                         واتساب سريع
                     </a>
@@ -1088,10 +1088,10 @@
                         <a href="{{ route('switch.template', 'minimal-classic') }}" class="template-option">
                             <i class="fas fa-palette"></i> القالب البسيط الكلاسيكي
                         </a>
-                        <a href="{{ route('switch.template', 'emerald-classic') }}" class="template-option active">
+                        <a href="{{ route('switch.template', 'emerald-classic') }}" class="template-option">
                             <i class="fas fa-gem"></i> القالب الزمردي الكلاسيكي
                         </a>
-                        <a href="{{ route('switch.template', 'royal-classic') }}" class="template-option">
+                        <a href="{{ route('switch.template', 'royal-classic') }}" class="template-option active">
                             <i class="fas fa-crown"></i> القالب الملكي الكلاسيكي
                         </a>
                     </div>
@@ -1177,7 +1177,7 @@
                         </div>
                          <div class="method-content">
                              <h4>اتصل مباشرة</h4>
-                             <p style="color: #0D5C4A !important;">+966 50 000 0000</p>
+                             <p style="color: #0C2D66 !important;">+966 50 000 0000</p>
                          </div>
                     </div>
                     <div class="contact-method">
@@ -1186,12 +1186,12 @@
                         </div>
                          <div class="method-content">
                              <h4>واتساب سريع</h4>
-                             <p style="color: #0D5C4A !important;">+966 50 000 0000</p>
+                             <p style="color: #0C2D66 !important;">+966 50 000 0000</p>
                          </div>
                     </div>
                 </div>
                 <div class="contact-buttons">
-                    <a href="tel:+966500000000" class="btn btn-primary" style="color: #FAFAFA !important; text-decoration: none !important;">
+                    <a href="tel:+966500000000" class="btn btn-primary" style="color: #EFE8D8 !important; text-decoration: none !important;">
                         <i class="fas fa-phone"></i>
                         اتصل الآن
                     </a>

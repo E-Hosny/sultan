@@ -524,6 +524,9 @@
                             <a href="{{ route('switch.template', 'emerald-classic') }}" style="display: block; padding: 0.75rem 1rem; color: #F5F5F0; text-decoration: none; border-radius: 8px; transition: all 0.3s; font-weight: 500;">
                                 <i class="fas fa-gem"></i> القالب الزمردي الكلاسيكي
                             </a>
+                            <a href="{{ route('switch.template', 'royal-classic') }}" style="display: block; padding: 0.75rem 1rem; color: #F5F5F0; text-decoration: none; border-radius: 8px; transition: all 0.3s; font-weight: 500;">
+                                <i class="fas fa-crown"></i> القالب الملكي الكلاسيكي
+                            </a>
                         </div>
                     </div>
                     <a href="#home" class="nav-link">الرئيسية</a>
