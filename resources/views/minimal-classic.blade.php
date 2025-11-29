@@ -346,25 +346,60 @@
         .hero-text {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
         }
         
-        .hero-title {
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: var(--green-gradient);
+            color: var(--warm-white);
+            border: 2px solid var(--accent-dark);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            width: fit-content;
+            box-shadow: 0 4px 20px var(--shadow-gold), 0 2px 8px rgba(26, 15, 10, 0.3);
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-badge i {
+            margin-left: 0.5rem;
+        }
+        
+        .hero-name {
             font-family: 'SaudiWeb', sans-serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
             color: var(--text-primary);
-            line-height: 1.3;
+            line-height: 1.2;
             margin: 0;
             text-shadow: 0 2px 10px var(--shadow-gold);
         }
         
-        .hero-description {
-            font-size: 1.1rem;
+        .hero-title {
+            font-family: 'SaudiWeb', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.4;
             margin: 0;
-            font-weight: 500;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--accent-dark);
+            line-height: 1.4;
+            margin: 0.5rem 0 0 0;
+            font-weight: 600;
+        }
+        
+        .hero-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0.5rem 0 0 0;
+            font-weight: 400;
         }
         
         .hero-buttons {
@@ -498,14 +533,28 @@
                 order: -1;
             }
             
-            .hero-title {
-                font-size: 2rem;
+            .hero-badge {
+                margin: 0 auto;
+            }
+            
+            .hero-name {
+                font-size: 2.5rem;
                 text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 1.3rem;
+                text-align: center;
+            }
+            
+            .hero-subtitle {
+                text-align: center;
+                font-size: 1.1rem;
             }
             
             .hero-description {
                 text-align: center;
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
             
             .hero-buttons {
@@ -518,12 +567,24 @@
                 padding: 2rem 0;
             }
             
+            .hero-name {
+                font-size: 2rem;
+            }
+            
             .hero-title {
-                font-size: 1.75rem;
+                font-size: 1.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
             }
             
             .hero-description {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
+            }
+            
+            .services-title {
+                font-size: 2rem;
             }
             
             .hero-buttons {
@@ -547,12 +608,24 @@
                 padding: 1.5rem 0;
             }
             
+            .hero-name {
+                font-size: 1.75rem;
+            }
+            
             .hero-title {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.95rem;
             }
             
             .hero-description {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
+            }
+            
+            .services-title {
+                font-size: 1.75rem;
             }
         }
         
@@ -618,6 +691,35 @@
             max-width: 500px;
             margin: 0 auto 1rem;
             line-height: 1.4;
+        }
+        
+        /* Services Title Section */
+        .services-title-section {
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+        }
+        
+        .services-title {
+            font-family: 'SaudiWeb', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin: 0;
+            text-shadow: 0 2px 10px var(--shadow-gold);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .services-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: var(--green-gradient);
+            border-radius: 2px;
         }
         
         /* Services Grid */
@@ -1322,8 +1424,14 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">تقييم احترافي للأحجار الكريمة والماس</h1>
-                    <p class="hero-description">خبرة 20 عاماً في تقييم الأحجار واعتماد شهادات دقيقة ومعتمدة.</p>
+                    <div class="hero-badge">
+                        <i class="fas fa-certificate"></i>
+                        خبير معتمد في تقييم المجوهرات
+                    </div>
+                    <h1 class="hero-name">سلطان المسعري</h1>
+                    <h2 class="hero-title">خبير تقييم المجوهرات والأحجار الكريمة</h2>
+                    <p class="hero-subtitle">تقييم احترافي للأحجار الكريمة والماس</p>
+                    <p class="hero-description">خبرة 20 عاماً في تقييم الأحجار واعتماد شهادات دقيقة ومعتمدة. استشارات سريعة وتقارير احترافية معتمدة لتقييم مجوهراتك وأحجارك الكريمة بدقة وشفافية عالية.</p>
                     <div class="hero-buttons">
                         <a href="https://wa.me/966500000000" target="_blank" class="hero-btn hero-btn-primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
                             <i class="fab fa-whatsapp"></i>
@@ -1351,20 +1459,9 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Header Section -->
-            <div class="header-section">
-                <div class="header-badge">
-                    <i class="fas fa-certificate"></i>
-                    خبير معتمد في تقييم المجوهرات
-                </div>
-                <div class="header-icon">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h1 class="header-title">سلطان المسعري</h1>
-                <p class="header-subtitle">خبير تقييم المجوهرات والأحجار الكريمة</p>
-                <p class="header-description">
-                    استشارات سريعة وتقارير احترافية معتمدة لتقييم مجوهراتك وأحجارك الكريمة بدقة وشفافية عالية
-                </p>
+            <!-- Services Section Title -->
+            <div class="services-title-section">
+                <h2 class="services-title">الخدمات</h2>
             </div>
             
             <!-- Services Grid -->
