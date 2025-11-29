@@ -908,6 +908,195 @@
             box-shadow: 0 6px 20px var(--shadow-gold);
         }
         
+        /* About Section */
+        .about-section {
+            background: var(--velvet-gradient);
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 10px 35px var(--shadow), 0 0 20px rgba(184, 150, 90, 0.2), inset 0 1px 3px rgba(184, 150, 90, 0.15);
+            position: relative;
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(184, 150, 90, 0.08) 0%, transparent 70%);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .about-section-title {
+            font-family: 'SaudiWeb', sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            text-align: center;
+            text-shadow: 0 2px 10px var(--shadow-gold);
+        }
+        
+        .about-name {
+            font-family: 'SaudiWeb', sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin: 0;
+            text-shadow: 0 2px 10px var(--shadow-gold);
+        }
+        
+        .about-subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-dark);
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+        
+        .about-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin: 0;
+            text-align: justify;
+        }
+        
+        .about-video-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px var(--shadow), 0 0 30px var(--shadow-gold);
+            border: 3px solid var(--accent);
+            background: var(--secondary);
+            padding: 0.5rem;
+            max-height: 600px;
+            aspect-ratio: 16 / 9;
+        }
+        
+        .about-video-wrapper video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+        
+        .about-video-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(184, 150, 90, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            border-radius: 12px;
+        }
+        
+        /* About Section Responsive */
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-video-wrapper {
+                order: -1;
+            }
+            
+            .about-section-title {
+                font-size: 1.75rem;
+            }
+            
+            .about-name {
+                font-size: 1.75rem;
+                text-align: center;
+            }
+            
+            .about-subtitle {
+                text-align: center;
+                font-size: 1.1rem;
+            }
+            
+            .about-description {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 2rem 1.5rem;
+                margin: 2rem 0;
+            }
+            
+            .about-section-title {
+                font-size: 1.5rem;
+            }
+            
+            .about-name {
+                font-size: 1.5rem;
+            }
+            
+            .about-subtitle {
+                font-size: 1rem;
+            }
+            
+            .about-description {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+            
+            .about-video-wrapper {
+                max-height: 450px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-section {
+                padding: 1.5rem 1rem;
+                margin: 1.5rem 0;
+            }
+            
+            .about-section-title {
+                font-size: 1.3rem;
+            }
+            
+            .about-name {
+                font-size: 1.3rem;
+            }
+            
+            .about-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .about-description {
+                font-size: 0.9rem;
+            }
+            
+            .about-video-wrapper {
+                max-height: 350px;
+            }
+        }
+        
         /* Contact Section */
         .contact-section {
             background: var(--velvet-gradient);
@@ -1568,6 +1757,30 @@
                     <a href="tel:+966500000000" class="service-btn free">احجز مجاناً</a>
                 </div>
             </div>
+            
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="container">
+                    <h2 class="about-section-title">نبذة تعريفية للموقع</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3 class="about-name">سلطان المسعري</h3>
+                            <p class="about-subtitle">خبير أحجار كريمة ومدير تنفيذي في صناعة المجوهرات</p>
+                            <div class="about-description">
+                                <p>يُعد أحد أبرز الخبراء السعوديين في علوم الأحجار الكريمة وتقييم المجوهرات، بخبرة تمتد لأكثر من 20 عامًا في الفحص، التدرّج، والتحليل المخبري وفق أعلى المعايير الدولية. يحمل اعتماد ISO/IEC 17025 لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من GIA، HRD، IGI، وDNA Diamonds، مما يجعله مرجعًا موثوقًا في هذا المجال.</p>
+                                <p>يشغل سلطان عدة مناصب في اللجان الوطنية للمعادن الثمينة والأحجار الكريمة، ويقود منشآت متخصصة في التقييم وخدمات المختبر، مع خبرة واسعة في تقييم المواريث والممتلكات وإصدار التقارير الفنية المعتمدة، إلى جانب دوره في تطوير العلامات التجارية للمجوهرات وبناء الهويات الفاخرة.</p>
+                                <p>أسس وأدار شركات رائدة في قطاع المجوهرات، ويقدم اليوم خدمات تقييم دقيقة ومعتمدة، قائمة على المعرفة العلمية، والانضباط المهني، والجودة العالية لضمان حقوق العملاء وثقتهم.</p>
+                            </div>
+                        </div>
+                        <div class="about-video-wrapper">
+                            <video controls autoplay muted loop playsinline>
+                                <source src="{{ asset('sul_video.mp4') }}" type="video/mp4">
+                                متصفحك لا يدعم تشغيل الفيديو.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
             <!-- Contact Section -->
             <div class="contact-section">
