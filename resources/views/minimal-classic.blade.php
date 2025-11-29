@@ -307,6 +307,255 @@
             margin-left: 0.5rem;
         }
         
+        /* Hero Section */
+        .hero-section {
+            background: var(--velvet-gradient);
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--accent);
+            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(184, 150, 90, 0.2);
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(184, 150, 90, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .hero-title {
+            font-family: 'SaudiWeb', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin: 0;
+            text-shadow: 0 2px 10px var(--shadow-gold);
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+        
+        .hero-btn {
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'SaudiWeb', sans-serif;
+            box-shadow: 0 6px 20px var(--shadow-gold);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .hero-btn:hover::before {
+            left: 100%;
+        }
+        
+        .hero-btn-primary {
+            background: var(--green-gradient);
+            color: var(--warm-white);
+            border: 2px solid var(--accent-dark);
+        }
+        
+        .hero-btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--shadow-gold);
+        }
+        
+        .hero-btn-secondary {
+            background: var(--secondary);
+            color: var(--text-primary);
+            border: 2px solid var(--accent);
+        }
+        
+        .hero-btn-secondary:hover {
+            background: var(--tertiary);
+            border-color: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--shadow-gold);
+        }
+        
+        .hero-btn-tertiary {
+            background: var(--accent);
+            color: var(--warm-white);
+            border: 2px solid var(--accent-dark);
+        }
+        
+        .hero-btn-tertiary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--shadow-gold);
+        }
+        
+        .hero-btn i {
+            font-size: 1.2rem;
+        }
+        
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px var(--shadow), 0 0 30px var(--shadow-gold);
+            border: 3px solid var(--accent);
+            background: var(--secondary);
+            padding: 0.5rem;
+        }
+        
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+        
+        .hero-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(184, 150, 90, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            border-radius: 15px;
+        }
+        
+        /* Hero Section Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+                text-align: center;
+            }
+            
+            .hero-description {
+                text-align: center;
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 2rem 0;
+            }
+            
+            .hero-title {
+                font-size: 1.75rem;
+            }
+            
+            .hero-description {
+                font-size: 0.95rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .hero-image-wrapper {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 1.5rem 0;
+            }
+            
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            
+            .hero-description {
+                font-size: 0.9rem;
+            }
+        }
+        
         /* Main Content - Single Screen Layout */
         .main-content {
             padding: 1rem 0;
@@ -379,6 +628,7 @@
             margin-bottom: 1.5rem;
             width: 100%;
             align-items: start;
+            scroll-margin-top: 100px;
         }
         
         @media (min-width: 1200px) {
@@ -702,6 +952,7 @@
             background: #F8F0E0 !important;
             background-color: #F8F0E0 !important;
             min-height: 100vh !important;
+            scroll-behavior: smooth;
         }
         
         /* Extra viewport protection */
@@ -1066,6 +1317,37 @@
         </div>
     </nav>
     
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">تقييم احترافي للأحجار الكريمة والماس</h1>
+                    <p class="hero-description">خبرة 20 عاماً في تقييم الأحجار واعتماد شهادات دقيقة ومعتمدة.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/966500000000" target="_blank" class="hero-btn hero-btn-primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
+                            <i class="fab fa-whatsapp"></i>
+                            واتساب
+                        </a>
+                        <a href="tel:+966500000000" class="hero-btn hero-btn-secondary" style="color: #1A0F0A !important; text-decoration: none !important;">
+                            <i class="fas fa-phone"></i>
+                            اتصال
+                        </a>
+                        <a href="#services" class="hero-btn hero-btn-tertiary" style="color: #FFFEF7 !important; text-decoration: none !important;">
+                            <i class="fas fa-clipboard-list"></i>
+                            طلب تقييم
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="{{ asset('sultan_img.jpg') }}" alt="سلطان المسعري - خبير تقييم المجوهرات">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
@@ -1086,7 +1368,7 @@
             </div>
             
             <!-- Services Grid -->
-            <div class="services-container">
+            <div id="services" class="services-container">
                 <!-- الاستشارات الفورية -->
                 <div class="service-card featured">
                     <div class="service-badge">الأكثر طلباً</div>
