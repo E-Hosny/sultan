@@ -200,12 +200,15 @@
             border-bottom: 2px solid var(--accent);
             padding: 1rem 0;
             box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(184, 150, 90, 0.2);
+            position: relative;
+            z-index: 1000;
         }
         
         .navbar-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
         
         .navbar-brand {
@@ -218,11 +221,115 @@
             align-items: center;
             gap: 0.75rem;
             text-shadow: 0 2px 10px var(--shadow-gold);
+            margin-left: 2rem;
         }
         
         .navbar-brand i {
             color: var(--accent);
             font-size: 1.25rem;
+        }
+        
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 2rem;
+        }
+        
+        .navbar-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+            font-family: 'SaudiWeb', sans-serif;
+        }
+        
+        .navbar-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .navbar-link:hover {
+            color: var(--accent);
+        }
+        
+        .navbar-link:hover::after {
+            width: 100%;
+        }
+        
+        .navbar-link.active {
+            color: var(--accent-dark);
+            font-weight: 700;
+        }
+        
+        .navbar-link.active::after {
+            width: 100%;
+            background: var(--accent-dark);
+            height: 3px;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 120px;
+            right: 0;
+            left: 0;
+            background: rgba(255, 254, 247, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid var(--accent);
+            box-shadow: 0 4px 25px var(--shadow);
+            padding: 1rem;
+            z-index: 9999;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu .navbar-link {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .mobile-menu .navbar-link:last-child {
+            border-bottom: none;
+        }
+        
+        .mobile-menu .navbar-link:hover {
+            background: var(--tertiary);
+            color: var(--accent);
+        }
+        
+        .mobile-menu .navbar-link.active {
+            background: rgba(184, 150, 90, 0.1);
+            color: var(--accent-dark);
+            border-right: 3px solid var(--accent-dark);
         }
         
         .template-selector {
@@ -1361,13 +1468,47 @@
         /* Mobile Menu */
         .mobile-menu-toggle {
             display: none;
-            background: var(--secondary);
-            border: 1px solid var(--border-light);
+            background: transparent;
+            border: none;
             color: var(--text-primary);
-            font-size: 1.25rem;
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
+            font-size: 1.5rem;
             cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                margin-right: 1rem;
+            }
+            
+            .navbar-content {
+                position: relative;
+            }
+            
+            .navbar-brand {
+                margin-left: 1rem;
+            }
+            
+            .mobile-menu {
+                animation: slideDown 0.3s ease;
+                top: 110px;
+            }
+            
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
         }
         
         /* Force mobile styles */
@@ -1732,16 +1873,31 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <a href="{{ route('home') }}" class="navbar-brand">
+                <a href="#hero" class="navbar-brand">
                     <i class="fas fa-gem"></i>
                     سلطان المسعري
                 </a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-links">
+                    <a href="#hero" class="navbar-link">الرئيسية</a>
+                    <a href="#services" class="navbar-link">الخدمات</a>
+                    <a href="#about" class="navbar-link">عن الخبير</a>
+                    <a href="#contact" class="navbar-link">تواصل معنا</a>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="#hero" class="navbar-link" onclick="toggleMobileMenu()">الرئيسية</a>
+                    <a href="#services" class="navbar-link" onclick="toggleMobileMenu()">الخدمات</a>
+                    <a href="#about" class="navbar-link" onclick="toggleMobileMenu()">عن الخبير</a>
+                    <a href="#contact" class="navbar-link" onclick="toggleMobileMenu()">تواصل معنا</a>
+                </div>
             </div>
         </div>
     </nav>
     
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section id="hero" class="hero-section">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -1848,7 +2004,7 @@
             </div>
             
             <!-- About Section -->
-            <section class="about-section">
+            <section id="about" class="about-section">
                 <div class="container">
                     <h2 class="about-section-title">عن الخبير سلطان المسعري</h2>
                     <p class="about-short-desc">خبير أحجار كريمة بخبرة 20 عامًا في التحليل والتقييم المعتمد.</p>
@@ -1889,7 +2045,7 @@
             </section>
             
             <!-- Contact Section -->
-            <div class="contact-section">
+            <div id="contact" class="contact-section">
                 <h3 class="contact-title">تواصل معنا الآن</h3>
                 <div class="contact-methods">
                     <div class="contact-method">
@@ -1957,6 +2113,22 @@
     </footer>
     
     <script>
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (mobileMenu && mobileMenuToggle && !mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+        
         // Toggle About More Text
         function toggleAboutMore() {
             const moreText = document.getElementById('aboutMore');
@@ -1974,6 +2146,57 @@
                 btnIcon.className = 'fas fa-chevron-up';
             }
         }
+        
+        // Active Section Indicator
+        const sections = document.querySelectorAll('section[id], div[id]');
+        const navLinks = document.querySelectorAll('.navbar-link');
+        
+        const sectionObserverOptions = {
+            threshold: 0.3,
+            rootMargin: '-100px 0px -50% 0px'
+        };
+        
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, sectionObserverOptions);
+        
+        sections.forEach(section => {
+            if (section.id) {
+                sectionObserver.observe(section);
+            }
+        });
+        
+        // Set active link on page load
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetSection = document.querySelector(hash);
+                if (targetSection) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === hash) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            } else {
+                // Set first link as active by default
+                const firstLink = document.querySelector('.navbar-link[href="#hero"]');
+                if (firstLink) {
+                    firstLink.classList.add('active');
+                }
+            }
+        });
         
         // Intersection Observer for animations
         const observerOptions = {
