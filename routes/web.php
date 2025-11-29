@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
-// الصفحة الرئيسية - عامة للجميع
-Route::get('/', [HomeController::class, 'index'])->name('home');
+// الصفحة الرئيسية - تصميم minimal-classic
+Route::get('/', function () {
+    return view('minimal-classic');
+})->name('home');
 
 // صفحة Laravel الفاخرة
 Route::get('/laravel', function () {

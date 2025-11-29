@@ -1058,41 +1058,10 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <a href="#" class="navbar-brand">
+                <a href="{{ route('home') }}" class="navbar-brand">
                     <i class="fas fa-gem"></i>
                     سلطان المسعري
                 </a>
-                
-                <div class="template-selector">
-                    <button class="template-btn" onclick="toggleTemplateDropdown()">
-                        <i class="fas fa-palette"></i>
-                        اختر القالب
-                        <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
-                    </button>
-                    <div class="template-dropdown" id="templateDropdown">
-                        <a href="{{ route('switch.template', 'home') }}" class="template-option">
-                            <i class="fas fa-star"></i> القالب الكلاسيكي
-                        </a>
-                        <a href="{{ route('switch.template', 'laravel') }}" class="template-option">
-                            <i class="fas fa-gem"></i> القالب الفاخر
-                        </a>
-                        <a href="{{ route('switch.template', 'modern') }}" class="template-option">
-                            <i class="fas fa-rocket"></i> القالب العصري
-                        </a>
-                        <a href="{{ route('switch.template', 'minimal') }}" class="template-option">
-                            <i class="fas fa-circle"></i> القالب البسيط
-                        </a>
-                        <a href="{{ route('switch.template', 'minimal-classic') }}" class="template-option active">
-                            <i class="fas fa-palette"></i> القالب البسيط الكلاسيكي
-                        </a>
-                        <a href="{{ route('switch.template', 'emerald-classic') }}" class="template-option">
-                            <i class="fas fa-gem"></i> القالب الزمردي الكلاسيكي
-                        </a>
-                        <a href="{{ route('switch.template', 'royal-classic') }}" class="template-option">
-                            <i class="fas fa-crown"></i> القالب الملكي الكلاسيكي
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </nav>
@@ -1233,22 +1202,6 @@
     </footer>
     
     <script>
-        // Toggle template dropdown
-        function toggleTemplateDropdown() {
-            const dropdown = document.getElementById('templateDropdown');
-            dropdown.classList.toggle('active');
-        }
-        
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function(event) {
-            const templateSelector = document.querySelector('.template-selector');
-            const dropdown = document.getElementById('templateDropdown');
-            
-            if (!templateSelector.contains(event.target)) {
-                dropdown.classList.remove('active');
-            }
-        });
-        
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
