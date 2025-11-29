@@ -933,8 +933,8 @@
         
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4.5rem;
             align-items: center;
             position: relative;
             z-index: 1;
@@ -951,9 +951,18 @@
             font-size: 2rem;
             font-weight: bold;
             color: var(--text-primary);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             text-align: center;
             text-shadow: 0 2px 10px var(--shadow-gold);
+        }
+        
+        .about-short-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            line-height: 1.6;
         }
         
         .about-name {
@@ -973,11 +982,91 @@
         }
         
         .about-description {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
             line-height: 1.8;
             margin: 0;
             text-align: justify;
+        }
+        
+        .about-description p {
+            margin-bottom: 1.25rem;
+        }
+        
+        .about-description p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .about-description-more {
+            display: none;
+        }
+        
+        .about-description-more.show {
+            display: block;
+        }
+        
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent);
+            color: var(--warm-white);
+            border: 2px solid var(--accent-dark);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'SaudiWeb', sans-serif;
+            box-shadow: 0 4px 15px var(--shadow-gold);
+        }
+        
+        .read-more-btn:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-gold);
+        }
+        
+        .read-more-btn i {
+            font-size: 0.85rem;
+        }
+        
+        .tech-info-inline {
+            color: var(--rich-brown);
+            font-weight: 700;
+        }
+        
+        .tech-info {
+            color: var(--rich-brown);
+            font-weight: 600;
+            margin: 0.75rem 0 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .tech-info-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.75rem;
+            background: rgba(184, 150, 90, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(184, 150, 90, 0.3);
+            transition: all 0.2s ease;
+        }
+        
+        .tech-info-item:hover {
+            background: rgba(184, 150, 90, 0.15);
+            border-color: var(--accent);
+        }
+        
+        .tech-info-item i {
+            color: var(--accent);
+            font-size: 0.85rem;
         }
         
         .about-video-wrapper {
@@ -1016,7 +1105,7 @@
         @media (max-width: 1024px) {
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 2.5rem;
             }
             
             .about-video-wrapper {
@@ -1761,15 +1850,32 @@
             <!-- About Section -->
             <section class="about-section">
                 <div class="container">
-                    <h2 class="about-section-title">نبذة تعريفية للموقع</h2>
+                    <h2 class="about-section-title">عن الخبير سلطان المسعري</h2>
+                    <p class="about-short-desc">خبير أحجار كريمة بخبرة 20 عامًا في التحليل والتقييم المعتمد.</p>
                     <div class="about-content">
                         <div class="about-text">
                             <h3 class="about-name">سلطان المسعري</h3>
                             <p class="about-subtitle">خبير أحجار كريمة ومدير تنفيذي في صناعة المجوهرات</p>
                             <div class="about-description">
-                                <p>يُعد أحد أبرز الخبراء السعوديين في علوم الأحجار الكريمة وتقييم المجوهرات، بخبرة تمتد لأكثر من 20 عامًا في الفحص، التدرّج، والتحليل المخبري وفق أعلى المعايير الدولية. يحمل اعتماد ISO/IEC 17025 لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من GIA، HRD، IGI، وDNA Diamonds، مما يجعله مرجعًا موثوقًا في هذا المجال.</p>
-                                <p>يشغل سلطان عدة مناصب في اللجان الوطنية للمعادن الثمينة والأحجار الكريمة، ويقود منشآت متخصصة في التقييم وخدمات المختبر، مع خبرة واسعة في تقييم المواريث والممتلكات وإصدار التقارير الفنية المعتمدة، إلى جانب دوره في تطوير العلامات التجارية للمجوهرات وبناء الهويات الفاخرة.</p>
-                                <p>أسس وأدار شركات رائدة في قطاع المجوهرات، ويقدم اليوم خدمات تقييم دقيقة ومعتمدة، قائمة على المعرفة العلمية، والانضباط المهني، والجودة العالية لضمان حقوق العملاء وثقتهم.</p>
+                                <p>يُعد أحد أبرز الخبراء السعوديين في علوم الأحجار الكريمة وتقييم المجوهرات، بخبرة تمتد لأكثر من 20 عامًا في الفحص، التدرّج، والتحليل المخبري وفق أعلى المعايير الدولية.</p>
+                                <p>يحمل اعتماد <strong class="tech-info-inline">ISO/IEC 17025</strong> لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من:</p>
+                                <div class="tech-info">
+                                    <span class="tech-info-item"><i class="fas fa-certificate"></i> GIA</span>
+                                    <span class="tech-info-item"><i class="fas fa-certificate"></i> HRD</span>
+                                    <span class="tech-info-item"><i class="fas fa-certificate"></i> IGI</span>
+                                    <span class="tech-info-item"><i class="fas fa-certificate"></i> DNA Diamonds</span>
+                                </div>
+                                <p>مما يجعله مرجعًا موثوقًا في هذا المجال.</p>
+                                <div class="about-description-more" id="aboutMore">
+                                    <p>يشغل سلطان عدة مناصب في اللجان الوطنية للمعادن الثمينة والأحجار الكريمة، ويقود منشآت متخصصة في التقييم وخدمات المختبر.</p>
+                                    <p>مع خبرة واسعة في تقييم المواريث والممتلكات وإصدار التقارير الفنية المعتمدة، إلى جانب دوره في تطوير العلامات التجارية للمجوهرات وبناء الهويات الفاخرة.</p>
+                                    <p>أسس وأدار شركات رائدة في قطاع المجوهرات، ويقدم اليوم خدمات تقييم دقيقة ومعتمدة.</p>
+                                    <p>قائمة على المعرفة العلمية، والانضباط المهني، والجودة العالية لضمان حقوق العملاء وثقتهم.</p>
+                                </div>
+                                <button class="read-more-btn" onclick="toggleAboutMore()" id="readMoreBtn">
+                                    <i class="fas fa-chevron-down"></i>
+                                    <span>قراءة المزيد</span>
+                                </button>
                             </div>
                         </div>
                         <div class="about-video-wrapper">
@@ -1851,6 +1957,24 @@
     </footer>
     
     <script>
+        // Toggle About More Text
+        function toggleAboutMore() {
+            const moreText = document.getElementById('aboutMore');
+            const btn = document.getElementById('readMoreBtn');
+            const btnText = btn.querySelector('span');
+            const btnIcon = btn.querySelector('i');
+            
+            if (moreText.classList.contains('show')) {
+                moreText.classList.remove('show');
+                btnText.textContent = 'قراءة المزيد';
+                btnIcon.className = 'fas fa-chevron-down';
+            } else {
+                moreText.classList.add('show');
+                btnText.textContent = 'قراءة أقل';
+                btnIcon.className = 'fas fa-chevron-up';
+            }
+        }
+        
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
