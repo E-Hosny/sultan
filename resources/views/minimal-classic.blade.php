@@ -367,6 +367,27 @@
             margin-left: 0.5rem;
         }
         
+        .hero-features {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .hero-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .hero-feature-item i {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+        
         .hero-name {
             font-family: 'SaudiWeb', sans-serif;
             font-size: 3rem;
@@ -407,22 +428,23 @@
             gap: 1rem;
             flex-wrap: wrap;
             margin-top: 0.5rem;
+            align-items: stretch;
         }
         
         .hero-btn {
-            padding: 1.25rem 2.5rem;
-            border-radius: 12px;
+            padding: 0.875rem 1.75rem;
+            border-radius: 10px;
             font-weight: bold;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             border: none;
             cursor: pointer;
             font-family: 'SaudiWeb', sans-serif;
-            box-shadow: 0 6px 20px var(--shadow-gold);
+            box-shadow: 0 4px 15px var(--shadow-gold);
             position: relative;
             overflow: hidden;
         }
@@ -446,6 +468,11 @@
             background: var(--green-gradient);
             color: var(--warm-white);
             border: 2px solid var(--accent-dark);
+            padding: 0.875rem 1.75rem;
+            font-size: 0.95rem;
+            flex: 1;
+            min-width: 160px;
+            justify-content: center;
         }
         
         .hero-btn-primary:hover {
@@ -454,27 +481,17 @@
             box-shadow: 0 8px 30px var(--shadow-gold);
         }
         
-        .hero-btn-secondary {
-            background: var(--secondary);
+        .hero-btn-outline {
+            background: transparent;
             color: var(--text-primary);
             border: 2px solid var(--accent);
+            flex: 1;
+            min-width: 100px;
         }
         
-        .hero-btn-secondary:hover {
+        .hero-btn-outline:hover {
             background: var(--tertiary);
             border-color: var(--accent-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px var(--shadow-gold);
-        }
-        
-        .hero-btn-tertiary {
-            background: var(--accent);
-            color: var(--warm-white);
-            border: 2px solid var(--accent-dark);
-        }
-        
-        .hero-btn-tertiary:hover {
-            background: var(--accent-dark);
             transform: translateY(-2px);
             box-shadow: 0 8px 30px var(--shadow-gold);
         }
@@ -537,6 +554,11 @@
                 margin: 0 auto;
             }
             
+            .hero-features {
+                justify-content: center;
+                gap: 1rem;
+            }
+            
             .hero-name {
                 font-size: 2.5rem;
                 text-align: center;
@@ -559,6 +581,12 @@
             
             .hero-buttons {
                 justify-content: center;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: center;
             }
         }
         
@@ -594,8 +622,23 @@
             .hero-btn {
                 width: 100%;
                 justify-content: center;
-                padding: 1rem 2rem;
-                font-size: 1rem;
+                padding: 0.875rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero-btn-primary {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: flex-start;
+            }
+            
+            .hero-feature-item {
+                font-size: 0.85rem;
             }
             
             .hero-image-wrapper {
@@ -1431,19 +1474,33 @@
                     <h1 class="hero-name">سلطان المسعري</h1>
                     <h2 class="hero-title">خبير تقييم المجوهرات والأحجار الكريمة</h2>
                     <p class="hero-subtitle">تقييم احترافي للأحجار الكريمة والماس</p>
-                    <p class="hero-description">خبرة 20 عاماً في تقييم الأحجار واعتماد شهادات دقيقة ومعتمدة. استشارات سريعة وتقارير احترافية معتمدة لتقييم مجوهراتك وأحجارك الكريمة بدقة وشفافية عالية.</p>
+                    <p class="hero-description">تقييم احترافي للأحجار الكريمة والماس مع تقارير موثوقة ومعتمدة.</p>
+                    <div class="hero-features">
+                        <div class="hero-feature-item">
+                            <i class="fas fa-star"></i>
+                            <span>خبرة أكثر من 20 سنة</span>
+                        </div>
+                        <div class="hero-feature-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>تقارير تقييم معتمدة</span>
+                        </div>
+                        <div class="hero-feature-item">
+                            <i class="fas fa-gem"></i>
+                            <span>تخصص في الماس والأحجار الكريمة</span>
+                        </div>
+                    </div>
                     <div class="hero-buttons">
-                        <a href="https://wa.me/966500000000" target="_blank" class="hero-btn hero-btn-primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
-                            <i class="fab fa-whatsapp"></i>
-                            واتساب
-                        </a>
-                        <a href="tel:+966500000000" class="hero-btn hero-btn-secondary" style="color: #1A0F0A !important; text-decoration: none !important;">
-                            <i class="fas fa-phone"></i>
-                            اتصال
-                        </a>
-                        <a href="#services" class="hero-btn hero-btn-tertiary" style="color: #FFFEF7 !important; text-decoration: none !important;">
+                        <a href="#services" class="hero-btn hero-btn-primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
                             <i class="fas fa-clipboard-list"></i>
                             طلب تقييم
+                        </a>
+                        <a href="https://wa.me/966500000000" target="_blank" class="hero-btn hero-btn-outline" style="color: #1A0F0A !important; text-decoration: none !important;">
+                            <i class="fab fa-whatsapp"></i>
+                            تواصل عبر واتساب
+                        </a>
+                        <a href="tel:+966500000000" class="hero-btn hero-btn-outline" style="color: #1A0F0A !important; text-decoration: none !important;">
+                            <i class="fas fa-phone"></i>
+                            اتصال
                         </a>
                     </div>
                 </div>
