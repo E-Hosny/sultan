@@ -562,9 +562,10 @@
             height: auto;
             display: block;
             object-fit: contain;
-            filter: drop-shadow(0 15px 40px rgba(26, 15, 10, 0.2)) 
-                    drop-shadow(0 8px 20px rgba(184, 150, 90, 0.25)) 
-                    drop-shadow(0 4px 10px rgba(184, 150, 90, 0.15));
+            filter: drop-shadow(0 20px 50px rgba(26, 15, 10, 0.25)) 
+                    drop-shadow(0 12px 30px rgba(184, 150, 90, 0.3)) 
+                    drop-shadow(0 6px 15px rgba(184, 150, 90, 0.2))
+                    drop-shadow(0 2px 5px rgba(26, 15, 10, 0.15));
         }
         
         /* Hero Section Responsive */
