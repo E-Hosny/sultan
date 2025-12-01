@@ -103,96 +103,6 @@
             padding: 0 1rem;
         }
         
-        /* Quick Contact Bar */
-        .quick-contact-bar {
-            background: var(--green-gradient);
-            color: var(--warm-white);
-            padding: 0.75rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 200;
-            box-shadow: 0 4px 25px var(--shadow), 0 2px 10px rgba(184, 150, 90, 0.3);
-            border-bottom: 2px solid var(--accent-dark);
-        }
-        
-        .quick-contact-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-        }
-        
-        .contact-item i {
-            color: var(--warm-white);
-            width: 16px;
-        }
-        
-        .contact-item a {
-            color: var(--warm-white) !important;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .contact-item a:hover {
-            color: var(--warm-white);
-            opacity: 0.9;
-        }
-        
-        .quick-actions {
-            display: flex;
-            gap: 0.75rem;
-            align-items: center;
-        }
-        
-        .quick-btn {
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.2s ease;
-        }
-        
-        .quick-btn.primary {
-            background: var(--accent);
-            color: var(--warm-white);
-            box-shadow: 0 4px 15px var(--shadow-gold);
-        }
-        
-        .quick-btn.primary:hover {
-            background: var(--deep-gold);
-            transform: translateY(-1px);
-        }
-        
-        .quick-btn.secondary {
-            background: rgba(184, 150, 90, 0.2);
-            color: var(--warm-white);
-            border: 1px solid var(--warm-white);
-        }
-        
-        .quick-btn.secondary:hover {
-            background: rgba(184, 150, 90, 0.3);
-            box-shadow: 0 4px 15px var(--shadow-gold);
-        }
-        
         /* Navigation */
         .navbar {
             background: rgba(255, 254, 247, 0.98);
@@ -291,7 +201,7 @@
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 120px;
+            top: 80px;
             right: 0;
             left: 0;
             background: rgba(255, 254, 247, 0.98);
@@ -300,7 +210,7 @@
             box-shadow: 0 4px 25px var(--shadow);
             padding: 1rem;
             z-index: 9999;
-            max-height: calc(100vh - 120px);
+            max-height: calc(100vh - 80px);
             overflow-y: auto;
         }
         
@@ -1496,7 +1406,7 @@
             
             .mobile-menu {
                 animation: slideDown 0.3s ease;
-                top: 110px;
+                top: 70px;
             }
             
             @keyframes slideDown {
@@ -1841,34 +1751,6 @@
     </style>
 </head>
 <body>
-    <!-- Quick Contact Bar -->
-    <div class="quick-contact-bar">
-        <div class="container">
-            <div class="quick-contact-content">
-                 <div class="contact-info">
-                     <span class="contact-item">
-                         <i class="fas fa-phone"></i>
-                         <a href="tel:+966500000000" style="color: #FFFEF7 !important; text-decoration: none !important;">+966 50 000 0000</a>
-                     </span>
-                     <span class="contact-item">
-                         <i class="fab fa-whatsapp"></i>
-                         <a href="https://wa.me/966500000000" target="_blank" style="color: #FFFEF7 !important; text-decoration: none !important;">واتساب</a>
-                     </span>
-                 </div>
-                <div class="quick-actions">
-                    <a href="tel:+966500000000" class="quick-btn primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
-                        <i class="fas fa-phone"></i>
-                        احجز الآن
-                    </a>
-                    <a href="https://wa.me/966500000000" class="quick-btn secondary" target="_blank" style="color: #FFFEF7 !important; text-decoration: none !important;">
-                        <i class="fab fa-whatsapp"></i>
-                        واتساب سريع
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
