@@ -1882,6 +1882,17 @@
             
             <!-- Services Grid -->
             <div id="services" class="services-container">
+                <!-- جلسة تعريفية -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="service-card-title">جلسة تعريفية</h3>
+                    <div class="service-price">مجاناً</div>
+                    <p class="service-description">جلسة تعريفية لمدة 20 دقيقة للتعرف على خدماتنا</p>
+                    <a href="tel:+966500000000" class="service-btn free">احجز مجاناً</a>
+                </div>
+                
                 <!-- الاستشارات الفورية -->
                 <div class="service-card featured">
                     <div class="service-badge">الأكثر طلباً</div>
@@ -1914,17 +1925,6 @@
                     <div class="service-price">1,500 ر.س</div>
                     <p class="service-description">استشارة شاملة لمدة 90 دقيقة مع خطة تطوير متكاملة</p>
                     <a href="tel:+966500000000" class="service-btn">احجز الآن</a>
-                </div>
-                
-                <!-- الاستشارة المجانية -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                    <h3 class="service-card-title">جلسة تعريفية</h3>
-                    <div class="service-price">مجاناً</div>
-                    <p class="service-description">جلسة تعريفية لمدة 20 دقيقة للتعرف على خدماتنا</p>
-                    <a href="tel:+966500000000" class="service-btn free">احجز مجاناً</a>
                 </div>
             </div>
             
