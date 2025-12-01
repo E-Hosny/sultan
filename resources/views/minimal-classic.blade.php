@@ -327,7 +327,7 @@
         /* Hero Section */
         .hero-section {
             background: var(--velvet-gradient);
-            padding: 3rem 0;
+            padding: 1.5rem 0 3rem 0;
             position: relative;
             overflow: hidden;
             border-bottom: 2px solid var(--accent);
@@ -355,15 +355,31 @@
         
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 1rem;
             align-items: center;
+            justify-items: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
         }
         
         .hero-text {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.75rem;
+            padding-right: 5rem;
+            padding-left: 3rem;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: -1.5rem;
         }
         
         .hero-badge {
@@ -386,23 +402,30 @@
         
         .hero-features {
             display: flex;
-            gap: 1.5rem;
-            margin: 1rem 0;
+            gap: 2rem;
+            margin: 2rem 0 0 0;
             flex-wrap: wrap;
         }
         
         .hero-feature-item {
             display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 0.5rem;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--text-secondary);
-            font-weight: 500;
+            font-weight: 600;
+            text-align: center;
         }
         
         .hero-feature-item i {
             color: var(--accent);
-            font-size: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .hero-feature-item:first-child i {
+            color: var(--accent);
         }
         
         .hero-name {
@@ -437,7 +460,7 @@
             color: var(--text-secondary);
             line-height: 1.7;
             margin: 0.5rem 0 0 0;
-            font-weight: 400;
+            font-weight: 500;
         }
         
         .hero-buttons {
@@ -485,10 +508,11 @@
             background: var(--green-gradient);
             color: var(--warm-white);
             border: 2px solid var(--accent-dark);
-            padding: 0.875rem 1.75rem;
+            padding: 0.875rem 1.5rem;
             font-size: 0.95rem;
-            flex: 1;
-            min-width: 160px;
+            width: auto;
+            min-width: 200px;
+            max-width: 280px;
             justify-content: center;
         }
         
@@ -528,32 +552,19 @@
             position: relative;
             width: 100%;
             max-width: 500px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px var(--shadow), 0 0 30px var(--shadow-gold);
-            border: 3px solid var(--accent);
-            background: var(--secondary);
-            padding: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         .hero-image-wrapper img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 15px;
-            object-fit: cover;
-        }
-        
-        .hero-image-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(184, 150, 90, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            border-radius: 15px;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 40px rgba(26, 15, 10, 0.2)) 
+                    drop-shadow(0 8px 20px rgba(184, 150, 90, 0.25)) 
+                    drop-shadow(0 4px 10px rgba(184, 150, 90, 0.15));
         }
         
         /* Hero Section Responsive */
@@ -601,9 +612,14 @@
             }
             
             .hero-features {
-                flex-direction: column;
-                gap: 0.75rem;
+                flex-direction: row;
+                gap: 1.5rem;
                 align-items: center;
+                justify-content: center;
+            }
+            
+            .hero-feature-item {
+                flex-direction: column;
             }
         }
         
@@ -649,13 +665,26 @@
             }
             
             .hero-features {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 0.75rem;
-                align-items: flex-start;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
             }
             
             .hero-feature-item {
+                flex-direction: column;
+                flex: 1;
+                min-width: 0;
                 font-size: 0.85rem;
+            }
+            
+            .hero-feature-item span {
+                font-size: 0.8rem;
+            }
+            
+            .hero-feature-item i {
+                font-size: 1.1rem;
             }
             
             .hero-image-wrapper {
@@ -1783,46 +1812,33 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="hero-badge">
-                        <i class="fas fa-certificate"></i>
-                        خبير معتمد في تقييم المجوهرات
-                    </div>
                     <h1 class="hero-name">سلطان المسعري</h1>
-                    <h2 class="hero-title">خبير تقييم المجوهرات والأحجار الكريمة</h2>
-                    <p class="hero-subtitle">تقييم احترافي للأحجار الكريمة والماس</p>
-                    <p class="hero-description">تقييم احترافي للأحجار الكريمة والماس مع تقارير موثوقة ومعتمدة.</p>
+                    <h2 class="hero-title">خبير المجوهرات والأحجار الكريمة</h2>
+                    <p class="hero-description">معايير معتمدة. دفعة عاشرة من المختبرات العالمية</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="hero-btn hero-btn-primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
+                            <i class="fas fa-calendar-check"></i>
+                            احجز استشارة الآن
+                        </a>
+                    </div>
                     <div class="hero-features">
                         <div class="hero-feature-item">
-                            <i class="fas fa-star"></i>
-                            <span>خبرة أكثر من 20 سنة</span>
-                        </div>
-                        <div class="hero-feature-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>تقارير تقييم معتمدة</span>
+                            <i class="fas fa-file-alt"></i>
+                            <span>تقارير معتمدة</span>
                         </div>
                         <div class="hero-feature-item">
                             <i class="fas fa-gem"></i>
-                            <span>تخصص في الماس والأحجار الكريمة</span>
+                            <span>فحص الأحجار</span>
                         </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#services" class="hero-btn hero-btn-primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
-                            <i class="fas fa-clipboard-list"></i>
-                            طلب تقييم
-                        </a>
-                        <a href="https://wa.me/966500000000" target="_blank" class="hero-btn hero-btn-outline" style="color: #1A0F0A !important; text-decoration: none !important;">
-                            <i class="fab fa-whatsapp"></i>
-                            تواصل عبر واتساب
-                        </a>
-                        <a href="tel:+966500000000" class="hero-btn hero-btn-outline" style="color: #1A0F0A !important; text-decoration: none !important;">
-                            <i class="fas fa-phone"></i>
-                            اتصال
-                        </a>
+                        <div class="hero-feature-item">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>تقديم الخدمات</span>
+                        </div>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="hero-image-wrapper">
-                        <img src="{{ asset('sultan_img.jpg') }}" alt="سلطان المسعري - خبير تقييم المجوهرات">
+                        <img src="{{ asset('sul-removebg-preview.png') }}" alt="سلطان المسعري - خبير تقييم المجوهرات">
                     </div>
                 </div>
             </div>
