@@ -463,7 +463,7 @@
             font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 1.5rem;
             font-weight: 600;
-            color: var(--text-secondary);
+            color: var(--accent);
             line-height: 1.4;
             margin: 0;
         }
@@ -1979,7 +1979,7 @@
                         </div>
                          <div class="method-content">
                              <h4>اتصل مباشرة</h4>
-                             <p style="color: #8B6914 !important;">+966 50 000 0000</p>
+                             <p style="color: #8B6914 !important;">0000 000 50 966+</p>
                          </div>
                     </div>
                     <div class="contact-method">
@@ -1988,7 +1988,7 @@
                         </div>
                          <div class="method-content">
                              <h4>واتساب سريع</h4>
-                             <p style="color: #8B6914 !important;">+966 50 000 0000</p>
+                             <p style="color: #8B6914 !important;">0000 000 50 966+</p>
                          </div>
                     </div>
                 </div>
