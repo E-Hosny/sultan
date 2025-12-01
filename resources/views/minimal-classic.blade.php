@@ -50,8 +50,8 @@
             
             /* متغيرات القالب البسيط مع ألوان كلاسيكية محسنة */
             --primary: #FFFEF7;
-            --secondary: #F8F0E0;
-            --tertiary: #F0E6D0;
+            --secondary: #FEFCF8;
+            --tertiary: #FDF9F3;
             --accent: #B8965A;
             --accent-light: #D4A85F;
             --accent-dark: #8B6914;
@@ -66,16 +66,16 @@
             --shadow: rgba(26, 15, 10, 0.25);
             --shadow-hover: rgba(26, 15, 10, 0.4);
             --shadow-gold: rgba(184, 150, 90, 0.4);
-            --gradient: linear-gradient(135deg, #F8F0E0 0%, #F0E6D0 50%, #FFFEF7 100%);
-            --velvet-gradient: linear-gradient(145deg, #F8F0E0 0%, #F0E6D0 25%, #FFFEF7 50%, #F0E6D0 75%, #F8F0E0 100%);
+            --gradient: linear-gradient(135deg, #FEFCF8 0%, #FDF9F3 50%, #FFFEF7 100%);
+            --velvet-gradient: linear-gradient(145deg, #FEFCF8 0%, #FDF9F3 25%, #FFFEF7 50%, #FDF9F3 75%, #FEFCF8 100%);
             --green-gradient: linear-gradient(135deg, #B8965A 0%, #8B6914 100%);
-            --warm-gradient: linear-gradient(135deg, #F8F0E0 0%, #F0E6D0 100%);
+            --warm-gradient: linear-gradient(135deg, #FEFCF8 0%, #FDF9F3 100%);
         }
         
         body {
             font-family: 'SaudiWeb', 'Inter', sans-serif;
-            background: var(--warm-gradient) !important;
-            background-color: #F8F0E0 !important;
+            background: #FEFCF8 !important;
+            background-color: #FEFCF8 !important;
             color: var(--text-primary) !important;
             line-height: 1.7;
             font-weight: 400;
@@ -91,7 +91,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(184, 150, 90, 0.15) 0%, transparent 70%) !important;
+            background: radial-gradient(ellipse at center, rgba(184, 150, 90, 0.08) 0%, transparent 70%) !important;
             pointer-events: none;
             z-index: -1;
         }
@@ -1423,8 +1423,8 @@
         
         /* Force mobile styles */
         html {
-            background: #F8F0E0 !important;
-            background-color: #F8F0E0 !important;
+            background: #FEFCF8 !important;
+            background-color: #FEFCF8 !important;
             min-height: 100vh !important;
             scroll-behavior: smooth;
         }
@@ -1451,13 +1451,13 @@
         /* Responsive */
         @media (max-width: 768px) {
             html {
-                background: #F8F0E0 !important;
-                background-color: #F8F0E0 !important;
+                background: #FEFCF8 !important;
+                background-color: #FEFCF8 !important;
             }
             
             body {
                 background: var(--warm-gradient) !important;
-                background-color: #F8F0E0 !important;
+                background-color: #FEFCF8 !important;
                 color: var(--text-primary) !important;
             }
             
@@ -1575,13 +1575,13 @@
         
         @media (max-width: 480px) {
             html {
-                background: #F8F0E0 !important;
-                background-color: #F8F0E0 !important;
+                background: #FEFCF8 !important;
+                background-color: #FEFCF8 !important;
             }
             
             body {
                 background: var(--warm-gradient) !important;
-                background-color: #F8F0E0 !important;
+                background-color: #FEFCF8 !important;
                 color: var(--text-primary) !important;
             }
             
