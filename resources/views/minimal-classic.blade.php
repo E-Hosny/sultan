@@ -1931,7 +1931,7 @@
             <!-- About Section -->
             <section id="about" class="about-section">
                 <div class="container">
-                    <h2 class="about-section-title">عن الخبير سلطان المسعري</h2>
+                    <h2 class="about-section-title">الخبير سلطان المسعري</h2>
                     <p class="about-short-desc">خبير أحجار كريمة بخبرة 20 عامًا في التحليل والتقييم المعتمد.</p>
                     <div class="about-content">
                         <div class="about-text">
