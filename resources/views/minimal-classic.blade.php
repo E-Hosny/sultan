@@ -14,7 +14,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* تحميل الخط السعودي */
+        /* تحميل الخطوط المخصصة */
+        @font-face {
+            font-family: 'Cairo';
+            src: url('{{ asset('fonts/Cairo-Bold.ttf') }}') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Tajawal';
+            src: url('{{ asset('fonts/Tajawal-Regular.ttf') }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        /* تحميل الخط السعودي (للاحتياط) */
         @font-face {
             font-family: 'SaudiWeb';
             src: url('{{ asset('fonts/SaudiWeb-Regular.woff') }}') format('woff');
@@ -72,8 +89,12 @@
             --warm-gradient: linear-gradient(135deg, #FEFCF8 0%, #FDF9F3 100%);
         }
         
+        p {
+            font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
+        }
+        
         body {
-            font-family: 'SaudiWeb', 'Inter', sans-serif;
+            font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
             background: #FEFCF8 !important;
             background-color: #FEFCF8 !important;
             color: var(--text-primary) !important;
@@ -122,7 +143,7 @@
         }
         
         .navbar-brand {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--text-primary);
@@ -429,7 +450,7 @@
         }
         
         .hero-name {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 3rem;
             font-weight: bold;
             color: var(--text-primary);
@@ -439,7 +460,7 @@
         }
         
         .hero-title {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 1.5rem;
             font-weight: 600;
             color: var(--text-secondary);
@@ -456,6 +477,7 @@
         }
         
         .hero-description {
+            font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
             font-size: 1rem;
             color: var(--text-secondary);
             line-height: 1.7;
@@ -760,7 +782,7 @@
         }
         
         .header-title {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 1.8rem;
             font-weight: bold;
             color: var(--text-primary);
@@ -790,7 +812,7 @@
         }
         
         .services-title {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 2.5rem;
             font-weight: bold;
             color: var(--text-primary);
@@ -899,7 +921,7 @@
         }
         
         .service-card-title {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 1.1rem;
             font-weight: bold;
             color: var(--text-primary);
@@ -908,7 +930,7 @@
         }
         
         .service-price {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
             color: var(--accent-dark);
@@ -917,6 +939,7 @@
         }
         
         .service-description {
+            font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
             color: var(--text-secondary);
             font-size: 0.85rem;
             margin-bottom: 1rem;
@@ -994,7 +1017,7 @@
         }
         
         .about-section-title {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 2rem;
             font-weight: bold;
             color: var(--text-primary);
@@ -1013,7 +1036,7 @@
         }
         
         .about-name {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 2rem;
             font-weight: bold;
             color: var(--text-primary);
@@ -1029,6 +1052,7 @@
         }
         
         .about-description {
+            font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
             font-size: 0.9rem;
             color: var(--text-secondary);
             line-height: 1.8;
@@ -1037,6 +1061,7 @@
         }
         
         .about-description p {
+            font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
             margin-bottom: 1.25rem;
         }
         
@@ -1245,7 +1270,7 @@
         }
         
         .contact-title {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 1.3rem;
             font-weight: bold;
             color: var(--text-primary);
@@ -1300,6 +1325,7 @@
         }
         
         .method-content p {
+            font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
             font-size: 0.85rem;
             font-weight: 700;
             color: var(--accent-dark) !important;
@@ -1376,7 +1402,7 @@
         }
         
         .stat-number {
-            font-family: 'SaudiWeb', sans-serif;
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
             font-size: 1.6rem;
             font-weight: bold;
             color: var(--warm-white);
