@@ -400,7 +400,7 @@
             padding-left: 3rem;
             justify-content: flex-start;
             align-items: flex-start;
-            margin-top: -1.5rem;
+            margin-top: -6rem;
         }
         
         .hero-badge {
@@ -1865,7 +1865,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="hero-image-wrapper">
-                        <img src="{{ asset('sul-removebg-preview.png') }}" alt="سلطان المسعري - خبير تقييم المجوهرات">
+                        <img src="{{ asset('sultan.gif') }}" alt="سلطان المسعري - خبير تقييم المجوهرات">
                     </div>
                 </div>
             </div>
