@@ -1106,7 +1106,7 @@
         }
         
         .tech-info-inline {
-            color: var(--rich-brown);
+            color: var(--text-primary);
             font-weight: 700;
         }
         
