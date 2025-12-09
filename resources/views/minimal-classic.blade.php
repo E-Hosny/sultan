@@ -168,6 +168,40 @@
             margin-right: 2rem;
         }
         
+        .navbar-social {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            margin-right: 2rem;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent);
+            background: rgba(184, 150, 90, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .social-icon i {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover i {
+            transform: scale(1.1);
+        }
+        
         .navbar-link {
             color: var(--text-primary);
             text-decoration: none;
@@ -261,6 +295,21 @@
             background: rgba(184, 150, 90, 0.1);
             color: var(--accent-dark);
             border-right: 3px solid var(--accent-dark);
+        }
+        
+        .mobile-menu-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        .mobile-menu-social .social-icon {
+            width: 38px;
+            height: 38px;
+            font-size: 1.1rem;
         }
         
         .template-selector {
@@ -385,6 +434,7 @@
         @media (max-width: 1024px) {
             .hero-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
             .hero-image {
@@ -447,6 +497,70 @@
         
         .hero-feature-item:first-child i {
             color: var(--accent);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            padding: 0;
+            margin: 1rem 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            position: relative;
+        }
+        
+        .hero-stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.2rem;
+            padding: 0.25rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .hero-stat-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .hero-stat-item i {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-bottom: 0.05rem;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-stat-item:hover i {
+            opacity: 1;
+            transform: scale(1.1);
+            color: var(--accent-dark);
+        }
+        
+        .hero-stat-number {
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            line-height: 1;
+            text-shadow: 0 1px 4px rgba(184, 150, 90, 0.25);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-stat-item:hover .hero-stat-number {
+            color: var(--accent-dark);
+            transform: scale(1.05);
+        }
+        
+        .hero-stat-label {
+            font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            line-height: 1.1;
         }
         
         .hero-name {
@@ -601,6 +715,13 @@
                 order: -1;
             }
             
+            .hero-text {
+                padding-right: 1rem;
+                padding-left: 1rem;
+                align-items: center;
+                margin-top: 0;
+            }
+            
             .hero-badge {
                 margin: 0 auto;
             }
@@ -608,6 +729,24 @@
             .hero-features {
                 justify-content: center;
                 gap: 1rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.5rem;
+                padding: 0;
+            }
+            
+            .hero-stat-number {
+                font-size: 1.3rem;
+            }
+            
+            .hero-stat-item i {
+                font-size: 1.1rem;
+            }
+            
+            .hero-stat-label {
+                font-size: 0.75rem;
             }
             
             .hero-name {
@@ -651,6 +790,14 @@
                 padding: 2rem 0;
             }
             
+            .hero-content {
+                gap: 1.5rem;
+            }
+            
+            .hero-text {
+                margin-top: 1.5rem;
+            }
+            
             .hero-name {
                 font-size: 2rem;
             }
@@ -669,6 +816,24 @@
             
             .services-title {
                 font-size: 2rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.4rem;
+                padding: 0;
+            }
+            
+            .hero-stat-number {
+                font-size: 1.2rem;
+            }
+            
+            .hero-stat-item i {
+                font-size: 1rem;
+            }
+            
+            .hero-stat-label {
+                font-size: 0.7rem;
             }
             
             .hero-buttons {
@@ -720,6 +885,14 @@
                 padding: 1.5rem 0;
             }
             
+            .hero-text {
+                margin-top: 1rem;
+            }
+            
+            .hero-content {
+                gap: 1.5rem;
+            }
+            
             .hero-name {
                 font-size: 1.75rem;
             }
@@ -734,6 +907,24 @@
             
             .hero-description {
                 font-size: 0.85rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(4, 1fr);
+                padding: 0;
+                gap: 0.3rem;
+            }
+            
+            .hero-stat-number {
+                font-size: 1rem;
+            }
+            
+            .hero-stat-item i {
+                font-size: 0.9rem;
+            }
+            
+            .hero-stat-label {
+                font-size: 0.65rem;
             }
             
             .services-title {
@@ -1426,6 +1617,20 @@
             box-shadow: 0 -4px 15px var(--shadow);
         }
         
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+        
+        .footer-social .social-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+        
         .footer-text {
             color: var(--text-light);
             font-size: 0.9rem;
@@ -1444,6 +1649,10 @@
         
         @media (max-width: 768px) {
             .navbar-links {
+                display: none;
+            }
+            
+            .navbar-social {
                 display: none;
             }
             
@@ -1824,11 +2033,45 @@
                     <a href="#about" class="navbar-link">عن الخبير</a>
                     <a href="#contact" class="navbar-link">تواصل معنا</a>
                 </div>
+                <div class="navbar-social">
+                    <a href="https://www.instagram.com/sultan.jewelry1/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/s_almas3ri" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
+                        <i class="fab fa-x"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/@sultan.jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Snapchat">
+                        <i class="fab fa-snapchat"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@sultan_jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sultan.jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
                 <div class="mobile-menu" id="mobileMenu">
                     <a href="#hero" class="navbar-link" onclick="toggleMobileMenu()">الرئيسية</a>
                     <a href="#services" class="navbar-link" onclick="toggleMobileMenu()">الخدمات</a>
                     <a href="#about" class="navbar-link" onclick="toggleMobileMenu()">عن الخبير</a>
                     <a href="#contact" class="navbar-link" onclick="toggleMobileMenu()">تواصل معنا</a>
+                    <div class="mobile-menu-social">
+                        <a href="https://www.instagram.com/sultan.jewelry1/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/s_almas3ri" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
+                            <i class="fab fa-x"></i>
+                        </a>
+                        <a href="https://www.snapchat.com/@sultan.jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Snapchat">
+                            <i class="fab fa-snapchat"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@sultan_jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@sultan.jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1841,6 +2084,28 @@
                 <div class="hero-text">
                     <h1 class="hero-name">سلطان المسعري</h1>
                     <h2 class="hero-title">خبير المجوهرات والأحجار الكريمة</h2>
+                    <div class="hero-stats">
+                        <div class="hero-stat-item">
+                            <i class="fas fa-crown"></i>
+                            <div class="hero-stat-number">+20</div>
+                            <div class="hero-stat-label">سنوات خبرة</div>
+                        </div>
+                        <div class="hero-stat-item">
+                            <i class="fas fa-star"></i>
+                            <div class="hero-stat-number">+5000</div>
+                            <div class="hero-stat-label">تقييم ناجح</div>
+                        </div>
+                        <div class="hero-stat-item">
+                            <i class="fas fa-medal"></i>
+                            <div class="hero-stat-number">%100</div>
+                            <div class="hero-stat-label">رضا العملاء</div>
+                        </div>
+                        <div class="hero-stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="hero-stat-number">24/7</div>
+                            <div class="hero-stat-label">دعم متواصل</div>
+                        </div>
+                    </div>
                     <p class="hero-description">معايير معتمدة. دفعة عاشرة من المختبرات العالمية</p>
                     <div class="hero-buttons">
                         <a href="#services" class="hero-btn hero-btn-primary" style="color: #FFFEF7 !important; text-decoration: none !important;">
@@ -2031,6 +2296,23 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-social">
+                <a href="https://www.instagram.com/sultan.jewelry1/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/s_almas3ri" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
+                    <i class="fab fa-x"></i>
+                </a>
+                <a href="https://www.snapchat.com/@sultan.jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Snapchat">
+                    <i class="fab fa-snapchat"></i>
+                </a>
+                <a href="https://www.youtube.com/@sultan_jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@sultan.jewelry" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
             <p class="footer-text">
                 © 2024 سلطان المسعري - جميع الحقوق محفوظة
             </p>
