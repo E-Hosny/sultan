@@ -1193,10 +1193,10 @@
         }
         
         .about-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4.5rem;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            margin: 0 auto;
             position: relative;
             z-index: 1;
         }
@@ -1204,7 +1204,8 @@
         .about-text {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
+            text-align: center;
         }
         
         .about-section-title {
@@ -1244,16 +1245,18 @@
         
         .about-description {
             font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             color: var(--text-secondary);
-            line-height: 1.8;
+            line-height: 2;
             margin: 0;
-            text-align: justify;
+            text-align: center;
         }
         
         .about-description p {
             font-family: 'Tajawal', 'SaudiWeb', 'Inter', sans-serif;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            text-align-last: center;
         }
         
         .about-description p:last-child {
@@ -1301,78 +1304,38 @@
             font-weight: 700;
         }
         
-        .tech-info {
-            color: var(--rich-brown);
-            font-weight: 600;
-            margin: 0.75rem 0 1rem 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            align-items: center;
-        }
-        
-        .tech-info-item {
+        .cert-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.4rem;
-            padding: 0.4rem 0.75rem;
-            background: rgba(184, 150, 90, 0.1);
-            border-radius: 8px;
-            border: 1px solid rgba(184, 150, 90, 0.3);
-            transition: all 0.2s ease;
+            gap: 0.3rem;
+            padding: 0.25rem 0.6rem;
+            background: rgba(184, 150, 90, 0.12);
+            border: 1px solid rgba(184, 150, 90, 0.25);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+            margin: 0 0.15rem;
+            transition: all 0.3s ease;
+            vertical-align: middle;
         }
         
-        .tech-info-item:hover {
-            background: rgba(184, 150, 90, 0.15);
+        .cert-badge:hover {
+            background: rgba(184, 150, 90, 0.18);
             border-color: var(--accent);
+            transform: translateY(-1px);
         }
         
-        .tech-info-item i {
+        .cert-badge i {
             color: var(--accent);
             font-size: 0.85rem;
         }
         
-        .about-video-wrapper {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px var(--shadow), 0 0 30px var(--shadow-gold);
-            border: 3px solid var(--accent);
-            background: var(--secondary);
-            padding: 0.5rem;
-            max-height: 600px;
-            aspect-ratio: 16 / 9;
-        }
-        
-        .about-video-wrapper video {
-            width: 100%;
-            height: 100%;
-            display: block;
-            border-radius: 12px;
-            object-fit: cover;
-        }
-        
-        .about-video-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(184, 150, 90, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            border-radius: 12px;
-        }
         
         /* About Section Responsive */
         @media (max-width: 1024px) {
             .about-content {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-            
-            .about-video-wrapper {
-                order: -1;
+                max-width: 100%;
             }
             
             .about-section-title {
@@ -1417,9 +1380,6 @@
                 line-height: 1.7;
             }
             
-            .about-video-wrapper {
-                max-height: 450px;
-            }
         }
         
         @media (max-width: 480px) {
@@ -1444,9 +1404,6 @@
                 font-size: 0.9rem;
             }
             
-            .about-video-wrapper {
-                max-height: 350px;
-            }
         }
         
         /* Contact Section */
@@ -2200,18 +2157,9 @@
                     <p class="about-short-desc">مُقيّم أحجار كريمة بخبرة 20 عامًا في التحليل والتقييم المعتمد.</p>
                     <div class="about-content">
                         <div class="about-text">
-                            <h3 class="about-name">سلطان المسعري</h3>
-                            <p class="about-subtitle">مُقيّم أحجار كريمة ومدير تنفيذي في صناعة المجوهرات</p>
                             <div class="about-description">
                                 <p>يُعد أحد أبرز الخبراء السعوديين في علوم الأحجار الكريمة وتقييم المجوهرات، بخبرة تمتد لأكثر من 20 عامًا في الفحص، التدرّج، والتحليل المخبري وفق أعلى المعايير الدولية.</p>
-                                <p>يحمل اعتماد <strong class="tech-info-inline">ISO/IEC 17025</strong> لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من:</p>
-                                <div class="tech-info">
-                                    <span class="tech-info-item"><i class="fas fa-certificate"></i> GIA</span>
-                                    <span class="tech-info-item"><i class="fas fa-certificate"></i> HRD</span>
-                                    <span class="tech-info-item"><i class="fas fa-certificate"></i> IGI</span>
-                                    <span class="tech-info-item"><i class="fas fa-certificate"></i> DNA Diamonds</span>
-                                </div>
-                                <p>مما يجعله مرجعًا موثوقًا في هذا المجال.</p>
+                                <p>يحمل اعتماد <strong class="tech-info-inline">ISO/IEC 17025</strong> لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من: <span class="cert-badge"><i class="fas fa-certificate"></i> GIA</span>، <span class="cert-badge"><i class="fas fa-certificate"></i> HRD</span>، <span class="cert-badge"><i class="fas fa-certificate"></i> IGI</span>، و<span class="cert-badge"><i class="fas fa-certificate"></i> DNA Diamonds</span>. مما يجعله مرجعًا موثوقًا في هذا المجال.</p>
                                 <div class="about-description-more" id="aboutMore">
                                     <p>يشغل سلطان عدة مناصب في اللجان الوطنية للمعادن الثمينة والأحجار الكريمة، ويقود منشآت متخصصة في التقييم وخدمات المختبر.</p>
                                     <p>مع خبرة واسعة في تقييم المواريث والممتلكات وإصدار التقارير الفنية المعتمدة، إلى جانب دوره في تطوير العلامات التجارية للمجوهرات وبناء الهويات الفاخرة.</p>
@@ -2223,12 +2171,6 @@
                                     <span>قراءة المزيد</span>
                                 </button>
                             </div>
-                        </div>
-                        <div class="about-video-wrapper">
-                            <video controls autoplay muted loop playsinline>
-                                <source src="{{ asset('sul_video.mp4') }}" type="video/mp4">
-                                متصفحك لا يدعم تشغيل الفيديو.
-                            </video>
                         </div>
                     </div>
                 </div>
