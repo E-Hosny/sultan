@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#F8F0E0">
     <meta name="msapplication-navbutton-color" content="#F8F0E0">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>سلطان المسعري - خبير تقييم المجوهرات والأحجار الكريمة</title>
+    <title>سلطان المسعري - مُقيّم تقييم المجوهرات والأحجار الكريمة</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -2030,7 +2030,7 @@
                 <div class="navbar-links">
                     <a href="#hero" class="navbar-link">الرئيسية</a>
                     <a href="#services" class="navbar-link">الخدمات</a>
-                    <a href="#about" class="navbar-link">عن الخبير</a>
+                    <a href="#about" class="navbar-link">عن المُقيّم</a>
                     <a href="#contact" class="navbar-link">تواصل معنا</a>
                 </div>
                 <div class="navbar-social">
@@ -2053,7 +2053,7 @@
                 <div class="mobile-menu" id="mobileMenu">
                     <a href="#hero" class="navbar-link" onclick="toggleMobileMenu()">الرئيسية</a>
                     <a href="#services" class="navbar-link" onclick="toggleMobileMenu()">الخدمات</a>
-                    <a href="#about" class="navbar-link" onclick="toggleMobileMenu()">عن الخبير</a>
+                    <a href="#about" class="navbar-link" onclick="toggleMobileMenu()">عن المُقيّم</a>
                     <a href="#contact" class="navbar-link" onclick="toggleMobileMenu()">تواصل معنا</a>
                     <div class="mobile-menu-social">
                         <a href="https://www.instagram.com/sultan.jewelry1/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
@@ -2083,7 +2083,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-name">سلطان المسعري</h1>
-                    <h2 class="hero-title">خبير المجوهرات والأحجار الكريمة</h2>
+                    <h2 class="hero-title">مُقيّم المجوهرات والأحجار الكريمة</h2>
                     <div class="hero-stats">
                         <div class="hero-stat-item">
                             <i class="fas fa-crown"></i>
@@ -2130,7 +2130,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="hero-image-wrapper">
-                        <img src="{{ asset('sultan.gif') }}" alt="سلطان المسعري - خبير تقييم المجوهرات">
+                        <img src="{{ asset('sultan.gif') }}" alt="سلطان المسعري - مُقيّم تقييم المجوهرات">
                     </div>
                 </div>
             </div>
@@ -2196,12 +2196,12 @@
             <!-- About Section -->
             <section id="about" class="about-section">
                 <div class="container">
-                    <h2 class="about-section-title">الخبير سلطان المسعري</h2>
-                    <p class="about-short-desc">خبير أحجار كريمة بخبرة 20 عامًا في التحليل والتقييم المعتمد.</p>
+                    <h2 class="about-section-title">المُقيّم سلطان المسعري</h2>
+                    <p class="about-short-desc">مُقيّم أحجار كريمة بخبرة 20 عامًا في التحليل والتقييم المعتمد.</p>
                     <div class="about-content">
                         <div class="about-text">
                             <h3 class="about-name">سلطان المسعري</h3>
-                            <p class="about-subtitle">خبير أحجار كريمة ومدير تنفيذي في صناعة المجوهرات</p>
+                            <p class="about-subtitle">مُقيّم أحجار كريمة ومدير تنفيذي في صناعة المجوهرات</p>
                             <div class="about-description">
                                 <p>يُعد أحد أبرز الخبراء السعوديين في علوم الأحجار الكريمة وتقييم المجوهرات، بخبرة تمتد لأكثر من 20 عامًا في الفحص، التدرّج، والتحليل المخبري وفق أعلى المعايير الدولية.</p>
                                 <p>يحمل اعتماد <strong class="tech-info-inline">ISO/IEC 17025</strong> لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من:</p>
