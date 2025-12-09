@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#F8F0E0">
     <meta name="msapplication-navbutton-color" content="#F8F0E0">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>سلطان المسعري - مُقيّم تقييم المجوهرات والأحجار الكريمة</title>
+    <title>Sultan Al-Massari | Gem & Jewelry Evaluation</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
