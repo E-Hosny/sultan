@@ -1357,20 +1357,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0.75rem 1rem;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 12px;
-            border: 1px solid rgba(184, 150, 90, 0.2);
+            padding: 0;
+            background: transparent;
+            border-radius: 0;
+            border: none;
             transition: all 0.3s ease;
             flex: 0 0 auto;
-            box-shadow: 0 2px 8px rgba(26, 15, 10, 0.1);
+            box-shadow: none;
         }
         
         .cert-logo:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(26, 15, 10, 0.2);
-            border-color: var(--accent);
-            background: rgba(255, 255, 255, 0.8);
+            box-shadow: none;
         }
         
         .cert-logo-img {
@@ -1385,6 +1383,12 @@
         .cert-logo:hover .cert-logo-img {
             transform: scale(1.08);
             filter: drop-shadow(0 4px 8px rgba(26, 15, 10, 0.25));
+        }
+        
+        /* تكبير اللوجو في الوسط */
+        .cert-logo-img-middle {
+            height: 65px !important;
+            max-width: 150px !important;
         }
         
         
@@ -1430,6 +1434,11 @@
                 height: 35px;
                 max-width: 85px;
             }
+            
+            .cert-logo-img-middle {
+                height: 55px !important;
+                max-width: 130px !important;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1473,6 +1482,11 @@
             .cert-logo-img {
                 height: 30px;
                 max-width: 70px;
+            }
+            
+            .cert-logo-img-middle {
+                height: 45px !important;
+                max-width: 110px !important;
             }
             
         }
@@ -1521,6 +1535,11 @@
                 height: 25px;
                 max-width: 60px;
                 width: 100%;
+            }
+            
+            .cert-logo-img-middle {
+                height: 38px !important;
+                max-width: 90px !important;
             }
             
         }
@@ -2284,8 +2303,8 @@
                                     <div class="cert-logo">
                                         <img src="{{ asset('gia.png') }}" alt="GIA" class="cert-logo-img">
                                     </div>
-                                    <div class="cert-logo">
-                                        <img src="{{ asset('logo.png') }}" alt="HRD" class="cert-logo-img">
+                                    <div class="cert-logo cert-logo-middle">
+                                        <img src="{{ asset('logo.png') }}" alt="HRD" class="cert-logo-img cert-logo-img-middle">
                                     </div>
                                     <div class="cert-logo">
                                         <img src="{{ asset('logo_IGI.webp') }}" alt="IGI" class="cert-logo-img">
