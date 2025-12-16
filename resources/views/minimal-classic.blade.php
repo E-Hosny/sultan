@@ -1386,6 +1386,12 @@
         }
         
         /* تكبير اللوجو في الوسط */
+        /* تكبير اللوجوهات ماعدا IGI */
+        .cert-logo-img-large {
+            height: 60px !important;
+            max-width: 140px !important;
+        }
+        
         .cert-logo-img-middle {
             height: 65px !important;
             max-width: 150px !important;
@@ -1435,6 +1441,11 @@
                 max-width: 85px;
             }
             
+            .cert-logo-img-large {
+                height: 52px !important;
+                max-width: 120px !important;
+            }
+            
             .cert-logo-img-middle {
                 height: 55px !important;
                 max-width: 130px !important;
@@ -1482,6 +1493,11 @@
             .cert-logo-img {
                 height: 30px;
                 max-width: 70px;
+            }
+            
+            .cert-logo-img-large {
+                height: 45px !important;
+                max-width: 100px !important;
             }
             
             .cert-logo-img-middle {
@@ -1535,6 +1551,11 @@
                 height: 25px;
                 max-width: 60px;
                 width: 100%;
+            }
+            
+            .cert-logo-img-large {
+                height: 35px !important;
+                max-width: 80px !important;
             }
             
             .cert-logo-img-middle {
@@ -2301,7 +2322,7 @@
                                 <h3 class="cert-subtitle">جهات الاعتماد المعتمدة</h3>
                                 <div class="cert-logos-container">
                                     <div class="cert-logo">
-                                        <img src="{{ asset('gia.png') }}" alt="GIA" class="cert-logo-img">
+                                        <img src="{{ asset('gia.png') }}" alt="GIA" class="cert-logo-img cert-logo-img-large">
                                     </div>
                                     <div class="cert-logo cert-logo-middle">
                                         <img src="{{ asset('logo.png') }}" alt="HRD" class="cert-logo-img cert-logo-img-middle">
