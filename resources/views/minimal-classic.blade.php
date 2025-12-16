@@ -1331,6 +1331,51 @@
             font-size: 0.85rem;
         }
         
+        /* Certificate Logos */
+        .cert-logos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: nowrap;
+            margin: 1.5rem 0;
+            padding: 1rem 0;
+        }
+        
+        .cert-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(184, 150, 90, 0.2);
+            transition: all 0.3s ease;
+            flex: 0 0 auto;
+            box-shadow: 0 2px 8px rgba(26, 15, 10, 0.1);
+        }
+        
+        .cert-logo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(26, 15, 10, 0.2);
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        .cert-logo-img {
+            height: 40px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(26, 15, 10, 0.15));
+            transition: all 0.3s ease;
+        }
+        
+        .cert-logo:hover .cert-logo-img {
+            transform: scale(1.08);
+            filter: drop-shadow(0 4px 8px rgba(26, 15, 10, 0.25));
+        }
+        
         
         /* About Section Responsive */
         @media (max-width: 1024px) {
@@ -1354,6 +1399,20 @@
             
             .about-description {
                 text-align: center;
+            }
+            
+            .cert-logos-container {
+                gap: 1.5rem;
+                margin: 1.25rem 0;
+            }
+            
+            .cert-logo {
+                padding: 0.6rem 0.8rem;
+            }
+            
+            .cert-logo-img {
+                height: 35px;
+                max-width: 85px;
             }
         }
         
@@ -1380,6 +1439,21 @@
                 line-height: 1.7;
             }
             
+            .cert-logos-container {
+                gap: 1rem;
+                margin: 1rem 0;
+                padding: 0.75rem 0;
+            }
+            
+            .cert-logo {
+                padding: 0.5rem 0.7rem;
+            }
+            
+            .cert-logo-img {
+                height: 30px;
+                max-width: 70px;
+            }
+            
         }
         
         @media (max-width: 480px) {
@@ -1402,6 +1476,25 @@
             
             .about-description {
                 font-size: 0.9rem;
+            }
+            
+            .cert-logos-container {
+                gap: 0.75rem;
+                margin: 1rem 0;
+                padding: 0.5rem 0;
+                flex-wrap: nowrap;
+            }
+            
+            .cert-logo {
+                padding: 0.4rem 0.6rem;
+                flex: 1 1 0;
+                min-width: 0;
+            }
+            
+            .cert-logo-img {
+                height: 25px;
+                max-width: 60px;
+                width: 100%;
             }
             
         }
@@ -2159,7 +2252,19 @@
                         <div class="about-text">
                             <div class="about-description">
                                 <p>يُعد أحد أبرز الخبراء السعوديين في علوم الأحجار الكريمة وتقييم المجوهرات، بخبرة تمتد لأكثر من 20 عامًا في الفحص، التدرّج، والتحليل المخبري وفق أعلى المعايير الدولية.</p>
-                                <p>يحمل اعتماد <strong class="tech-info-inline">ISO/IEC 17025</strong> لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من: <span class="cert-badge"><i class="fas fa-certificate"></i> GIA</span>، <span class="cert-badge"><i class="fas fa-certificate"></i> HRD</span>، <span class="cert-badge"><i class="fas fa-certificate"></i> IGI</span>، و<span class="cert-badge"><i class="fas fa-certificate"></i> DNA Diamonds</span>. مما يجعله مرجعًا موثوقًا في هذا المجال.</p>
+                                <p>يحمل اعتماد <strong class="tech-info-inline">ISO/IEC 17025</strong> لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من:</p>
+                                <div class="cert-logos-container">
+                                    <div class="cert-logo">
+                                        <img src="{{ asset('gia.png') }}" alt="GIA" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-logo">
+                                        <img src="{{ asset('logo.png') }}" alt="HRD" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-logo">
+                                        <img src="{{ asset('logo_IGI.webp') }}" alt="IGI" class="cert-logo-img">
+                                    </div>
+                                </div>
+                                <p>مما يجعله مرجعًا موثوقًا في هذا المجال.</p>
                                 <div class="about-description-more" id="aboutMore">
                                     <p>يشغل سلطان عدة مناصب في اللجان الوطنية للمعادن الثمينة والأحجار الكريمة، ويقود منشآت متخصصة في التقييم وخدمات المختبر.</p>
                                     <p>مع خبرة واسعة في تقييم المواريث والممتلكات وإصدار التقارير الفنية المعتمدة، إلى جانب دوره في تطوير العلامات التجارية للمجوهرات وبناء الهويات الفاخرة.</p>
