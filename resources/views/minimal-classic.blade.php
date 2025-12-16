@@ -1331,6 +1331,17 @@
             font-size: 0.85rem;
         }
         
+        /* Certificate Subtitle */
+        .cert-subtitle {
+            font-family: 'Cairo', 'SaudiWeb', sans-serif;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-dark);
+            text-align: center;
+            margin: 1.5rem 0 1rem 0;
+            text-shadow: 0 1px 3px rgba(184, 150, 90, 0.2);
+        }
+        
         /* Certificate Logos */
         .cert-logos-container {
             display: flex;
@@ -1401,6 +1412,11 @@
                 text-align: center;
             }
             
+            .cert-subtitle {
+                font-size: 1.2rem;
+                margin: 1.25rem 0 0.75rem 0;
+            }
+            
             .cert-logos-container {
                 gap: 1.5rem;
                 margin: 1.25rem 0;
@@ -1437,6 +1453,11 @@
             .about-description {
                 font-size: 0.95rem;
                 line-height: 1.7;
+            }
+            
+            .cert-subtitle {
+                font-size: 1.1rem;
+                margin: 1rem 0 0.5rem 0;
             }
             
             .cert-logos-container {
@@ -1476,6 +1497,11 @@
             
             .about-description {
                 font-size: 0.9rem;
+            }
+            
+            .cert-subtitle {
+                font-size: 1rem;
+                margin: 0.75rem 0 0.5rem 0;
             }
             
             .cert-logos-container {
@@ -2252,7 +2278,8 @@
                         <div class="about-text">
                             <div class="about-description">
                                 <p>يُعد أحد أبرز الخبراء السعوديين في علوم الأحجار الكريمة وتقييم المجوهرات، بخبرة تمتد لأكثر من 20 عامًا في الفحص، التدرّج، والتحليل المخبري وفق أعلى المعايير الدولية.</p>
-                                <p>يحمل اعتماد <strong class="tech-info-inline">ISO/IEC 17025</strong> لمختبرات الاختبار والمعايرة، إضافة إلى شهادات مهنية معتمدة من:</p>
+                                <p>يحمل الخبير سلطان المسعري اعتمادات مهنية من كبرى المختبرات العالمية في تقييم الألماس والأحجار الكريمة، مثل:</p>
+                                <h3 class="cert-subtitle">جهات الاعتماد المعتمدة</h3>
                                 <div class="cert-logos-container">
                                     <div class="cert-logo">
                                         <img src="{{ asset('gia.png') }}" alt="GIA" class="cert-logo-img">
